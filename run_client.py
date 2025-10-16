@@ -51,7 +51,7 @@ def run_experiment():
             command = [
                 QUICSAMPLE_PATH,
                 '-client',
-                '-target:127.0.0.1',
+                '-target:163.152.192.70',
                 f'-port:{port}',
                 '-unsecure',
                 '-download:1000000000'
