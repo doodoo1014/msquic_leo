@@ -1359,9 +1359,11 @@ CubicCongestionControlOnDataAcknowledged(
         Cubic->CongestionWindow += (BytesAcked / Cubic->CWndSlowStartGrowthDivisor);
         
         if (PrevCwnd != Cubic->CongestionWindow && Connection->Stats.Timing.Start != 0) {
+            if (QuicConnIsServer(Connection)) {
             double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             printf("[Cubic][%p][%.3fms] CWND Update (SlowStart): %u -> %u\n",
                 (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow);
+            }
         }
 
         BytesAcked = 0;
@@ -1418,9 +1420,11 @@ CubicCongestionControlOnDataAcknowledged(
         // }
         
         if (PrevCwnd != Cubic->CongestionWindow && Connection->Stats.Timing.Start != 0) {
+            if (QuicConnIsServer(Connection)) {
             double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             printf("[Cubic][%p][%.3fms] CWND Update (CUBIC/AIMD): %u -> %u\n",
                 (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow);
+            }
         }
     }
 
