@@ -37,7 +37,7 @@ typedef struct QUIC_CACHEALIGN QUIC_WORKER {
     BOOLEAN Enabled;
 
     //
-    // TRUE if the worker is currently processing work.
+    // TRUE if the worker is currently processing connections.
     //
     BOOLEAN IsActive;
 
@@ -57,12 +57,12 @@ typedef struct QUIC_CACHEALIGN QUIC_WORKER {
     CXPLAT_EVENT Ready;
 
     //
-    // A thread for draining operations.
+    // A thread for draining operations from queued connections.
     //
     CXPLAT_THREAD Thread;
 
     //
-    // Serializes access to the connection, listener, and operation lists.
+    // Serializes access to the connection and operation lists.
     //
     CXPLAT_DISPATCH_LOCK Lock;
 
@@ -71,11 +71,6 @@ typedef struct QUIC_CACHEALIGN QUIC_WORKER {
     //
     CXPLAT_LIST_ENTRY Connections;
     CXPLAT_LIST_ENTRY** PriorityConnectionsTail;
-
-    //
-    // Queue of listeners with operations to be processed.
-    //
-    CXPLAT_LIST_ENTRY Listeners;
 
     //
     // Queue of stateless operations to be processed.
@@ -193,20 +188,6 @@ QuicWorkerQueuePriorityConnection(
     _In_ QUIC_CONNECTION* Connection
     );
 
-_IRQL_requires_max_(DISPATCH_LEVEL)
-void
-QuicWorkerAssignListener(
-    _In_ QUIC_WORKER* Worker,
-    _In_ QUIC_LISTENER* Listener
-    );
-
-_IRQL_requires_max_(DISPATCH_LEVEL)
-void
-QuicWorkerQueueListener(
-    _In_ QUIC_WORKER* Worker,
-    _In_ QUIC_LISTENER* Listener
-    );
-
 //
 // Queues the operation onto the worker, and kicks the worker thread if
 // necessary.
@@ -216,10 +197,4 @@ void
 QuicWorkerQueueOperation(
     _In_ QUIC_WORKER* Worker,
     _In_ QUIC_OPERATION* Operation
-    );
-
-BOOLEAN
-QuicWorkerPoolIsInPartition(
-    _In_ QUIC_WORKER_POOL* WorkerPool,
-    _In_ uint16_t PartitionIndex
     );

@@ -569,6 +569,13 @@ BOOLEAN
     _Inout_ CXPLAT_EXECUTION_STATE* State
     );
 
+typedef
+_IRQL_requires_max_(PASSIVE_LEVEL)
+BOOLEAN
+(*CXPLAT_EXECUTION_WAKE_FN)(
+    _Inout_ CXPLAT_EXECUTION_CONTEXT* Context
+    );
+
 typedef struct CXPLAT_EXECUTION_CONTEXT {
 
     CXPLAT_SLIST_ENTRY Entry;
@@ -582,22 +589,12 @@ typedef struct CXPLAT_EXECUTION_CONTEXT {
 
 #ifdef _KERNEL_MODE // Not supported on kernel mode
 #define CxPlatWakeExecutionContext(Context) CXPLAT_FRE_ASSERT(FALSE)
-#if DEBUG
-#define CxPlatWorkerIsThisThread(Context) TRUE
 #else
-#define CxPlatWorkerIsThisThread(Context) CXPLAT_FRE_ASSERT(FALSE)
-#endif
-#else // _KERNEL_MODE
 void
 CxPlatWakeExecutionContext(
     _In_ CXPLAT_EXECUTION_CONTEXT* Context
     );
-
-BOOLEAN
-CxPlatWorkerIsThisThread(
-    _In_ CXPLAT_EXECUTION_CONTEXT* Context
-    );
-#endif // _KERNEL_MODE
+#endif
 
 //
 // Test Interface for loading a self-signed certificate.

@@ -739,17 +739,6 @@ typedef struct CXPLAT_SOCKET_SQE {
 #endif
 } CXPLAT_SOCKET_SQE;
 
-#ifdef CXPLAT_USE_IO_URING
-
-typedef enum CXPLAT_SOCKET_IO_TAG {
-    IoTagShutdown,
-    IoTagRecv,
-    IoTagSend,
-    IoTagMax
-} CXPLAT_SOCKET_IO_TAG;
-
-#endif // CXPLAT_USE_IO_URING
-
 //
 // Socket context.
 //
@@ -805,10 +794,6 @@ typedef struct QUIC_CACHEALIGN CXPLAT_SOCKET_CONTEXT {
     //
     uint32_t IoCount;
 
-#if defined(CXPLAT_USE_IO_URING) && defined(DEBUG)
-    int64_t IoCountTags[IoTagMax];
-#endif // defined(CXPLAT_USE_IO_URING) && defined(DEBUG)
-
     //
     // Inidicates the SQEs have been initialized.
     //
@@ -820,20 +805,18 @@ typedef struct QUIC_CACHEALIGN CXPLAT_SOCKET_CONTEXT {
     BOOLEAN IoStarted : 1;
 
 #ifdef CXPLAT_USE_IO_URING
-    struct {
-        //
-        // Indicates if the socket has started shutting down.
-        //
-        BOOLEAN Shutdown : 1;
+    //
+    // Indicates if the socket has started shutting down.
+    //
+    BOOLEAN Shutdown : 1;
 
 #if DEBUG
-        //
-        // Indicates if the socket socket has a multi recv outstanding.
-        //
-        BOOLEAN MultiRecvStarted : 1;
-#endif // DEBUG
-    } LockedFlags;
-#endif // CXPLAT_USE_IO_URING
+    //
+    // Indicates if the socket socket has a multi recv outstanding.
+    //
+    BOOLEAN MultiRecvStarted : 1;
+#endif
+#endif
 
 #if DEBUG
     uint8_t Uninitialized : 1;
@@ -1085,7 +1068,6 @@ DataPathInitialize(
     _In_opt_ const CXPLAT_UDP_DATAPATH_CALLBACKS* UdpCallbacks,
     _In_opt_ const CXPLAT_TCP_DATAPATH_CALLBACKS* TcpCallbacks,
     _In_ CXPLAT_WORKER_POOL* WorkerPool,
-    _In_ CXPLAT_DATAPATH_INIT_CONFIG* InitConfig,
     _Out_ CXPLAT_DATAPATH** NewDatapath
     );
 

@@ -434,8 +434,7 @@ Error:
 
 VOID
 CxPlatDataPathQuerySockoptSupport(
-    _Inout_ CXPLAT_DATAPATH* Datapath,
-    _In_ CXPLAT_DATAPATH_INIT_CONFIG* InitConfig
+    _Inout_ CXPLAT_DATAPATH* Datapath
     )
 {
     NTSTATUS Status;
@@ -646,9 +645,7 @@ CxPlatDataPathQuerySockoptSupport(
     //
     if (CxPlatform.dwBuildNumber != 20348) {
         Datapath->Features |= CXPLAT_DATAPATH_FEATURE_TTL;
-        if (InitConfig->EnableDscpOnRecv) {
-            Datapath->Features |= CXPLAT_DATAPATH_FEATURE_RECV_DSCP;
-        }
+        Datapath->Features |= CXPLAT_DATAPATH_FEATURE_RECV_DSCP;
     }
 
 Error:
@@ -680,8 +677,7 @@ DataPathInitialize(
     _In_opt_ const CXPLAT_UDP_DATAPATH_CALLBACKS* UdpCallbacks,
     _In_opt_ const CXPLAT_TCP_DATAPATH_CALLBACKS* TcpCallbacks,
     _In_ CXPLAT_WORKER_POOL* WorkerPool,
-    _In_ CXPLAT_DATAPATH_INIT_CONFIG* InitConfig,
-    _Out_ CXPLAT_DATAPATH** NewDataPath
+    _Out_ CXPLAT_DATAPATH* *NewDataPath
     )
 {
     QUIC_STATUS Status;
@@ -863,7 +859,7 @@ DataPathInitialize(
     }
 
     CxPlatDataPathQueryRssScalabilityInfo(Datapath);
-    CxPlatDataPathQuerySockoptSupport(Datapath, InitConfig);
+    CxPlatDataPathQuerySockoptSupport(Datapath);
 
     *NewDataPath = Datapath;
 

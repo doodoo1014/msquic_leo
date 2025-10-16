@@ -63,8 +63,7 @@ main(
     CxPlatInitialize();
     CXPLAT_WORKER_POOL* WorkerPool = CxPlatWorkerPoolCreate(nullptr);
     CxPlatRandom(sizeof(PcpNonce), PcpNonce);
-    CXPLAT_DATAPATH_INIT_CONFIG InitConfig = {0};
-    CxPlatDataPathInitialize(0, nullptr, nullptr, WorkerPool, &InitConfig, &Datapath);
+    CxPlatDataPathInitialize(0, nullptr, nullptr, WorkerPool, &Datapath);
 
     QUIC_STATUS Status =
         CxPlatPcpInitialize(

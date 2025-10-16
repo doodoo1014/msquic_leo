@@ -309,8 +309,7 @@ QuicMainStart(
         PerfServer::DatapathReceive,
         PerfServer::DatapathUnreachable
     };
-    CXPLAT_DATAPATH_INIT_CONFIG InitConfig = {0};
-    Status = CxPlatDataPathInitialize(0, &DatapathCallbacks, &TcpEngine::TcpCallbacks, WorkerPool, &InitConfig, &Datapath);
+    Status = CxPlatDataPathInitialize(0, &DatapathCallbacks, &TcpEngine::TcpCallbacks, WorkerPool, &Datapath);
     if (QUIC_FAILED(Status)) {
 #ifndef _KERNEL_MODE
         CxPlatWorkerPoolDelete(WorkerPool);

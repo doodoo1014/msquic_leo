@@ -60,15 +60,12 @@ struct QuicAddr
     void Resolve(QUIC_ADDRESS_FAMILY af, const char* hostname) {
         CXPLAT_WORKER_POOL* WorkerPool = CxPlatWorkerPoolCreate(nullptr);
         CXPLAT_DATAPATH* Datapath = nullptr;
-        CXPLAT_DATAPATH_INIT_CONFIG InitConfig = {0};
-        InitConfig.EnableDscpOnRecv = TRUE;
         if (QUIC_FAILED(
             CxPlatDataPathInitialize(
                 0,
                 NULL,
                 NULL,
                 WorkerPool,
-                &InitConfig,
                 &Datapath))) {
             GTEST_FATAL_FAILURE_(" QuicDataPathInitialize failed.");
         }
@@ -465,15 +462,12 @@ struct CxPlatDataPath {
     {
         WorkerPool =
             CxPlatWorkerPoolCreate(Config ? Config : &DefaultExecutionConfig);
-        CXPLAT_DATAPATH_INIT_CONFIG InitConfig = {0};
-        InitConfig.EnableDscpOnRecv = TRUE;
         InitStatus =
             CxPlatDataPathInitialize(
                 ClientRecvContextLength,
                 UdpCallbacks,
                 TcpCallbacks,
                 WorkerPool,
-                &InitConfig,
                 &Datapath);
     }
     ~CxPlatDataPath() noexcept {
@@ -725,7 +719,7 @@ TEST_F(DataPathTest, Initialize)
 
 TEST_F(DataPathTest, InitializeInvalid)
 {
-    ASSERT_EQ(QUIC_STATUS_INVALID_PARAMETER, CxPlatDataPathInitialize(0, nullptr, nullptr, nullptr, nullptr, nullptr));
+    ASSERT_EQ(QUIC_STATUS_INVALID_PARAMETER, CxPlatDataPathInitialize(0, nullptr, nullptr, nullptr, nullptr));
     {
         const CXPLAT_UDP_DATAPATH_CALLBACKS InvalidUdpCallbacks = { nullptr, EmptyUnreachableCallback };
         CxPlatDataPath Datapath(&InvalidUdpCallbacks);

@@ -1526,7 +1526,6 @@ QuicConnTryClose(
         if (!SilentClose) {
             //
             // Enter 'draining period' to flush out any leftover packets.
-            // During that time, no packet should be sent.
             //
             QuicConnTimerSet(
                 Connection,
@@ -1547,8 +1546,7 @@ QuicConnTryClose(
         if (!SilentClose) {
             //
             // Enter 'closing period' to wait for a (optional) connection close
-            // response. During that time, the connection close will be re-transmitted
-            // when packets are received.
+            // response.
             //
             uint64_t Pto =
                 QuicLossDetectionComputeProbeTimeout(
@@ -1872,7 +1870,7 @@ QuicConnStart(
     UdpConfig.LocalAddress = Connection->State.LocalAddressSet ? &Path->Route.LocalAddress : NULL;
     UdpConfig.RemoteAddress = &Path->Route.RemoteAddress;
     UdpConfig.Flags = CXPLAT_SOCKET_FLAG_NONE;
-    UdpConfig.InterfaceIndex = Connection->State.LocalInterfaceSet ? (uint32_t)Path->Route.LocalAddress.Ipv6.sin6_scope_id : 0; // NOLINT(google-readability-casting)
+    UdpConfig.InterfaceIndex = Connection->State.LocalInterfaceSet ? (uint32_t)Path->Route.LocalAddress.Ipv6.sin6_scope_id : 0, // NOLINT(google-readability-casting)
     UdpConfig.PartitionIndex = QuicPartitionIdGetIndex(Connection->PartitionID);
 #ifdef QUIC_COMPARTMENT_ID
     UdpConfig.CompartmentId = Configuration->CompartmentId;
@@ -1889,9 +1887,6 @@ QuicConnStart(
     }
     if (Connection->Settings.QTIPEnabled) {
         UdpConfig.Flags |= CXPLAT_SOCKET_FLAG_QTIP;
-    }
-    if (Connection->State.Partitioned) {
-        UdpConfig.Flags |= CXPLAT_SOCKET_FLAG_PARTITIONED;
     }
 
     //
@@ -4440,17 +4435,14 @@ QuicConnRecvFrames(
     BOOLEAN UpdatedFlowControl = FALSE;
     QUIC_ENCRYPT_LEVEL EncryptLevel = QuicKeyTypeToEncryptLevel(Packet->KeyType);
     BOOLEAN Closed = Connection->State.ClosedLocally || Connection->State.ClosedRemotely;
-    const BOOLEAN ClosingState = Connection->State.ClosedLocally && !Connection->State.ClosedRemotely;
     const uint8_t* Payload = Packet->AvailBuffer + Packet->HeaderLength;
     uint16_t PayloadLength = Packet->PayloadLength;
     uint64_t RecvTime = CxPlatTimeUs64();
 
     //
     // In closing state, respond to any packet with a new close frame (rate-limited).
-    // Note this excludes the draining state (i.e., ClosedRemotely == TRUE)
-    // in which we should be silent.
     //
-    if (ClosingState && !Connection->State.ShutdownComplete) {
+    if (Closed && !Connection->State.ShutdownComplete) {
         if (RecvTime - Connection->LastCloseResponseTimeUs >= QUIC_CLOSING_RESPONSE_MIN_INTERVAL) {
             QuicSendSetSendFlag(
                 &Connection->Send,
@@ -5602,8 +5594,7 @@ QuicConnRecvDatagramBatch(
             RecvState->ResetIdleTimeout |= Packet->CompletelyValid;
 
             if (Connection->Registration != NULL && !Connection->Registration->NoPartitioning &&
-                !Path->Binding->Partitioned && !Connection->State.Partitioned && Path->IsActive &&
-                !Path->PartitionUpdated && Packet->CompletelyValid &&
+                Path->IsActive && !Path->PartitionUpdated && Packet->CompletelyValid &&
                 (Packets[i]->PartitionIndex % MsQuicLib.PartitionCount) != RecvState->PartitionIndex) {
                 RecvState->PartitionIndex = Packets[i]->PartitionIndex % MsQuicLib.PartitionCount;
                 RecvState->UpdatePartitionId = TRUE;
@@ -6729,28 +6720,6 @@ QuicConnParamSet(
         break;
     }
 
-    case QUIC_PARAM_CONN_CLOSE_ASYNC:
-        if (BufferLength != sizeof(BOOLEAN)) {
-            Status = QUIC_STATUS_INVALID_PARAMETER;
-            break;
-        }
-
-        if (Connection->State.HandleClosed) {
-            Status = QUIC_STATUS_INVALID_STATE;
-            break;
-        }
-
-        Connection->State.CloseAsync = *(BOOLEAN*)Buffer;
-        Status = QUIC_STATUS_SUCCESS;
-
-        QuicTraceLogConnVerbose(
-            CloseAsyncUpdated,
-            Connection,
-            "Updated CloseAsync to %hhu",
-            Connection->State.CloseAsync);
-
-        break;
-
     //
     // Private
     //
@@ -7421,25 +7390,6 @@ QuicConnParamGet(
             QuicConnGetNetworkStatistics(Connection, BufferLength, (QUIC_NETWORK_STATISTICS *)Buffer);
         break;
 
-    case QUIC_PARAM_CONN_CLOSE_ASYNC:
-
-        if (*BufferLength < sizeof(BOOLEAN)) {
-            *BufferLength = sizeof(BOOLEAN);
-            Status = QUIC_STATUS_BUFFER_TOO_SMALL;
-            break;
-        }
-
-        if (Buffer == NULL) {
-            Status = QUIC_STATUS_INVALID_PARAMETER;
-            break;
-        }
-
-        *BufferLength = sizeof(BOOLEAN);
-        *(BOOLEAN*)Buffer = Connection->State.CloseAsync;
-
-        Status = QUIC_STATUS_SUCCESS;
-        break;
-
     default:
         Status = QUIC_STATUS_INVALID_PARAMETER;
         break;
@@ -7625,14 +7575,6 @@ QuicConnProcessApiOperation(
 
     case QUIC_API_TYPE_CONN_CLOSE:
         QuicConnCloseHandle(Connection);
-        if (Connection->State.CloseAsync) {
-            CXPLAT_TEL_ASSERT(Connection->State.HandleClosed);
-            //
-            // Release the external reference to the connection for async
-            // completion.
-            //
-            QuicConnRelease(Connection, QUIC_CONN_REF_HANDLE_OWNER);
-        }
         break;
 
     case QUIC_API_TYPE_CONN_SHUTDOWN:

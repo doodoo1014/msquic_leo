@@ -20,7 +20,9 @@ set(SOURCES
     crypto.c
     crypto_tls.c
     cubic.c
+    cubicprobe.c
     bbr.c
+    bbrresync.c
     datagram.c
     frame.c
     partition.c

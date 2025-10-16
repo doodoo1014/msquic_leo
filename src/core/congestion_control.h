@@ -1,3 +1,4 @@
+
 /*++
 
     Copyright (c) Microsoft Corporation.
@@ -7,6 +8,8 @@
 
 #include "bbr.h"
 #include "cubic.h"
+#include "cubicprobe.h" // <--- [수정 1] cubicprobe.h 헤더 추가
+#include "bbrresync.h" // <--- [수정 2] bbrresync.h 헤더 추가
 
 typedef struct QUIC_ACK_EVENT {
 
@@ -167,6 +170,8 @@ typedef struct QUIC_CONGESTION_CONTROL {
     union {
         QUIC_CONGESTION_CONTROL_CUBIC Cubic;
         QUIC_CONGESTION_CONTROL_BBR Bbr;
+        QUIC_CONGESTION_CONTROL_CUBICPROBE CubicProbe; // <--- [수정 2] CubicProbe 상태 구조체 추가
+        QUIC_CONGESTION_CONTROL_BBRRESYNC BbrResync; // <--- [수정 3] BbrResync 상태 구조체 추가
     };
 
 } QUIC_CONGESTION_CONTROL;
@@ -216,6 +221,23 @@ QuicCongestionControlInitialize(
     _In_ QUIC_CONGESTION_CONTROL* Cc,
     _In_ const QUIC_SETTINGS_INTERNAL* Settings
     );
+
+//
+// Initializes the CubicProbe congestion control algorithm.
+//
+_IRQL_requires_max_(DISPATCH_LEVEL)
+void
+CubicProbeCongestionControlInitialize(
+    _In_ QUIC_CONGESTION_CONTROL* Cc,
+    _In_ const QUIC_SETTINGS_INTERNAL* Settings
+    ); // <--- [수정 3] CubicProbe 초기화 함수 프로토타입 추가
+
+_IRQL_requires_max_(DISPATCH_LEVEL)
+void
+BbrResyncCongestionControlInitialize(
+    _In_ QUIC_CONGESTION_CONTROL* Cc,
+    _In_ const QUIC_SETTINGS_INTERNAL* Settings
+    ); // <--- [수정 4] BbrResync 초기화 함수 프로토타입 추가
 
 //
 // Returns TRUE if more bytes can be sent on the network.
