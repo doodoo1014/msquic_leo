@@ -1715,7 +1715,7 @@ RunClient(
     printf("60-second measurement complete.\n");
 
 Error:
-    if (Connection != NULL) {
+    if (Ctx.Connected && Connection != NULL) { // Ctx.Connected 조건을 추가!
         MsQuic->ConnectionClose(Connection);
     }
 }
