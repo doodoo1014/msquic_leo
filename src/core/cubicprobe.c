@@ -1786,14 +1786,15 @@ CubicProbeCongestionControlOnDataAcknowledged(
         // 2. [NEW] Proportional growth on every ACK
         uint32_t TargetWindow = CubicProbeGetTargetWindow(Cubic, TimeNowUs, Path->SmoothedRtt, DatagramPayloadLength);
         
-        if (TargetWindow <= Cubic->CongestionWindow) {
-            // TCP-friendly region (Concave)
-            // Use standard CUBIC's gentle growth formula
-            uint64_t CwndGrowth = (uint64_t)100 * DatagramPayloadLength * BytesAcked;
-            CwndGrowth /= Cubic->CongestionWindow;
-            Cubic->CongestionWindow += (uint32_t)CwndGrowth;
+        // if (TargetWindow <= Cubic->CongestionWindow) {
+        //     // TCP-friendly region (Concave)
+        //     // Use standard CUBIC's gentle growth formula
+        //     uint64_t CwndGrowth = (uint64_t)100 * DatagramPayloadLength * BytesAcked;
+        //     CwndGrowth /= Cubic->CongestionWindow;
+        //     Cubic->CongestionWindow += (uint32_t)CwndGrowth;
 
-        } else { // Aggressive growth region (Convex)
+        // } else { // Aggressive growth region (Convex)
+
             // Base proportional growth: (Target - Cwnd) / Cwnd * BytesAcked
             uint64_t CwndGrowth = TargetWindow - Cubic->CongestionWindow;
             CwndGrowth = (CwndGrowth * BytesAcked) / Cubic->CongestionWindow;
@@ -1815,7 +1816,7 @@ CubicProbeCongestionControlOnDataAcknowledged(
                 printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Growth=%u)\n",
                     (void*)Connection, (double)TimeNowUs / 1000.0, CubicProbe->CumulativeSuccessLevel, PrevCwnd, Cubic->CongestionWindow, (uint32_t)CwndGrowth);
             }
-        }
+        // }
     }
 
     if (Cubic->CongestionWindow > 2 * Cubic->BytesInFlightMax) {
