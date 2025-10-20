@@ -1530,7 +1530,7 @@ CubicProbeResetProbeState(
     CubicProbe->RttAtProbeStartUs = 0;
 }
 
-// [신규] AckTarget 계산을 전담하는 헬퍼 함수
+// AckTarget 계산을 전담하는 헬퍼 함수
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static uint32_t
 CubicProbeCalculateAckTarget(
@@ -1540,7 +1540,7 @@ CubicProbeCalculateAckTarget(
     _In_ uint16_t DatagramPayloadLength
     )
 {
-    // 1. 표준 CUBIC 목표 윈도우(W_cubic) 계산 (정수 연산 방식)
+    // CUBIC 목표 윈도우(W_cubic) 계산 (정수 연산 방식)
     const uint32_t W_max_bytes = Cubic->WindowMax;
     const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
     if (Cubic->TimeOfCongAvoidStart > AckEvent->TimeNow) { Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow; }
@@ -1555,7 +1555,6 @@ CubicProbeCalculateAckTarget(
         W_cubic_bytes = W_max_bytes + (uint32_t)CubicTerm;
     }
     
-    // 2. AckTarget 계산
     uint32_t AckTarget;
     if (W_cubic_bytes > Cubic->CongestionWindow) { // Convex region
         if (Cubic->CongestionWindow > 0) {
@@ -1570,7 +1569,7 @@ CubicProbeCalculateAckTarget(
         AckTarget = 100 * (Cubic->CongestionWindow / DatagramPayloadLength);
     }
     
-    // 3. Probe 빈도 가속 로직 적용
+    // Probe 빈도 가속 로직 적용
     if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 1) {
         double accelerationFactor = 1.0 + (1.0 * (CubicProbe->CumulativeSuccessLevel - 1));
         if (accelerationFactor > 1.0) {
@@ -1614,13 +1613,15 @@ CubicProbeCongestionControlReset(
 {
     QUIC_CONGESTION_CONTROL_CUBICPROBE* CubicProbe = &Cc->CubicProbe;
     QUIC_CONGESTION_CONTROL_CUBIC* Cubic = &CubicProbe->Cubic;
-    const QUIC_PATH* Path = &QuicCongestionControlGetConnection(Cc)->Paths[0];
+    QUIC_CONNECTION* Connection = QuicCongestionControlGetConnection(Cc);
+    const QUIC_SETTINGS_INTERNAL* Settings = &Connection->Settings;
+    const QUIC_PATH* Path = &Connection->Paths[0];
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
 
     Cubic->SlowStartThreshold = UINT32_MAX;
     Cubic->IsInRecovery = FALSE;
     Cubic->HasHadCongestionEvent = FALSE;
-    Cubic->CongestionWindow = DatagramPayloadLength * Cubic->InitialWindowPackets;
+    Cubic->CongestionWindow = DatagramPayloadLength * Settings->InitialWindowPackets;
     Cubic->BytesInFlightMax = Cubic->CongestionWindow / 2;
     Cubic->LastSendAllowance = 0;
     if (FullReset) {
@@ -1807,7 +1808,7 @@ CubicProbeCongestionControlOnDataAcknowledged(
 
             uint32_t PrevCwnd = Cubic->CongestionWindow;
             Cubic->CongestionWindow += (GrowthInSegments * DatagramPayloadLength);
-            CubicProbe->AckCountSinceLastGrowth -= AckTarget; // ns-3과 같이 초과분은 남김
+            CubicProbe->AckCountSinceLastGrowth -= AckTarget;
 
             if (CubicProbe->ProbeState != PROBE_INACTIVE) {
                 printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Target=%u)\n",
@@ -1867,7 +1868,7 @@ CubicProbeCongestionControlOnCongestionEvent(
         Cubic->WindowMax = (uint32_t)(Cubic->CongestionWindow * (10.0 + TEN_TIMES_BETA_CUBIC) / 20.0);
     }
 
-    // K 계산 (정수 연산 방식으로 복원)
+    // K 계산 (정수 연산 방식)
     if (DatagramPayloadLength > 0) {
         uint32_t W_max_in_mss = Cubic->WindowMax / DatagramPayloadLength;
         uint32_t radicand = (W_max_in_mss * (10 - TEN_TIMES_BETA_CUBIC) << 9) / TEN_TIMES_C_CUBIC;
@@ -2075,7 +2076,8 @@ CubicProbeCongestionControlInitialize(
     *Cc = QuicCongestionControlCubicProbe;
     QUIC_CONGESTION_CONTROL_CUBICPROBE* CubicProbe = &Cc->CubicProbe;
     QUIC_CONGESTION_CONTROL_CUBIC* Cubic = &CubicProbe->Cubic;
-    const QUIC_PATH* Path = &QuicCongestionControlGetConnection(Cc)->Paths[0];
+    QUIC_CONNECTION* Connection = QuicCongestionControlGetConnection(Cc);
+    const QUIC_PATH* Path = &Connection->Paths[0];
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
 
     Cubic->SlowStartThreshold = UINT32_MAX;
