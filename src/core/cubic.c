@@ -946,7 +946,6 @@
 
 
 
-
 /*++
 
     Copyright (c) Microsoft Corporation.
@@ -968,7 +967,7 @@ Abstract:
 #include "cubic.h"
 
 //
-// BETA and C from RFC8312. 10x multiples for integer arithmetic.
+// BETA and C from RFC8Tid2bis. 10x multiples for integer arithmetic.
 //
 #define TEN_TIMES_BETA_CUBIC 7
 #define TEN_TIMES_C_CUBIC 4
@@ -1253,9 +1252,8 @@ CubicCongestionControlOnCongestionEvent(
     }
 
     if (Connection->Stats.Timing.Start != 0) {
-        double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
         printf("[Cubic][%p][%.3fms] CWND Update (Congestion Event): %u -> %u\n",
-            (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow);
+            (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, PrevCwnd, Cubic->CongestionWindow);
     }
 }
 
@@ -1360,9 +1358,8 @@ CubicCongestionControlOnDataAcknowledged(
         
         if (PrevCwnd != Cubic->CongestionWindow && Connection->Stats.Timing.Start != 0) {
             if (QuicConnIsServer(Connection)) {
-            double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             printf("[Cubic][%p][%.3fms] CWND Update (SlowStart): %u -> %u\n",
-                (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow);
+                (void*)Connection, (double)TimeNowUs / 1000.0, PrevCwnd, Cubic->CongestionWindow);
             }
         }
 
@@ -1421,9 +1418,8 @@ CubicCongestionControlOnDataAcknowledged(
         
         if (PrevCwnd != Cubic->CongestionWindow && Connection->Stats.Timing.Start != 0) {
             if (QuicConnIsServer(Connection)) {
-            double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             printf("[Cubic][%p][%.3fms] CWND Update (CUBIC/AIMD): %u -> %u\n",
-                (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow);
+                (void*)Connection, (double)TimeNowUs / 1000.0, PrevCwnd, Cubic->CongestionWindow);
             }
         }
     }
@@ -1455,9 +1451,8 @@ CubicCongestionControlOnDataLost(
     BOOLEAN PreviousCanSendState = CubicCongestionControlCanSend(Cc);
 
     if (Connection->Stats.Timing.Start != 0) {
-        double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
         printf("[Cubic][%p][%.3fms] LOSS: CWnd=%u, InFlight=%u, LostBytes=%u\n",
-            (void*)Connection, ElapsedMilliseconds, Cubic->CongestionWindow, Cubic->BytesInFlight, LossEvent->NumRetransmittableBytes);
+            (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, Cubic->CongestionWindow, Cubic->BytesInFlight, LossEvent->NumRetransmittableBytes);
     }
 
     if (!Cubic->HasHadCongestionEvent ||
@@ -1489,9 +1484,8 @@ CubicCongestionControlOnEcn(
     BOOLEAN PreviousCanSendState = CubicCongestionControlCanSend(Cc);
 
     if (Connection->Stats.Timing.Start != 0) {
-        double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
         printf("[Cubic][%p][%.3fms] ECN: CWnd=%u, InFlight=%u\n",
-            (void*)Connection, ElapsedMilliseconds, Cubic->CongestionWindow, Cubic->BytesInFlight);
+            (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, Cubic->CongestionWindow, Cubic->BytesInFlight);
     }
 
     if (!Cubic->HasHadCongestionEvent ||
