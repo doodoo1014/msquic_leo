@@ -1448,6 +1448,7 @@
 
 #include "precomp.h"
 #include <stdio.h> // For printf debugging
+// #include <math.h> // math.h is no longer needed
 
 #include "cubicprobe.h"
 
@@ -1495,7 +1496,7 @@ void CubicProbeCongestionControlGetNetworkStatistics(_In_ const QUIC_CONNECTION*
 static void CubicProbeCongestionControlOnCongestionEvent(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ BOOLEAN IsPersistentCongestion, _In_ BOOLEAN Ecn);
 static BOOLEAN CubicProbeCongestionControlUpdateBlockedState(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ BOOLEAN PreviousCanSendState);
 
-// Helper function to calculate the cube root
+// [복원] 정수 기반 CubeRoot 함수
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static uint32_t
 CubeRoot(
@@ -1527,6 +1528,59 @@ CubicProbeResetProbeState(
     CubicProbe->CumulativeSuccessLevel = 0;
     CubicProbe->RttCount = 0;
     CubicProbe->RttAtProbeStartUs = 0;
+}
+
+// [신규] AckTarget 계산을 전담하는 헬퍼 함수
+_IRQL_requires_max_(DISPATCH_LEVEL)
+static uint32_t
+CubicProbeCalculateAckTarget(
+    _In_ QUIC_CONGESTION_CONTROL_CUBIC* Cubic,
+    _In_ QUIC_CONGESTION_CONTROL_CUBICPROBE* CubicProbe,
+    _In_ const QUIC_ACK_EVENT* AckEvent,
+    _In_ uint16_t DatagramPayloadLength
+    )
+{
+    // 1. 표준 CUBIC 목표 윈도우(W_cubic) 계산 (정수 연산 방식)
+    const uint32_t W_max_bytes = Cubic->WindowMax;
+    const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
+    if (Cubic->TimeOfCongAvoidStart > AckEvent->TimeNow) { Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow; }
+    const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, AckEvent->TimeNow) + AckEvent->SmoothedRtt;
+    int64_t TimeDeltaUs = (int64_t)t_us - (int64_t)K_us;
+    int64_t OffsetMs = (TimeDeltaUs / 1000);
+    int64_t CubicTerm = ((((OffsetMs * OffsetMs) >> 10) * OffsetMs * (int64_t)(DatagramPayloadLength * TEN_TIMES_C_CUBIC / 10)) >> 20);
+    uint32_t W_cubic_bytes;
+    if (TimeDeltaUs < 0) {
+        W_cubic_bytes = W_max_bytes - (uint32_t)(-CubicTerm);
+    } else {
+        W_cubic_bytes = W_max_bytes + (uint32_t)CubicTerm;
+    }
+    
+    // 2. AckTarget 계산
+    uint32_t AckTarget;
+    if (W_cubic_bytes > Cubic->CongestionWindow) { // Convex region
+        if (Cubic->CongestionWindow > 0) {
+            uint32_t CwndSegments = Cubic->CongestionWindow / DatagramPayloadLength;
+            uint32_t TargetSegments = W_cubic_bytes / DatagramPayloadLength;
+            uint32_t DiffSegments = TargetSegments > CwndSegments ? TargetSegments - CwndSegments : 1;
+            AckTarget = CwndSegments / DiffSegments;
+        } else {
+            AckTarget = 1;
+        }
+    } else { // Concave region (TCP-friendly)
+        AckTarget = 100 * (Cubic->CongestionWindow / DatagramPayloadLength);
+    }
+    
+    // 3. Probe 빈도 가속 로직 적용
+    if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 1) {
+        double accelerationFactor = 1.0 + (1.0 * (CubicProbe->CumulativeSuccessLevel - 1));
+        if (accelerationFactor > 1.0) {
+            AckTarget = (uint32_t)(AckTarget / accelerationFactor);
+        }
+    }
+
+    if (AckTarget < 2) AckTarget = 2;
+
+    return AckTarget;
 }
 
 // --- START OF COMPLETE V-TABLE FUNCTION IMPLEMENTATIONS ---
@@ -1705,13 +1759,9 @@ CubicProbeCongestionControlOnDataAcknowledged(
         const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
         if (DatagramPayloadLength == 0) goto Exit;
 
-        /******************************************************************
-         * Final Correct Logic Implementation (Based on ns-3 and Final Request)
-         ******************************************************************/
-
-        // 1. Probe 상태 머신: CWND가 W_lastMax를 초과했을 때만 Probe를 활성화.
+        // 1. Probe 상태 관리
         if (AckEvent->MinRttValid) {
-            if (Cubic->WindowLastMax > 0 && Cubic->CongestionWindow >= Cubic->WindowLastMax) {
+            if (Cubic->WindowMax > 0 && Cubic->CongestionWindow >= Cubic->WindowMax) {
                 switch (CubicProbe->ProbeState) {
                     case PROBE_INACTIVE:
                         CubicProbe->RttCount++;
@@ -1722,7 +1772,7 @@ CubicProbeCongestionControlOnDataAcknowledged(
                             CubicProbe->RttCount = 0;
                         }
                         break;
-                    case PROBE_TEST: // Fallthrough
+                    case PROBE_TEST:
                     case PROBE_JUDGMENT:
                         if (CubicProbe->RttAnchorUs == 0 ||
                             (AckEvent->MinRtt * PROBE_RTT_INCREASE_DENOMINATOR <= CubicProbe->RttAnchorUs * PROBE_RTT_INCREASE_NUMERATOR)) {
@@ -1736,7 +1786,6 @@ CubicProbeCongestionControlOnDataAcknowledged(
                         break;
                 }
             } else {
-                // CWND가 W_lastMax보다 작으면 (복구 중이면) Probe 비활성화.
                 if (CubicProbe->ProbeState != PROBE_INACTIVE) {
                     CubicProbeResetProbeState(CubicProbe);
                 }
@@ -1746,57 +1795,19 @@ CubicProbeCongestionControlOnDataAcknowledged(
         // 2. ACK 카운터 누적
         CubicProbe->AckCountSinceLastGrowth += (BytesAcked + DatagramPayloadLength - 1) / DatagramPayloadLength;
 
-        // 3. 표준 CUBIC 목표 윈도우(W_cubic) 및 AckTarget 계산
-        uint32_t W_max_bytes;
-        // Fast Convergence 로직: 이전 W_max보다 현재 CWND가 작으면 W_max를 보정
-        if (Cubic->WindowLastMax > 0 && Cubic->CongestionWindow < Cubic->WindowLastMax) {
-             W_max_bytes = (uint32_t)(Cubic->WindowLastMax * (10 + TEN_TIMES_BETA_CUBIC) / 20.0);
-        } else {
-             W_max_bytes = Cubic->CongestionWindow;
-        }
+        // 3. 헬퍼 함수를 호출하여 AckTarget 계산
+        uint32_t AckTarget = CubicProbeCalculateAckTarget(Cubic, CubicProbe, AckEvent, DatagramPayloadLength);
 
-        const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
-        if (Cubic->TimeOfCongAvoidStart > TimeNowUs) { Cubic->TimeOfCongAvoidStart = TimeNowUs; }
-        const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, TimeNowUs) + AckEvent->SmoothedRtt;
-        int64_t TimeDeltaUs = (int64_t)t_us - (int64_t)K_us;
-        int64_t OffsetMs = (TimeDeltaUs / 1000);
-        int64_t CubicTerm = ((((OffsetMs * OffsetMs) >> 10) * OffsetMs * (int64_t)(DatagramPayloadLength * TEN_TIMES_C_CUBIC / 10)) >> 20);
-        uint32_t W_cubic_bytes;
-        if (TimeDeltaUs < 0) {
-            W_cubic_bytes = W_max_bytes - (uint32_t)(-CubicTerm);
-        } else {
-            W_cubic_bytes = W_max_bytes + (uint32_t)CubicTerm;
-        }
-
-        uint32_t AckTarget;
-        if (W_cubic_bytes > Cubic->CongestionWindow) { // Convex region
-            uint32_t CwndSegments = Cubic->CongestionWindow / DatagramPayloadLength;
-            uint32_t TargetSegments = W_cubic_bytes / DatagramPayloadLength;
-            uint32_t DiffSegments = TargetSegments - CwndSegments;
-            if (DiffSegments == 0) DiffSegments = 1;
-            AckTarget = CwndSegments / DiffSegments;
-        } else { // Concave region (TCP-friendly)
-            AckTarget = 100 * (Cubic->CongestionWindow / DatagramPayloadLength);
-        }
-        
-        // 4. Probe 빈도 가속: Probe 상태일 때만 AckTarget을 줄임
-        if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 1) {
-            double accelerationFactor = 1.0 + (1.0 * (CubicProbe->CumulativeSuccessLevel - 1));
-            AckTarget = (uint32_t)(AckTarget / accelerationFactor);
-        }
-        if (AckTarget < 2) AckTarget = 2;
-
-        // 5. CWND 성장 실행
+        // 4. CWND 성장 실행 (카운터 >= 목표치일 때만)
         if (CubicProbe->AckCountSinceLastGrowth >= AckTarget) {
-            // 6. Probe 크기 가속: Probe 상태일 때만 성장 폭을 늘림
-            uint32_t GrowthInSegments = 1; // 기본 성장은 1 MSS
+            uint32_t GrowthInSegments = 1;
             if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 0) {
                 GrowthInSegments = (CubicProbe->CumulativeSuccessLevel / 2) + 1;
             }
 
             uint32_t PrevCwnd = Cubic->CongestionWindow;
             Cubic->CongestionWindow += (GrowthInSegments * DatagramPayloadLength);
-            CubicProbe->AckCountSinceLastGrowth = 0; // 카운터 리셋
+            CubicProbe->AckCountSinceLastGrowth -= AckTarget; // ns-3과 같이 초과분은 남김
 
             if (CubicProbe->ProbeState != PROBE_INACTIVE) {
                 printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Target=%u)\n",
@@ -1818,6 +1829,7 @@ Exit:
     return CubicProbeCongestionControlUpdateBlockedState(Cc, PreviousCanSendState);
 }
 
+
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static void
 CubicProbeCongestionControlOnCongestionEvent(
@@ -1834,12 +1846,10 @@ CubicProbeCongestionControlOnCongestionEvent(
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
     uint32_t PrevCwnd = Cubic->CongestionWindow;
 
-    // 손실 발생 시, Probe 상태를 완전히 리셋하여 표준 CUBIC 복구를 시작하도록 함.
     CubicProbeResetProbeState(CubicProbe);
     CubicProbe->AckCountSinceLastGrowth = 0;
     CubicProbe->RttAnchorUs = 0;
     
-    // RTT Spike로 인한 호출이 아닐 경우(실제 손실)에만 복구 상태로 진입
     if (!Cubic->IsInRecovery) {
          Cubic->IsInRecovery = TRUE;
     }
@@ -1848,11 +1858,16 @@ CubicProbeCongestionControlOnCongestionEvent(
     if (!Ecn) {
         Cubic->PrevCongestionWindow = Cubic->CongestionWindow;
     }
-
-    // Fast Convergence 로직을 위해 WindowLastMax를 먼저 갱신
-    Cubic->WindowLastMax = (Cubic->CongestionWindow > Cubic->WindowMax) ? Cubic->CongestionWindow : Cubic->WindowMax;
+    
+    Cubic->WindowLastMax = Cubic->WindowMax;
     Cubic->WindowMax = Cubic->CongestionWindow;
+    
+    // Fast Convergence
+    if (Cubic->WindowLastMax > 0 && Cubic->CongestionWindow < Cubic->WindowLastMax) {
+        Cubic->WindowMax = (uint32_t)(Cubic->CongestionWindow * (10.0 + TEN_TIMES_BETA_CUBIC) / 20.0);
+    }
 
+    // K 계산 (정수 연산 방식으로 복원)
     if (DatagramPayloadLength > 0) {
         uint32_t W_max_in_mss = Cubic->WindowMax / DatagramPayloadLength;
         uint32_t radicand = (W_max_in_mss * (10 - TEN_TIMES_BETA_CUBIC) << 9) / TEN_TIMES_C_CUBIC;
@@ -1870,8 +1885,6 @@ CubicProbeCongestionControlOnCongestionEvent(
             MinCongestionWindow,
             (uint32_t)(Cubic->CongestionWindow * ((double)TEN_TIMES_BETA_CUBIC / 10.0)));
     
-    // TimeOfCongAvoidStart는 복구가 끝날 때(첫 ACK 수신 시) 갱신되므로 여기서는 설정하지 않음
-
     printf("[Cubic][%p][%.3fms] CWND Update (Congestion Event): %u -> %u\n",
         (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, PrevCwnd, Cubic->CongestionWindow);
 }
