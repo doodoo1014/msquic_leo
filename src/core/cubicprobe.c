@@ -1453,7 +1453,7 @@
 #include "cubicprobe.h"
 
 //
-// Note: The following field must be added to the QUIC_CONGESTION_CONTROL_CUBICPROBE struct in the corresponding header file (e.g., congestion_control.h)
+// Note: The following field must be added to the QUIC_CONGESTGLISH_CONTROL_CUBICPROBE struct in the corresponding header file (e.g., congestion_control.h)
 //
 // typedef struct QUIC_CONGESTION_CONTROL_CUBICPROBE {
 //     ... (existing fields)
@@ -1700,9 +1700,8 @@ CubicProbeCongestionControlOnDataAcknowledged(
         }
 
         if (PrevCwnd / 100000 != Cubic->CongestionWindow / 100000) {
-            double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             printf("[Cubic][%p][%.3fms] CWND Update (SlowStart): %u -> %u\n",
-                (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow);
+                (void*)Connection, (double)TimeNowUs / 1000.0, PrevCwnd, Cubic->CongestionWindow);
         }
 
     } else { // Congestion Avoidance Phase
@@ -1742,9 +1741,8 @@ CubicProbeCongestionControlOnDataAcknowledged(
                         /******************************************************************
                          * Treat RTT spike as an 'Actual Loss' (Final Version)
                          ******************************************************************/
-                        double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
                         printf("[Cubic][%p][%.3fms] PROBE FAILED (RTT Spike): CWnd=%u. Treating as congestion event.\n",
-                            (void*)Connection, ElapsedMilliseconds, Cubic->CongestionWindow);
+                            (void*)Connection, (double)TimeNowUs / 1000.0, Cubic->CongestionWindow);
 
                         // 1. Reset probe state and anchor RTT
                         CubicProbeResetProbeState(CubicProbe);
@@ -1778,7 +1776,7 @@ CubicProbeCongestionControlOnDataAcknowledged(
                         Cubic->TimeOfCongAvoidStart = TimeNowUs;
 
                         printf("[Cubic][%p][%.3fms] CWND Update (Probe Failure): %u -> %u\n",
-                            (void*)Connection, ElapsedMilliseconds, Cubic->WindowMax, Cubic->CongestionWindow);
+                            (void*)Connection, (double)TimeNowUs / 1000.0, Cubic->WindowMax, Cubic->CongestionWindow);
                     }
                     break;
             }
@@ -1834,13 +1832,12 @@ CubicProbeCongestionControlOnDataAcknowledged(
             Cubic->CongestionWindow += (GrowthInSegments * DatagramPayloadLength);
             CubicProbe->AckCountSinceLastGrowth = 0;
 
-            double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             if (CubicProbe->ProbeState == PROBE_TEST) {
                 printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Target=%u)\n",
-                    (void*)Connection, ElapsedMilliseconds, CubicProbe->CumulativeSuccessLevel, PrevCwnd, Cubic->CongestionWindow, AckTarget);
+                    (void*)Connection, (double)TimeNowUs / 1000.0, CubicProbe->CumulativeSuccessLevel, PrevCwnd, Cubic->CongestionWindow, AckTarget);
             } else {
                  printf("[Cubic][%p][%.3fms] CWND Update (CUBIC): %u -> %u (Target=%u)\n",
-                    (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow, AckTarget);
+                    (void*)Connection, (double)TimeNowUs / 1000.0, PrevCwnd, Cubic->CongestionWindow, AckTarget);
             }
         }
     }
@@ -1906,9 +1903,8 @@ CubicProbeCongestionControlOnCongestionEvent(
             MinCongestionWindow,
             (uint32_t)(Cubic->CongestionWindow * ((double)TEN_TIMES_BETA_CUBIC / 10.0)));
 
-    double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
     printf("[Cubic][%p][%.3fms] CWND Update (Congestion Event): %u -> %u (Wmax=%u, Wlastmax=%u)\n",
-        (void*)Connection, ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow, Cubic->WindowMax, Cubic->WindowLastMax);
+        (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, PrevCwnd, Cubic->CongestionWindow, Cubic->WindowMax, Cubic->WindowLastMax);
 }
 
 _IRQL_requires_max_(DISPATCH_LEVEL)
@@ -1922,9 +1918,8 @@ CubicProbeCongestionControlOnDataLost(
     QUIC_CONNECTION* Connection = QuicCongestionControlGetConnection(Cc);
     BOOLEAN PreviousCanSendState = CubicProbeCongestionControlCanSend(Cc);
 
-    double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
     printf("[Cubic][%p][%.3fms] LOSS EVENT: CWnd=%u, InFlight=%u, LostBytes=%u\n",
-        (void*)Connection, ElapsedMilliseconds, Cubic->CongestionWindow, Cubic->BytesInFlight, LossEvent->NumRetransmittableBytes);
+        (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, Cubic->CongestionWindow, Cubic->BytesInFlight, LossEvent->NumRetransmittableBytes);
 
     if (!Cubic->HasHadCongestionEvent || LossEvent->LargestPacketNumberLost > Cubic->RecoverySentPacketNumber) {
         Cubic->RecoverySentPacketNumber = LossEvent->LargestSentPacketNumber;
@@ -1948,9 +1943,8 @@ CubicProbeCongestionControlOnEcn(
     QUIC_CONNECTION* Connection = QuicCongestionControlGetConnection(Cc);
     BOOLEAN PreviousCanSendState = CubicProbeCongestionControlCanSend(Cc);
 
-    double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
     printf("[Cubic][%p][%.3fms] ECN EVENT: CWnd=%u, InFlight=%u\n",
-        (void*)Connection, ElapsedMilliseconds, Cubic->CongestionWindow, Cubic->BytesInFlight);
+        (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, Cubic->CongestionWindow, Cubic->BytesInFlight);
 
     if (!Cubic->HasHadCongestionEvent || EcnEvent->LargestPacketNumberAcked > Cubic->RecoverySentPacketNumber) {
         Cubic->RecoverySentPacketNumber = EcnEvent->LargestSentPacketNumber;
