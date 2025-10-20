@@ -141,6 +141,7 @@ typedef struct QUIC_CONGESTION_CONTROL_CUBICPROBE {
 
     // **ACK Counter for ns-3 style growth**
     uint32_t AckCountSinceLastGrowth; // ns-3의 m_cWndCnt 역할 (세그먼트 단위)
+    uint64_t RttAnchorUs;
 
 } QUIC_CONGESTION_CONTROL_CUBICPROBE;
 

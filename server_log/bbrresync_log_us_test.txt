@@ -1,0 +1,2353 @@
+Press Enter to exit.
+
+[CC INIT] Selected CC Algorithm: Cubic
+[CC INIT] Selected CC Algorithm: BbrResync
+[273.073ms] CWND Update (Startup): 12200 -> 12339
+[273.114ms] CWND Update (Startup): 12339 -> 13654
+[SERVER-conn][0x7fe5ac0129c0] Connected
+[SERVER-strm][0x7fe5ac03faa0] Peer started
+[SERVER-strm][0x7fe5ac03faa0] Peer request received, starting continuous send...
+[SERVER-strm][0x7fe5ac03faa0] Peer request received, starting continuous send...
+[798.989ms] CWND Update (Startup): 13654 -> 17314
+[803.820ms] CWND Update (Startup): 17314 -> 22194
+[803.847ms] CWND Update (Startup): 22194 -> 27074
+[1377.013ms] CWND Update (Startup): 27074 -> 31954
+[1377.040ms] CWND Update (Startup): 31954 -> 35758
+[1547.825ms] CWND Update (Startup): 35758 -> 40766
+[1550.566ms] CWND Update (Startup): 40766 -> 46094
+[1550.587ms] CWND Update (Startup): 46094 -> 50090
+[1883.849ms] CWND Update (Startup): 50090 -> 55418
+[1891.741ms] CWND Update (Startup): 55418 -> 60746
+[1891.785ms] CWND Update (Startup): 60746 -> 66394
+[1891.799ms] CWND Update (Startup): 66394 -> 72042
+[1891.838ms] CWND Update (Startup): 72042 -> 77690
+[2196.078ms] CWND Update (Startup): 77690 -> 83338
+[2196.113ms] CWND Update (Startup): 83338 -> 88986
+[2196.192ms] CWND Update (Startup): 88986 -> 94874
+[2196.202ms] CWND Update (Startup): 94874 -> 100762
+[2196.212ms] CWND Update (Startup): 100762 -> 106650
+[2196.222ms] CWND Update (Startup): 106650 -> 112538
+[2196.231ms] CWND Update (Startup): 112538 -> 115482
+[2368.742ms] CWND Update (Startup): 115482 -> 121370
+[2392.037ms] CWND Update (Startup): 121370 -> 127258
+[2392.057ms] CWND Update (Startup): 127258 -> 133146
+[2392.067ms] CWND Update (Startup): 133146 -> 139034
+[2392.079ms] CWND Update (Startup): 139034 -> 144922
+[2392.089ms] CWND Update (Startup): 144922 -> 150810
+[2392.098ms] CWND Update (Startup): 150810 -> 156698
+[2392.107ms] CWND Update (Startup): 156698 -> 162586
+[2392.117ms] CWND Update (Startup): 162586 -> 169946
+[2403.682ms] CWND Update (Startup): 169946 -> 171418
+[2588.891ms] CWND Update (Startup): 171418 -> 177306
+[2588.923ms] CWND Update (Startup): 177306 -> 183194
+[2588.940ms] CWND Update (Startup): 183194 -> 189082
+[2592.553ms] CWND Update (Startup): 189082 -> 194970
+[2592.584ms] CWND Update (Startup): 194970 -> 200858
+[2592.598ms] CWND Update (Startup): 200858 -> 206746
+[2592.610ms] CWND Update (Startup): 206746 -> 212634
+[2592.625ms] CWND Update (Startup): 212634 -> 218522
+[2592.638ms] CWND Update (Startup): 218522 -> 224410
+[2592.648ms] CWND Update (Startup): 224410 -> 230298
+[2592.657ms] CWND Update (Startup): 230298 -> 236186
+[2592.668ms] CWND Update (Startup): 236186 -> 242074
+[2593.422ms] CWND Update (Startup): 242074 -> 247962
+[2593.441ms] CWND Update (Startup): 247962 -> 253850
+[2593.456ms] CWND Update (Startup): 253850 -> 259738
+[2593.467ms] CWND Update (Startup): 259738 -> 265626
+[2593.479ms] CWND Update (Startup): 265626 -> 271514
+[2593.491ms] CWND Update (Startup): 271514 -> 277402
+[2593.502ms] CWND Update (Startup): 277402 -> 283290
+[2593.511ms] CWND Update (Startup): 283290 -> 289178
+[2593.522ms] CWND Update (Startup): 289178 -> 295066
+[2593.531ms] CWND Update (Startup): 295066 -> 300954
+[2593.540ms] CWND Update (Startup): 300954 -> 306842
+[2593.549ms] CWND Update (Startup): 306842 -> 312730
+[2593.559ms] CWND Update (Startup): 312730 -> 318618
+[2593.568ms] CWND Update (Startup): 318618 -> 324506
+[2593.578ms] CWND Update (Startup): 324506 -> 330394
+[2593.587ms] CWND Update (Startup): 330394 -> 336022
+[2593.597ms] CWND Update (Startup): 336022 -> 341910
+[2627.529ms] CWND Update (Startup): 341910 -> 343382
+[2760.735ms] CWND Update (Startup): 343382 -> 349270
+[2763.938ms] CWND Update (Startup): 349270 -> 355158
+[2763.969ms] CWND Update (Startup): 355158 -> 361046
+[2763.983ms] CWND Update (Startup): 361046 -> 366934
+[2763.997ms] CWND Update (Startup): 366934 -> 372822
+[2764.009ms] CWND Update (Startup): 372822 -> 378710
+[2764.021ms] CWND Update (Startup): 378710 -> 384598
+[2764.031ms] CWND Update (Startup): 384598 -> 390486
+[2764.041ms] CWND Update (Startup): 390486 -> 396374
+[2764.051ms] CWND Update (Startup): 396374 -> 402262
+[2764.146ms] CWND Update (Startup): 402262 -> 408150
+[2764.157ms] CWND Update (Startup): 408150 -> 414038
+[2770.313ms] CWND Update (Startup): 414038 -> 419926
+[2770.340ms] CWND Update (Startup): 419926 -> 425814
+[2770.356ms] CWND Update (Startup): 425814 -> 431702
+[2775.834ms] CWND Update (Startup): 431702 -> 439062
+[2775.838ms] CWND Update (Startup): 439062 -> 444950
+[2775.841ms] CWND Update (Startup): 444950 -> 450838
+[2775.843ms] CWND Update (Startup): 450838 -> 456726
+[2775.845ms] CWND Update (Startup): 456726 -> 462614
+[2775.847ms] CWND Update (Startup): 462614 -> 468502
+[2775.848ms] CWND Update (Startup): 468502 -> 474390
+[2775.850ms] CWND Update (Startup): 474390 -> 480278
+[2775.851ms] CWND Update (Startup): 480278 -> 486166
+[2775.853ms] CWND Update (Startup): 486166 -> 492054
+[2775.855ms] CWND Update (Startup): 492054 -> 497942
+[2780.363ms] CWND Update (Startup): 497942 -> 565654
+[2787.233ms] CWND Update (Startup): 565654 -> 631894
+[2883.806ms] CWND Update (Startup): 631894 -> 681861
+[2943.804ms] CWND Update (Startup): 681861 -> 751045
+[2943.850ms] CWND Update (Startup): 751045 -> 818757
+[2963.353ms] CWND Update (Startup): 818757 -> 884997
+[2963.361ms] CWND Update (Startup): 884997 -> 955653
+[2963.366ms] CWND Update (Startup): 955653 -> 1023500
+[2969.691ms] CWND Update (Startup): 1023500 -> 1091212
+[2975.335ms] CWND Update (Startup): 1091212 -> 1161868
+[2982.107ms] CWND Update (Startup): 1161868 -> 1232524
+[3008.289ms] CWND Update (Startup): 1232524 -> 1264908
+[3065.569ms] CWND Update (Startup): 1264908 -> 1331148
+[3095.677ms] CWND Update (Startup): 1331148 -> 1365004
+[3135.645ms] CWND Update (Startup): 1365004 -> 1435660
+[3135.694ms] CWND Update (Startup): 1435660 -> 1504844
+[3135.727ms] CWND Update (Startup): 1504844 -> 1574028
+[3140.990ms] CWND Update (Startup): 1574028 -> 1643212
+[3145.144ms] CWND Update (Startup): 1643212 -> 1710924
+[3153.151ms] CWND Update (Startup): 1710924 -> 1780108
+[3161.049ms] CWND Update (Startup): 1780108 -> 1846348
+[3161.370ms] CWND Update (Startup): 1846348 -> 1917004
+[3175.460ms] CWND Update (Startup): 1917004 -> 1983244
+[3179.357ms] CWND Update (Startup): 1983244 -> 2053900
+[3179.368ms] CWND Update (Startup): 2053900 -> 2123084
+[3183.299ms] CWND Update (Startup): 2123084 -> 2190796
+[3189.205ms] CWND Update (Startup): 2190796 -> 2261452
+[3194.124ms] CWND Update (Startup): 2261452 -> 2329164
+[3198.058ms] CWND Update (Startup): 2329164 -> 2396876
+[3207.417ms] CWND Update (Startup): 2396876 -> 2463116
+[3216.765ms] CWND Update (Startup): 2463116 -> 2530828
+[3246.277ms] CWND Update (Startup): 2530828 -> 2598540
+[3277.295ms] CWND Update (Startup): 2598540 -> 2663308
+[3277.305ms] CWND Update (Startup): 2663308 -> 2729548
+[3304.889ms] CWND Update (Startup): 2729548 -> 2731020
+[3320.999ms] CWND Update (Startup): 2731020 -> 2800204
+[3321.524ms] CWND Update (Startup): 2800204 -> 2869388
+[3424.004ms] CWND Update (Startup): 2869388 -> 2913548
+[3424.054ms] CWND Update (Startup): 2913548 -> 2984204
+[3424.090ms] CWND Update (Startup): 2984204 -> 3054860
+[3424.123ms] CWND Update (Startup): 3054860 -> 3125516
+[3424.156ms] CWND Update (Startup): 3125516 -> 3196172
+[3424.189ms] CWND Update (Startup): 3196172 -> 3263884
+[3424.222ms] CWND Update (Startup): 3263884 -> 3334540
+[3424.256ms] CWND Update (Startup): 3334540 -> 3405196
+[3424.293ms] CWND Update (Startup): 3405196 -> 3474380
+[3435.480ms] CWND Update (Startup): 3474380 -> 3545036
+[3443.607ms] CWND Update (Startup): 3545036 -> 3615692
+[3443.621ms] CWND Update (Startup): 3615692 -> 3681932
+[3455.380ms] LOSS EVENT: CWnd=3681932, InFlight=3681936, LostBytes=61824
+[3455.382ms] CWND Update (Congestion Event): 3681932 -> 3558288 (RecoveryWindow)
+[3455.384ms] CWND Update (Startup): 3681932 -> 3751116
+[3455.389ms] LOSS EVENT: CWnd=3620112, InFlight=3550928, LostBytes=2944
+[3455.390ms] CWND Update (Congestion Event): 3751116 -> 3617168 (RecoveryWindow)
+[3455.392ms] CWND Update (Startup): 3751116 -> 3821772
+[3467.784ms] CWND Update (Startup): 3821772 -> 3892428
+[3467.792ms] CWND Update (Startup): 3892428 -> 3963084
+[3467.796ms] CWND Update (Startup): 3963084 -> 4033740
+[3475.548ms] CWND Update (Startup): 4033740 -> 4104396
+[3475.556ms] CWND Update (Startup): 4104396 -> 4175052
+[3487.589ms] CWND Update (Startup): 4175052 -> 4241292
+[3487.596ms] CWND Update (Startup): 4241292 -> 4307532
+[3491.177ms] CWND Update (Startup): 4307532 -> 4378188
+[3500.382ms] CWND Update (Startup): 4378188 -> 4447372
+[3511.475ms] CWND Update (Startup): 4447372 -> 4516556
+[3511.483ms] CWND Update (Startup): 4516556 -> 4585740
+[3515.532ms] CWND Update (Startup): 4585740 -> 4653452
+[3519.590ms] CWND Update (Startup): 4653452 -> 4721164
+[3527.572ms] CWND Update (Startup): 4721164 -> 4791820
+[3528.373ms] LOSS EVENT: CWnd=3617168, InFlight=3617168, LostBytes=1472
+[3528.375ms] CWND Update (Congestion Event): 4791820 -> 3615696 (RecoveryWindow)
+[3528.377ms] CWND Update (Startup): 4791820 -> 4838924
+[3539.232ms] LOSS EVENT: CWnd=3615696, InFlight=3615696, LostBytes=1472
+[3539.234ms] CWND Update (Congestion Event): 4838924 -> 3614224 (RecoveryWindow)
+[3539.236ms] CWND Update (Startup): 4838924 -> 4908108
+[3547.312ms] CWND Update (Startup): 4908108 -> 4975820
+[3547.320ms] CWND Update (Startup): 4975820 -> 5045004
+[3555.462ms] CWND Update (Startup): 5045004 -> 5114188
+[3605.967ms] CWND Update (Startup): 5114188 -> 5184844
+[3611.513ms] CWND Update (Startup): 5184844 -> 5251084
+[3615.856ms] CWND Update (Startup): 5251084 -> 5320268
+[3623.117ms] CWND Update (Startup): 5320268 -> 5386508
+[3624.585ms] CWND Update (Startup): 5386508 -> 5457164
+[3627.521ms] CWND Update (Startup): 5457164 -> 5526348
+[3636.690ms] CWND Update (Startup): 5526348 -> 5592588
+[3639.327ms] CWND Update (Startup): 5592588 -> 5663244
+[3651.310ms] CWND Update (Startup): 5663244 -> 5732428
+[3655.393ms] CWND Update (Startup): 5732428 -> 5803084
+[3663.204ms] CWND Update (Startup): 5803084 -> 5870796
+[3667.504ms] CWND Update (Startup): 5870796 -> 5937036
+[3673.694ms] CWND Update (Startup): 5937036 -> 6003276
+[3673.701ms] CWND Update (Startup): 6003276 -> 6070988
+[3683.325ms] CWND Update (Startup): 6070988 -> 6140172
+[3683.333ms] CWND Update (Startup): 6140172 -> 6210828
+[3691.512ms] CWND Update (Startup): 6210828 -> 6280012
+[3696.533ms] CWND Update (Startup): 6280012 -> 6345665
+[3711.234ms] CWND Update (Startup): 6345665 -> 6411484
+[3715.385ms] LOSS EVENT: CWnd=3614224, InFlight=2251320, LostBytes=1472
+[3715.387ms] CWND Update (Congestion Event): 6411484 -> 3612752 (RecoveryWindow)
+[3812.662ms] LOSS EVENT: CWnd=4192720, InFlight=1054619, LostBytes=64768
+[3812.676ms] CWND Update (Congestion Event): 6411484 -> 4127952 (RecoveryWindow)
+[4291.417ms] LOSS EVENT: CWnd=6411484, InFlight=6412823, LostBytes=33435
+[4291.421ms] CWND Update (Congestion Event): 6411484 -> 6345953 (RecoveryWindow)
+[4483.757ms] LOSS EVENT: CWnd=6384870, InFlight=6386133, LostBytes=30912
+[4483.759ms] CWND Update (Congestion Event): 6411484 -> 6353958 (RecoveryWindow)
+[4483.765ms] LOSS EVENT: CWnd=6355221, InFlight=6332090, LostBytes=2523
+[4483.765ms] CWND Update (Congestion Event): 6411484 -> 6352698 (RecoveryWindow)
+[4501.271ms] LOSS EVENT: CWnd=6353331, InFlight=5302539, LostBytes=33435
+[4501.273ms] CWND Update (Congestion Event): 6411484 -> 6319896 (RecoveryWindow)
+[4595.413ms] LOSS EVENT: CWnd=6319896, InFlight=4111712, LostBytes=32384
+[4595.416ms] CWND Update (Congestion Event): 6411484 -> 6287512 (RecoveryWindow)
+[4595.475ms] LOSS EVENT: CWnd=6287512, InFlight=4065486, LostBytes=1051
+[4595.476ms] CWND Update (Congestion Event): 6411484 -> 6286461 (RecoveryWindow)
+[4595.478ms] CWND Update (Startup): 6411484 -> 6481719
+[4595.484ms] CWND Update (Startup): 6481719 -> 6552375
+[4608.022ms] CWND Update (Startup): 6552375 -> 6618615
+[4608.031ms] CWND Update (Startup): 6618615 -> 6687799
+[4614.531ms] CWND Update (Startup): 6687799 -> 6756983
+[4619.682ms] CWND Update (Startup): 6756983 -> 6826167
+[4630.809ms] CWND Update (Startup): 6826167 -> 6896823
+[4630.818ms] CWND Update (Startup): 6896823 -> 6964535
+[4708.282ms] LOSS EVENT: CWnd=6286461, InFlight=2758778, LostBytes=61824
+[4708.284ms] CWND Update (Congestion Event): 6964535 -> 6224637 (RecoveryWindow)
+[4708.290ms] LOSS EVENT: CWnd=6224637, InFlight=2661626, LostBytes=2944
+[4708.338ms] CWND Update (Congestion Event): 6964535 -> 6221693 (RecoveryWindow)
+[4801.040ms] CWND Update (BBR): 6964535 -> 6158766
+[4815.481ms] LOSS EVENT: CWnd=6158766, InFlight=1329502, LostBytes=5888
+[4815.493ms] CWND Update (Congestion Event): 6158766 -> 6494013 (RecoveryWindow)
+[4819.026ms] LOSS EVENT: CWnd=6158766, InFlight=1323650, LostBytes=1472
+[4819.057ms] CWND Update (Congestion Event): 6158766 -> 6498429 (RecoveryWindow)
+[4993.341ms] LOSS EVENT: CWnd=6158766, InFlight=106771, LostBytes=32384
+[4993.356ms] CWND Update (Congestion Event): 6158766 -> 7682960 (RecoveryWindow)
+[4993.387ms] LOSS EVENT: CWnd=6158766, InFlight=69328, LostBytes=36
+[4993.391ms] CWND Update (Congestion Event): 6158766 -> 7687983 (RecoveryWindow)
+[5016.332ms] CWND Update (BBR): 6158766 -> 6139264
+[5660.993ms] LOSS EVENT: CWnd=6139264, InFlight=5375051, LostBytes=29440
+[5660.996ms] CWND Update (Congestion Event): 6139264 -> 9048462 (RecoveryWindow)
+[5661.002ms] LOSS EVENT: CWnd=6139264, InFlight=5293461, LostBytes=3995
+[5661.003ms] CWND Update (Congestion Event): 6139264 -> 9096617 (RecoveryWindow)
+[5661.510ms] CWND Update (BBR): 6139264 -> 6158061
+[5661.516ms] CWND Update (BBR): 6158061 -> 6227793
+[5661.521ms] CWND Update (BBR): 6227793 -> 6297552
+[5661.526ms] CWND Update (BBR): 6297552 -> 6367284
+[5661.531ms] CWND Update (BBR): 6367284 -> 6435572
+[5661.535ms] CWND Update (BBR): 6435572 -> 6502373
+[5661.541ms] CWND Update (BBR): 6502373 -> 6572133
+[5662.846ms] CWND Update (BBR): 6572133 -> 6624109
+[5662.852ms] CWND Update (BBR): 6624109 -> 6693407
+[5662.857ms] CWND Update (BBR): 6693407 -> 6763166
+[5663.051ms] CWND Update (BBR): 6763166 -> 6830317
+[5663.057ms] LOSS EVENT: CWnd=6830317, InFlight=6570288, LostBytes=30912
+[5663.057ms] CWND Update (Congestion Event): 6830317 -> 10241818 (RecoveryWindow)
+[5663.058ms] CWND Update (BBR): 6830317 -> 6859267
+[5663.062ms] LOSS EVENT: CWnd=6859267, InFlight=6510357, LostBytes=2523
+[5663.062ms] CWND Update (Congestion Event): 6859267 -> 10268314 (RecoveryWindow)
+[5663.064ms] CWND Update (BBR): 6859267 -> 6924584
+[5663.068ms] CWND Update (BBR): 6924584 -> 6994316
+[5663.072ms] CWND Update (BBR): 6994316 -> 7064075
+[5663.076ms] CWND Update (BBR): 7064075 -> 7133834
+[5663.081ms] CWND Update (BBR): 7133834 -> 7203594
+[5663.086ms] CWND Update (BBR): 7203594 -> 7273326
+[5663.091ms] CWND Update (BBR): 7273326 -> 7343085
+[5663.095ms] CWND Update (BBR): 7343085 -> 7411359
+[5663.100ms] CWND Update (BBR): 7411359 -> 7481118
+[5663.104ms] CWND Update (BBR): 7481118 -> 7547920
+[5663.142ms] CWND Update (BBR): 7547920 -> 7617229
+[5663.147ms] CWND Update (BBR): 7617229 -> 7686974
+[5663.152ms] CWND Update (BBR): 7686974 -> 7753776
+[5663.157ms] CWND Update (BBR): 7753776 -> 7823522
+[5663.162ms] CWND Update (BBR): 7823522 -> 7892846
+[5663.166ms] CWND Update (BBR): 7892846 -> 7958176
+[5663.174ms] CWND Update (BBR): 7958176 -> 8027894
+[5663.179ms] CWND Update (BBR): 8027894 -> 8097640
+[5663.186ms] LOSS EVENT: CWnd=8097640, InFlight=5301236, LostBytes=30912
+[5663.186ms] CWND Update (Congestion Event): 8097640 -> 11477441 (RecoveryWindow)
+[5663.187ms] CWND Update (BBR): 8097640 -> 8128036
+[5663.220ms] LOSS EVENT: CWnd=8128036, InFlight=5270780, LostBytes=2523
+[5663.221ms] CWND Update (Congestion Event): 8128036 -> 11505409 (RecoveryWindow)
+[5663.223ms] CWND Update (BBR): 8128036 -> 8192956
+[5756.913ms] LOSS EVENT: CWnd=8192956, InFlight=4120748, LostBytes=32384
+[5756.917ms] CWND Update (Congestion Event): 8192956 -> 12623063 (RecoveryWindow)
+[5763.430ms] LOSS EVENT: CWnd=8192956, InFlight=4065690, LostBytes=1051
+[5763.432ms] CWND Update (Congestion Event): 8192956 -> 12677106 (RecoveryWindow)
+[5844.620ms] CWND Update (BBR): 8192956 -> 8263191
+[5856.056ms] CWND Update (BBR): 8263191 -> 8332375
+[5856.067ms] CWND Update (BBR): 8332375 -> 8400087
+[5863.630ms] CWND Update (BBR): 8400087 -> 8467799
+[5875.420ms] LOSS EVENT: CWnd=8467799, InFlight=2832594, LostBytes=38272
+[5875.422ms] CWND Update (Congestion Event): 8467799 -> 13871937 (RecoveryWindow)
+[5875.423ms] CWND Update (BBR): 8467799 -> 8500183
+[5875.524ms] LOSS EVENT: CWnd=8500183, InFlight=2800246, LostBytes=1472
+[5875.525ms] CWND Update (Congestion Event): 8500183 -> 13902849 (RecoveryWindow)
+[5875.527ms] CWND Update (BBR): 8500183 -> 8570839
+[5876.365ms] CWND Update (BBR): 8570839 -> 8618030
+[6040.981ms] LOSS EVENT: CWnd=8618030, InFlight=1568218, LostBytes=63296
+[6040.994ms] CWND Update (Congestion Event): 8618030 -> 15071617 (RecoveryWindow)
+[6041.017ms] LOSS EVENT: CWnd=8618030, InFlight=1493146, LostBytes=1472
+[6041.020ms] CWND Update (Congestion Event): 8618030 -> 15081921 (RecoveryWindow)
+[6092.025ms] LOSS EVENT: CWnd=8618030, InFlight=308222, LostBytes=61824
+[6092.038ms] CWND Update (Congestion Event): 8618030 -> 16268353 (RecoveryWindow)
+[6092.060ms] LOSS EVENT: CWnd=8618030, InFlight=222846, LostBytes=2944
+[6092.064ms] CWND Update (Congestion Event): 8618030 -> 16288961 (RecoveryWindow)
+[6389.698ms] LOSS EVENT: CWnd=8618030, InFlight=3903296, LostBytes=33435
+[6389.702ms] CWND Update (Congestion Event): 8618030 -> 17748286 (RecoveryWindow)
+[6556.877ms] LOSS EVENT: CWnd=8618030, InFlight=2684922, LostBytes=30912
+[6556.889ms] CWND Update (Congestion Event): 8618030 -> 18935754 (RecoveryWindow)
+[6556.916ms] LOSS EVENT: CWnd=8618030, InFlight=2603332, LostBytes=2523
+[6556.919ms] CWND Update (Congestion Event): 8618030 -> 18983909 (RecoveryWindow)
+[6580.027ms] LOSS EVENT: CWnd=8618030, InFlight=2100762, LostBytes=32384
+[6580.039ms] CWND Update (Congestion Event): 8618030 -> 19485013 (RecoveryWindow)
+[6580.075ms] LOSS EVENT: CWnd=8618030, InFlight=1998564, LostBytes=1051
+[6580.078ms] CWND Update (Congestion Event): 8618030 -> 19553776 (RecoveryWindow)
+[6580.963ms] LOSS EVENT: CWnd=8618030, InFlight=1409988, LostBytes=30912
+[6580.975ms] CWND Update (Congestion Event): 8618030 -> 20143830 (RecoveryWindow)
+[6595.858ms] LOSS EVENT: CWnd=8618030, InFlight=1363761, LostBytes=2523
+[6595.869ms] CWND Update (Congestion Event): 8618030 -> 20187569 (RecoveryWindow)
+[6634.944ms] LOSS EVENT: CWnd=8618030, InFlight=822919, LostBytes=33435
+[6634.948ms] CWND Update (Congestion Event): 8618030 -> 20694982 (RecoveryWindow)
+[6697.235ms] LOSS EVENT: CWnd=8618030, InFlight=265886, LostBytes=32384
+[6697.248ms] CWND Update (Congestion Event): 8618030 -> 21219638 (RecoveryWindow)
+[6720.609ms] LOSS EVENT: CWnd=8618030, InFlight=225548, LostBytes=1051
+[6720.617ms] CWND Update (Congestion Event): 8618030 -> 21258961 (RecoveryWindow)
+[6916.525ms] CWND Update (BBR): 8618030 -> 8607506
+[7206.833ms] LOSS EVENT: CWnd=8607506, InFlight=8608793, LostBytes=30912
+[7206.838ms] CWND Update (Congestion Event): 8607506 -> 8546969 (RecoveryWindow)
+[7206.844ms] LOSS EVENT: CWnd=8577881, InFlight=8518371, LostBytes=2523
+[7206.845ms] CWND Update (Congestion Event): 8607506 -> 8575358 (RecoveryWindow)
+[7245.591ms] LOSS EVENT: CWnd=8579780, InFlight=8580622, LostBytes=33435
+[7245.594ms] CWND Update (Congestion Event): 8607506 -> 8546345 (RecoveryWindow)
+[7352.658ms] LOSS EVENT: CWnd=8557927, InFlight=8491057, LostBytes=33435
+[7352.662ms] CWND Update (Congestion Event): 8607506 -> 8524492 (RecoveryWindow)
+[7452.767ms] LOSS EVENT: CWnd=8536704, InFlight=8466890, LostBytes=32384
+[7452.771ms] CWND Update (Congestion Event): 8607506 -> 8504320 (RecoveryWindow)
+[7461.552ms] LOSS EVENT: CWnd=8504320, InFlight=8504532, LostBytes=1051
+[7461.555ms] CWND Update (Congestion Event): 8607506 -> 8503269 (RecoveryWindow)
+[7625.619ms] LOSS EVENT: CWnd=8504323, InFlight=7369282, LostBytes=32384
+[7625.631ms] CWND Update (Congestion Event): 8607506 -> 8471939 (RecoveryWindow)
+[7625.639ms] LOSS EVENT: CWnd=8471939, InFlight=7284748, LostBytes=1051
+[7625.640ms] CWND Update (Congestion Event): 8607506 -> 8470888 (RecoveryWindow)
+[7665.528ms] LOSS EVENT: CWnd=8470888, InFlight=6151330, LostBytes=29440
+[7665.532ms] CWND Update (Congestion Event): 8607506 -> 8441448 (RecoveryWindow)
+[7686.705ms] LOSS EVENT: CWnd=8441448, InFlight=6116459, LostBytes=3995
+[7686.708ms] CWND Update (Congestion Event): 8607506 -> 8437453 (RecoveryWindow)
+[7768.981ms] LOSS EVENT: CWnd=8437453, InFlight=4898086, LostBytes=29440
+[7769.007ms] CWND Update (Congestion Event): 8607506 -> 8408013 (RecoveryWindow)
+[7770.460ms] LOSS EVENT: CWnd=8408013, InFlight=4845972, LostBytes=3995
+[7770.461ms] CWND Update (Congestion Event): 8607506 -> 8404018 (RecoveryWindow)
+[7876.091ms] LOSS EVENT: CWnd=8404018, InFlight=3687939, LostBytes=2944
+[7876.096ms] CWND Update (Congestion Event): 8607506 -> 8401074 (RecoveryWindow)
+[7876.113ms] LOSS EVENT: CWnd=8401074, InFlight=3615811, LostBytes=1472
+[7876.114ms] CWND Update (Congestion Event): 8607506 -> 8399602 (RecoveryWindow)
+[7926.488ms] LOSS EVENT: CWnd=8607506, InFlight=3024103, LostBytes=2944
+[7926.494ms] CWND Update (Congestion Event): 8607506 -> 8717554 (RecoveryWindow)
+[7976.879ms] LOSS EVENT: CWnd=8607506, InFlight=2411787, LostBytes=5888
+[7976.883ms] CWND Update (Congestion Event): 8607506 -> 9324018 (RecoveryWindow)
+[8028.718ms] LOSS EVENT: CWnd=8607506, InFlight=1803887, LostBytes=4416
+[8028.722ms] CWND Update (Congestion Event): 8607506 -> 9927538 (RecoveryWindow)
+[8150.537ms] LOSS EVENT: CWnd=8607506, InFlight=1228371, LostBytes=4416
+[8150.553ms] CWND Update (Congestion Event): 8607506 -> 10498674 (RecoveryWindow)
+[8150.581ms] LOSS EVENT: CWnd=8607506, InFlight=1206291, LostBytes=1472
+[8150.584ms] CWND Update (Congestion Event): 8607506 -> 10514866 (RecoveryWindow)
+[8171.999ms] LOSS EVENT: CWnd=8607506, InFlight=792695, LostBytes=1472
+[8172.018ms] CWND Update (Congestion Event): 8607506 -> 10931442 (RecoveryWindow)
+[8172.083ms] LOSS EVENT: CWnd=8607506, InFlight=732343, LostBytes=1472
+[8172.090ms] CWND Update (Congestion Event): 8607506 -> 10988850 (RecoveryWindow)
+[8172.328ms] LOSS EVENT: CWnd=8607506, InFlight=382007, LostBytes=1472
+[8172.334ms] CWND Update (Congestion Event): 8607506 -> 11336242 (RecoveryWindow)
+[8172.579ms] LOSS EVENT: CWnd=8607506, InFlight=327543, LostBytes=4416
+[8172.587ms] CWND Update (Congestion Event): 8607506 -> 11384818 (RecoveryWindow)
+[8460.401ms] LOSS EVENT: CWnd=8607506, InFlight=8608799, LostBytes=30912
+[8460.408ms] CWND Update (Congestion Event): 8607506 -> 8546975 (RecoveryWindow)
+[8476.564ms] LOSS EVENT: CWnd=8577887, InFlight=8578729, LostBytes=2523
+[8476.567ms] CWND Update (Congestion Event): 8607506 -> 8575364 (RecoveryWindow)
+[8507.385ms] LOSS EVENT: CWnd=8578944, InFlight=8579786, LostBytes=32384
+[8507.387ms] CWND Update (Congestion Event): 8607506 -> 8546560 (RecoveryWindow)
+[8507.393ms] LOSS EVENT: CWnd=8547402, InFlight=8490836, LostBytes=1051
+[8507.394ms] CWND Update (Congestion Event): 8607506 -> 8546351 (RecoveryWindow)
+[8668.610ms] LOSS EVENT: CWnd=8552251, InFlight=8274888, LostBytes=30912
+[8668.614ms] CWND Update (Congestion Event): 8607506 -> 8521339 (RecoveryWindow)
+[8668.620ms] LOSS EVENT: CWnd=8521339, InFlight=8180050, LostBytes=2523
+[8668.620ms] CWND Update (Congestion Event): 8607506 -> 8518816 (RecoveryWindow)
+[8707.126ms] LOSS EVENT: CWnd=8526615, InFlight=8527457, LostBytes=30912
+[8707.130ms] CWND Update (Congestion Event): 8607506 -> 8495703 (RecoveryWindow)
+[8710.981ms] LOSS EVENT: CWnd=8496545, InFlight=8497387, LostBytes=2523
+[8710.983ms] CWND Update (Congestion Event): 8607506 -> 8494022 (RecoveryWindow)
+[8805.479ms] LOSS EVENT: CWnd=8496548, InFlight=7468097, LostBytes=30912
+[8805.484ms] CWND Update (Congestion Event): 8607506 -> 8465636 (RecoveryWindow)
+[8815.547ms] LOSS EVENT: CWnd=8465636, InFlight=7418921, LostBytes=2523
+[8815.552ms] CWND Update (Congestion Event): 8607506 -> 8463113 (RecoveryWindow)
+[8904.555ms] LOSS EVENT: CWnd=8463113, InFlight=6264474, LostBytes=33435
+[8904.563ms] CWND Update (Congestion Event): 8607506 -> 8429678 (RecoveryWindow)
+[9018.821ms] LOSS EVENT: CWnd=8429678, InFlight=4983647, LostBytes=32384
+[9018.826ms] CWND Update (Congestion Event): 8607506 -> 8397294 (RecoveryWindow)
+[9018.832ms] LOSS EVENT: CWnd=8397294, InFlight=4910889, LostBytes=1051
+[9018.833ms] CWND Update (Congestion Event): 8607506 -> 8396243 (RecoveryWindow)
+[9203.195ms] LOSS EVENT: CWnd=8396243, InFlight=3705543, LostBytes=2944
+[9203.199ms] CWND Update (Congestion Event): 8607506 -> 8393299 (RecoveryWindow)
+[9203.315ms] LOSS EVENT: CWnd=8534611, InFlight=3155051, LostBytes=61824
+[9203.337ms] CWND Update (Congestion Event): 8607506 -> 8472787 (RecoveryWindow)
+[9203.348ms] LOSS EVENT: CWnd=8537555, InFlight=3028459, LostBytes=2944
+[9203.349ms] CWND Update (Congestion Event): 8607506 -> 8534611 (RecoveryWindow)
+[9279.136ms] LOSS EVENT: CWnd=8607506, InFlight=1853839, LostBytes=60352
+[9279.151ms] CWND Update (Congestion Event): 8607506 -> 9710739 (RecoveryWindow)
+[9283.128ms] LOSS EVENT: CWnd=8607506, InFlight=1786163, LostBytes=4416
+[9283.140ms] CWND Update (Congestion Event): 8607506 -> 9774035 (RecoveryWindow)
+[9409.170ms] LOSS EVENT: CWnd=8607506, InFlight=489367, LostBytes=1472
+[9409.176ms] CWND Update (Congestion Event): 8607506 -> 11069395 (RecoveryWindow)
+[9409.290ms] LOSS EVENT: CWnd=8607506, InFlight=474647, LostBytes=4416
+[9409.291ms] CWND Update (Congestion Event): 8607506 -> 11078227 (RecoveryWindow)
+[9578.897ms] CWND Update (BBR): 8607506 -> 8595134
+[9875.729ms] LOSS EVENT: CWnd=8595134, InFlight=927581, LostBytes=32384
+[9875.744ms] CWND Update (Congestion Event): 8595134 -> 862813 (RecoveryWindow)
+[9879.055ms] LOSS EVENT: CWnd=895197, InFlight=860746, LostBytes=1051
+[9879.067ms] CWND Update (Congestion Event): 8595134 -> 894146 (RecoveryWindow)
+[10045.126ms] CWND Update (BBR): 8595134 -> 8481314
+[10243.122ms] CWND Update (BBR): 8481314 -> 8058496
+[10250.899ms] CWND Update (BBR): 8058496 -> 4666719
+[10250.906ms] CWND Update (BBR): 4666719 -> 4736424
+[10251.251ms] CWND Update (BBR): 4736424 -> 4800131
+[10256.518ms] CWND Update (BBR): 4800131 -> 4863484
+[10256.526ms] CWND Update (BBR): 4863484 -> 4933203
+[10555.461ms] CWND Update (BBR): 4933203 -> 4935639
+[10555.471ms] LOSS EVENT: CWnd=4935639, InFlight=4795776, LostBytes=64768
+[10555.471ms] CWND Update (Congestion Event): 4935639 -> 4666240 (RecoveryWindow)
+[10555.473ms] CWND Update (BBR): 4935639 -> 4947237
+[10555.478ms] CWND Update (BBR): 4947237 -> 5014868
+[10555.482ms] CWND Update (BBR): 5014868 -> 5081026
+[10761.052ms] CWND Update (BBR): 5081026 -> 5097385
+[10761.063ms] LOSS EVENT: CWnd=4731008, InFlight=4455744, LostBytes=61824
+[10761.064ms] CWND Update (Congestion Event): 5097385 -> 4669184 (RecoveryWindow)
+[10761.065ms] CWND Update (BBR): 5097385 -> 5156142
+[10761.071ms] LOSS EVENT: CWnd=4669184, InFlight=4335040, LostBytes=2944
+[10761.071ms] CWND Update (Congestion Event): 5156142 -> 4666240 (RecoveryWindow)
+[10761.073ms] CWND Update (BBR): 5156142 -> 5223732
+[10761.078ms] CWND Update (BBR): 5223732 -> 5294292
+[10761.082ms] CWND Update (BBR): 5294292 -> 5364880
+[10772.595ms] CWND Update (BBR): 5364880 -> 5416978
+[10772.733ms] CWND Update (BBR): 5416978 -> 5485780
+[10772.739ms] CWND Update (BBR): 5485780 -> 5553397
+[10772.743ms] CWND Update (BBR): 5553397 -> 5622526
+[10782.300ms] CWND Update (BBR): 5622526 -> 5630643
+[10827.030ms] LOSS EVENT: CWnd=4666240, InFlight=4666240, LostBytes=63296
+[10827.033ms] CWND Update (Congestion Event): 5630643 -> 4602944 (RecoveryWindow)
+[10832.456ms] LOSS EVENT: CWnd=4602944, InFlight=4602944, LostBytes=1472
+[10832.458ms] CWND Update (Congestion Event): 5630643 -> 4601472 (RecoveryWindow)
+[10955.189ms] LOSS EVENT: CWnd=4601472, InFlight=4530816, LostBytes=60352
+[10955.194ms] CWND Update (Congestion Event): 5630643 -> 4541120 (RecoveryWindow)
+[10967.291ms] LOSS EVENT: CWnd=4541120, InFlight=4541120, LostBytes=4416
+[10967.294ms] CWND Update (Congestion Event): 5630643 -> 4536704 (RecoveryWindow)
+[11047.254ms] CWND Update (BBR): 5630643 -> 5663067
+[11048.610ms] LOSS EVENT: CWnd=5500864, InFlight=5500864, LostBytes=4416
+[11048.612ms] CWND Update (Congestion Event): 5663067 -> 5496448 (RecoveryWindow)
+[11048.614ms] CWND Update (BBR): 5663067 -> 5711395
+[11055.018ms] LOSS EVENT: CWnd=5562688, InFlight=5562688, LostBytes=2944
+[11055.020ms] CWND Update (Congestion Event): 5711395 -> 5559744 (RecoveryWindow)
+[11055.022ms] CWND Update (BBR): 5711395 -> 5772839
+[11062.976ms] CWND Update (BBR): 5772839 -> 5839079
+[11067.025ms] CWND Update (BBR): 5839079 -> 5908263
+[11076.153ms] CWND Update (BBR): 5908263 -> 5911101
+[11076.173ms] CWND Update (BBR): 5911101 -> 5942133
+[11166.951ms] LOSS EVENT: CWnd=5942133, InFlight=5942464, LostBytes=2944
+[11166.954ms] CWND Update (Congestion Event): 5942133 -> 6918400 (RecoveryWindow)
+[11296.973ms] LOSS EVENT: CWnd=5942133, InFlight=5942464, LostBytes=2944
+[11296.979ms] CWND Update (Congestion Event): 5942133 -> 8141632 (RecoveryWindow)
+[11296.991ms] CWND Update (BBR): 5942133 -> 5973384
+[11307.292ms] CWND Update (BBR): 5973384 -> 6029407
+[11307.300ms] CWND Update (BBR): 6029407 -> 6096988
+[11377.927ms] LOSS EVENT: CWnd=6096988, InFlight=6097024, LostBytes=5888
+[11377.930ms] CWND Update (Congestion Event): 6096988 -> 9423744 (RecoveryWindow)
+[11382.900ms] LOSS EVENT: CWnd=6096988, InFlight=6097024, LostBytes=2944
+[11382.902ms] CWND Update (Congestion Event): 6096988 -> 9450240 (RecoveryWindow)
+[11478.350ms] LOSS EVENT: CWnd=6096988, InFlight=5895360, LostBytes=60352
+[11478.353ms] CWND Update (Congestion Event): 6096988 -> 10535104 (RecoveryWindow)
+[11483.194ms] LOSS EVENT: CWnd=6096988, InFlight=6097024, LostBytes=4416
+[11483.197ms] CWND Update (Congestion Event): 6096988 -> 10599872 (RecoveryWindow)
+[11697.084ms] LOSS EVENT: CWnd=6096988, InFlight=5590752, LostBytes=60352
+[11697.089ms] CWND Update (Congestion Event): 6096988 -> 12935936 (RecoveryWindow)
+[11697.392ms] LOSS EVENT: CWnd=6096988, InFlight=5526020, LostBytes=4416
+[11697.394ms] CWND Update (Congestion Event): 6096988 -> 12996288 (RecoveryWindow)
+[11826.466ms] LOSS EVENT: CWnd=6096988, InFlight=4226280, LostBytes=60352
+[11826.468ms] CWND Update (Congestion Event): 6096988 -> 14235712 (RecoveryWindow)
+[11826.472ms] LOSS EVENT: CWnd=6096988, InFlight=4154152, LostBytes=4416
+[11826.473ms] CWND Update (Congestion Event): 6096988 -> 14243072 (RecoveryWindow)
+[11826.554ms] CWND Update (BBR): 6096988 -> 6136774
+[11905.399ms] LOSS EVENT: CWnd=6136774, InFlight=2917708, LostBytes=1472
+[11905.403ms] CWND Update (Congestion Event): 6136774 -> 15538432 (RecoveryWindow)
+[11910.835ms] LOSS EVENT: CWnd=6136774, InFlight=2905968, LostBytes=2944
+[11910.837ms] CWND Update (Congestion Event): 6136774 -> 15547264 (RecoveryWindow)
+[12005.346ms] LOSS EVENT: CWnd=6136774, InFlight=1738708, LostBytes=4416
+[12005.358ms] CWND Update (Congestion Event): 6136774 -> 16710144 (RecoveryWindow)
+[12011.571ms] LOSS EVENT: CWnd=6136774, InFlight=1682808, LostBytes=1472
+[12011.573ms] CWND Update (Congestion Event): 6136774 -> 16764608 (RecoveryWindow)
+[12059.748ms] LOSS EVENT: CWnd=6136774, InFlight=1071964, LostBytes=4416
+[12059.753ms] CWND Update (Congestion Event): 6136774 -> 17371072 (RecoveryWindow)
+[12113.521ms] LOSS EVENT: CWnd=6136774, InFlight=419904, LostBytes=2944
+[12113.534ms] CWND Update (Congestion Event): 6136774 -> 18020224 (RecoveryWindow)
+[12170.954ms] LOSS EVENT: CWnd=6136774, InFlight=390500, LostBytes=2944
+[12170.957ms] CWND Update (Congestion Event): 6136774 -> 18046720 (RecoveryWindow)
+[12641.274ms] LOSS EVENT: CWnd=6136774, InFlight=6071307, LostBytes=32384
+[12641.278ms] CWND Update (Congestion Event): 6136774 -> 6006539 (RecoveryWindow)
+[12651.200ms] LOSS EVENT: CWnd=6038923, InFlight=6039765, LostBytes=1051
+[12651.202ms] CWND Update (Congestion Event): 6136774 -> 6037872 (RecoveryWindow)
+[12703.759ms] LOSS EVENT: CWnd=6044820, InFlight=5979422, LostBytes=30912
+[12703.762ms] CWND Update (Congestion Event): 6136774 -> 6013908 (RecoveryWindow)
+[12711.380ms] LOSS EVENT: CWnd=6013908, InFlight=6015171, LostBytes=2523
+[12711.382ms] CWND Update (Congestion Event): 6136774 -> 6011385 (RecoveryWindow)
+[12863.881ms] LOSS EVENT: CWnd=6020862, InFlight=5881655, LostBytes=29440
+[12863.884ms] CWND Update (Congestion Event): 6136774 -> 5991422 (RecoveryWindow)
+[12864.078ms] LOSS EVENT: CWnd=5991422, InFlight=5991425, LostBytes=3995
+[12864.079ms] CWND Update (Congestion Event): 6136774 -> 5987427 (RecoveryWindow)
+[12915.470ms] LOSS EVENT: CWnd=5992070, InFlight=5923728, LostBytes=30912
+[12915.473ms] CWND Update (Congestion Event): 6136774 -> 5961158 (RecoveryWindow)
+[12929.333ms] LOSS EVENT: CWnd=5961158, InFlight=5961370, LostBytes=2523
+[12929.335ms] CWND Update (Congestion Event): 6136774 -> 5958635 (RecoveryWindow)
+[13016.817ms] LOSS EVENT: CWnd=5964329, InFlight=5965171, LostBytes=30912
+[13016.820ms] CWND Update (Congestion Event): 6136774 -> 5933417 (RecoveryWindow)
+[13021.313ms] LOSS EVENT: CWnd=5934259, InFlight=5935101, LostBytes=2523
+[13021.316ms] CWND Update (Congestion Event): 6136774 -> 5931736 (RecoveryWindow)
+[13117.168ms] LOSS EVENT: CWnd=5935104, InFlight=5935104, LostBytes=1472
+[13117.170ms] CWND Update (Congestion Event): 6136774 -> 5933632 (RecoveryWindow)
+[13177.175ms] LOSS EVENT: CWnd=6136774, InFlight=5358708, LostBytes=4416
+[13177.177ms] CWND Update (Congestion Event): 6136774 -> 6376704 (RecoveryWindow)
+[13237.084ms] LOSS EVENT: CWnd=6136774, InFlight=4655128, LostBytes=4416
+[13237.086ms] CWND Update (Congestion Event): 6136774 -> 7075904 (RecoveryWindow)
+[13277.320ms] LOSS EVENT: CWnd=6136774, InFlight=4178236, LostBytes=33856
+[13277.322ms] CWND Update (Congestion Event): 6136774 -> 7518976 (RecoveryWindow)
+[13279.109ms] LOSS EVENT: CWnd=6136774, InFlight=4120864, LostBytes=2944
+[13279.111ms] CWND Update (Congestion Event): 6136774 -> 7573440 (RecoveryWindow)
+[13407.210ms] LOSS EVENT: CWnd=6136774, InFlight=3636612, LostBytes=60352
+[13407.213ms] CWND Update (Congestion Event): 6136774 -> 7997376 (RecoveryWindow)
+[13407.304ms] LOSS EVENT: CWnd=6136774, InFlight=3591016, LostBytes=4416
+[13407.309ms] CWND Update (Congestion Event): 6136774 -> 8038592 (RecoveryWindow)
+[13434.920ms] LOSS EVENT: CWnd=6136774, InFlight=2263308, LostBytes=64768
+[13434.922ms] CWND Update (Congestion Event): 6136774 -> 9301568 (RecoveryWindow)
+[13539.826ms] LOSS EVENT: CWnd=6136774, InFlight=998896, LostBytes=1472
+[13539.834ms] CWND Update (Congestion Event): 6136774 -> 10564544 (RecoveryWindow)
+[14019.883ms] LOSS EVENT: CWnd=6136774, InFlight=6137547, LostBytes=32384
+[14019.887ms] CWND Update (Congestion Event): 6136774 -> 6072779 (RecoveryWindow)
+[14024.030ms] LOSS EVENT: CWnd=6105163, InFlight=6106005, LostBytes=1051
+[14024.033ms] CWND Update (Congestion Event): 6136774 -> 6104112 (RecoveryWindow)
+[14121.212ms] LOSS EVENT: CWnd=6118426, InFlight=6119268, LostBytes=30912
+[14121.216ms] CWND Update (Congestion Event): 6136774 -> 6087514 (RecoveryWindow)
+[14140.860ms] LOSS EVENT: CWnd=6088356, InFlight=6089198, LostBytes=2523
+[14140.862ms] CWND Update (Congestion Event): 6136774 -> 6085833 (RecoveryWindow)
+[14228.461ms] LOSS EVENT: CWnd=6095101, InFlight=6095943, LostBytes=32384
+[14228.463ms] CWND Update (Congestion Event): 6136774 -> 6062717 (RecoveryWindow)
+[14233.133ms] LOSS EVENT: CWnd=6063559, InFlight=6064401, LostBytes=1051
+[14233.135ms] CWND Update (Congestion Event): 6136774 -> 6062508 (RecoveryWindow)
+[14449.306ms] LOSS EVENT: CWnd=6071564, InFlight=6071776, LostBytes=30912
+[14449.308ms] CWND Update (Congestion Event): 6136774 -> 6040652 (RecoveryWindow)
+[14449.314ms] LOSS EVENT: CWnd=6040864, InFlight=5984298, LostBytes=2523
+[14449.315ms] CWND Update (Congestion Event): 6136774 -> 6038341 (RecoveryWindow)
+[14449.776ms] CWND Update (BBR): 6136774 -> 6141933
+[14449.785ms] CWND Update (BBR): 6141933 -> 6211001
+[14449.792ms] CWND Update (BBR): 6211001 -> 6277124
+[14449.800ms] LOSS EVENT: CWnd=6038347, InFlight=5212352, LostBytes=64768
+[14449.800ms] CWND Update (Congestion Event): 6277124 -> 5973579 (RecoveryWindow)
+[14449.802ms] CWND Update (BBR): 6277124 -> 6338846
+[14449.808ms] CWND Update (BBR): 6338846 -> 6409371
+[14456.417ms] CWND Update (BBR): 6409371 -> 6449974
+[14468.084ms] CWND Update (BBR): 6449974 -> 6486051
+[14546.578ms] LOSS EVENT: CWnd=6314880, InFlight=5372261, LostBytes=2944
+[14546.581ms] CWND Update (Congestion Event): 6486051 -> 6311936 (RecoveryWindow)
+[14565.538ms] LOSS EVENT: CWnd=6372288, InFlight=5311945, LostBytes=2944
+[14565.540ms] CWND Update (Congestion Event): 6486051 -> 6369344 (RecoveryWindow)
+[14665.592ms] LOSS EVENT: CWnd=6486051, InFlight=4156461, LostBytes=60352
+[14665.594ms] CWND Update (Congestion Event): 6486051 -> 7464512 (RecoveryWindow)
+[14665.651ms] LOSS EVENT: CWnd=6486051, InFlight=4109393, LostBytes=4416
+[14665.652ms] CWND Update (Congestion Event): 6486051 -> 7507200 (RecoveryWindow)
+[14773.434ms] LOSS EVENT: CWnd=6486051, InFlight=2817013, LostBytes=1472
+[14773.436ms] CWND Update (Congestion Event): 6486051 -> 8798144 (RecoveryWindow)
+[14948.309ms] LOSS EVENT: CWnd=6486051, InFlight=1640921, LostBytes=60352
+[14948.321ms] CWND Update (Congestion Event): 6486051 -> 9913920 (RecoveryWindow)
+[14948.361ms] LOSS EVENT: CWnd=6486051, InFlight=1526105, LostBytes=4416
+[14948.365ms] CWND Update (Congestion Event): 6486051 -> 9963968 (RecoveryWindow)
+[14981.843ms] LOSS EVENT: CWnd=6486051, InFlight=363225, LostBytes=2944
+[14981.846ms] CWND Update (Congestion Event): 6486051 -> 11256384 (RecoveryWindow)
+[15355.603ms] CWND Update (BBR): 6486051 -> 6037013
+[15363.640ms] CWND Update (Forced by Resync): 6037013 -> 5888
+[15483.725ms] LOSS EVENT: CWnd=5888, InFlight=5198196, LostBytes=32384
+[15483.727ms] CWND Update (Congestion Event): 6037013 -> 5133428 (RecoveryWindow)
+[15483.733ms] LOSS EVENT: CWnd=5888, InFlight=5112190, LostBytes=1051
+[15483.734ms] CWND Update (Congestion Event): 6037013 -> 5164761 (RecoveryWindow)
+[15563.068ms] LOSS EVENT: CWnd=5888, InFlight=3950797, LostBytes=29440
+[15563.071ms] CWND Update (Congestion Event): 6037013 -> 5135321 (RecoveryWindow)
+[15563.076ms] LOSS EVENT: CWnd=5888, InFlight=3880983, LostBytes=3995
+[15563.077ms] CWND Update (Congestion Event): 6037013 -> 5131326 (RecoveryWindow)
+[15851.546ms] LOSS EVENT: CWnd=5888, InFlight=2671856, LostBytes=32384
+[15851.561ms] CWND Update (Congestion Event): 6037013 -> 5098942 (RecoveryWindow)
+[15851.598ms] LOSS EVENT: CWnd=5888, InFlight=2574074, LostBytes=1051
+[15851.601ms] CWND Update (Congestion Event): 6037013 -> 5097891 (RecoveryWindow)
+[15852.997ms] LOSS EVENT: CWnd=5888, InFlight=1424457, LostBytes=30912
+[15853.009ms] CWND Update (Congestion Event): 6037013 -> 5066979 (RecoveryWindow)
+[15853.038ms] LOSS EVENT: CWnd=5888, InFlight=1339923, LostBytes=2523
+[15853.042ms] CWND Update (Congestion Event): 6037013 -> 5064456 (RecoveryWindow)
+[15876.187ms] LOSS EVENT: CWnd=5888, InFlight=114604, LostBytes=32384
+[15876.199ms] CWND Update (Congestion Event): 6037013 -> 5032072 (RecoveryWindow)
+[15898.980ms] LOSS EVENT: CWnd=5888, InFlight=33014, LostBytes=1051
+[15898.992ms] CWND Update (Congestion Event): 6037013 -> 5031021 (RecoveryWindow)
+[16116.411ms] CWND Update (BBR): 6037013 -> 6039957
+[16233.173ms] CWND Update (BBR): 6039957 -> 6042901
+[16290.999ms] CWND Update (BBR): 6042901 -> 6113557
+[16302.916ms] CWND Update (BBR): 6113557 -> 6140053
+[16302.970ms] CWND Update (BBR): 6140053 -> 6207765
+[16312.442ms] CWND Update (BBR): 6207765 -> 6275477
+[16316.474ms] CWND Update (BBR): 6275477 -> 6346133
+[16316.484ms] CWND Update (BBR): 6346133 -> 6412373
+[16321.147ms] CWND Update (BBR): 6412373 -> 6481557
+[16325.380ms] CWND Update (BBR): 6481557 -> 6547797
+[16337.214ms] CWND Update (BBR): 6547797 -> 6615509
+[16338.895ms] CWND Update (BBR): 6615509 -> 6681749
+[16360.990ms] CWND Update (BBR): 6681749 -> 6747989
+[16361.000ms] CWND Update (BBR): 6747989 -> 6815701
+[16361.007ms] CWND Update (BBR): 6815701 -> 6886357
+[16361.299ms] CWND Update (BBR): 6886357 -> 6952597
+[16368.431ms] CWND Update (BBR): 6952597 -> 7023253
+[16372.821ms] CWND Update (BBR): 7023253 -> 7090965
+[16380.423ms] CWND Update (BBR): 7090965 -> 7161621
+[16390.836ms] CWND Update (BBR): 7161621 -> 7229333
+[16392.451ms] CWND Update (BBR): 7229333 -> 7298517
+[16392.460ms] CWND Update (BBR): 7298517 -> 7346699
+[16406.909ms] LOSS EVENT: CWnd=7346699, InFlight=7346752, LostBytes=63296
+[16406.911ms] CWND Update (Congestion Event): 7346699 -> 7220160 (RecoveryWindow)
+[16406.917ms] LOSS EVENT: CWnd=7283456, InFlight=7242240, LostBytes=1472
+[16406.917ms] CWND Update (Congestion Event): 7346699 -> 7281984 (RecoveryWindow)
+[16544.254ms] LOSS EVENT: CWnd=7281984, InFlight=7140672, LostBytes=60352
+[16544.257ms] CWND Update (Congestion Event): 7346699 -> 7221632 (RecoveryWindow)
+[16544.263ms] LOSS EVENT: CWnd=7221632, InFlight=7056768, LostBytes=4416
+[16544.263ms] CWND Update (Congestion Event): 7346699 -> 7217216 (RecoveryWindow)
+[16622.858ms] LOSS EVENT: CWnd=7217216, InFlight=7217216, LostBytes=64768
+[16622.881ms] CWND Update (Congestion Event): 7346699 -> 7152448 (RecoveryWindow)
+[16740.257ms] LOSS EVENT: CWnd=7152448, InFlight=7084736, LostBytes=60352
+[16740.260ms] CWND Update (Congestion Event): 7346699 -> 7092096 (RecoveryWindow)
+[16751.311ms] LOSS EVENT: CWnd=7092096, InFlight=7092096, LostBytes=4416
+[16751.313ms] CWND Update (Congestion Event): 7346699 -> 7087680 (RecoveryWindow)
+[16852.586ms] LOSS EVENT: CWnd=7087680, InFlight=6257885, LostBytes=60352
+[16852.590ms] CWND Update (Congestion Event): 7346699 -> 7027328 (RecoveryWindow)
+[16856.398ms] LOSS EVENT: CWnd=7027328, InFlight=6199041, LostBytes=4416
+[16856.400ms] CWND Update (Congestion Event): 7346699 -> 7022912 (RecoveryWindow)
+[17090.707ms] LOSS EVENT: CWnd=7022912, InFlight=4909605, LostBytes=5888
+[17090.712ms] CWND Update (Congestion Event): 7346699 -> 7017024 (RecoveryWindow)
+[17091.289ms] LOSS EVENT: CWnd=7346699, InFlight=3673161, LostBytes=1472
+[17091.291ms] CWND Update (Congestion Event): 7346699 -> 7998848 (RecoveryWindow)
+[17091.316ms] LOSS EVENT: CWnd=7346699, InFlight=3661421, LostBytes=4416
+[17091.317ms] CWND Update (Congestion Event): 7346699 -> 8006208 (RecoveryWindow)
+[17124.852ms] LOSS EVENT: CWnd=7346699, InFlight=3121233, LostBytes=64768
+[17124.855ms] CWND Update (Congestion Event): 7346699 -> 8481664 (RecoveryWindow)
+[17222.902ms] LOSS EVENT: CWnd=7346699, InFlight=1759669, LostBytes=60352
+[17222.914ms] CWND Update (Congestion Event): 7346699 -> 9782912 (RecoveryWindow)
+[17229.542ms] LOSS EVENT: CWnd=7346699, InFlight=1719961, LostBytes=4416
+[17229.555ms] CWND Update (Congestion Event): 7346699 -> 9818240 (RecoveryWindow)
+[17372.726ms] LOSS EVENT: CWnd=7346699, InFlight=431997, LostBytes=64768
+[17372.738ms] CWND Update (Congestion Event): 7346699 -> 11041472 (RecoveryWindow)
+[17401.449ms] CWND Update (BBR): 7346699 -> 7306055
+[17657.961ms] LOSS EVENT: CWnd=7306055, InFlight=7306721, LostBytes=30912
+[17657.965ms] CWND Update (Congestion Event): 7306055 -> 7244897 (RecoveryWindow)
+[17663.931ms] LOSS EVENT: CWnd=7275809, InFlight=7276651, LostBytes=2523
+[17663.932ms] CWND Update (Congestion Event): 7306055 -> 7273286 (RecoveryWindow)
+[17760.214ms] LOSS EVENT: CWnd=7283184, InFlight=7284026, LostBytes=33435
+[17760.217ms] CWND Update (Congestion Event): 7306055 -> 7249749 (RecoveryWindow)
+[17863.108ms] LOSS EVENT: CWnd=7264275, InFlight=7265117, LostBytes=32384
+[17863.110ms] CWND Update (Congestion Event): 7306055 -> 7231891 (RecoveryWindow)
+[17867.967ms] LOSS EVENT: CWnd=7232733, InFlight=7233575, LostBytes=1051
+[17867.969ms] CWND Update (Congestion Event): 7306055 -> 7231682 (RecoveryWindow)
+[17963.997ms] LOSS EVENT: CWnd=7245996, InFlight=7246838, LostBytes=33435
+[17963.998ms] CWND Update (Congestion Event): 7306055 -> 7212561 (RecoveryWindow)
+[18072.001ms] LOSS EVENT: CWnd=7220560, InFlight=6710673, LostBytes=32384
+[18072.003ms] CWND Update (Congestion Event): 7306055 -> 7188176 (RecoveryWindow)
+[18076.219ms] LOSS EVENT: CWnd=7188176, InFlight=6648255, LostBytes=1051
+[18076.220ms] CWND Update (Congestion Event): 7306055 -> 7187125 (RecoveryWindow)
+[18178.979ms] LOSS EVENT: CWnd=7187125, InFlight=5421886, LostBytes=63296
+[18178.982ms] CWND Update (Congestion Event): 7306055 -> 7123829 (RecoveryWindow)
+[18187.407ms] LOSS EVENT: CWnd=7123829, InFlight=5392476, LostBytes=1472
+[18187.409ms] CWND Update (Congestion Event): 7306055 -> 7122357 (RecoveryWindow)
+[18224.349ms] LOSS EVENT: CWnd=7122357, InFlight=4846400, LostBytes=4416
+[18224.350ms] CWND Update (Congestion Event): 7306055 -> 7117941 (RecoveryWindow)
+[18280.224ms] LOSS EVENT: CWnd=7306055, InFlight=4161956, LostBytes=64768
+[18280.226ms] CWND Update (Congestion Event): 7306055 -> 7522741 (RecoveryWindow)
+[18343.017ms] LOSS EVENT: CWnd=7306055, InFlight=3568776, LostBytes=1472
+[18343.018ms] CWND Update (Congestion Event): 7306055 -> 8114485 (RecoveryWindow)
+[18376.443ms] LOSS EVENT: CWnd=7306055, InFlight=3037420, LostBytes=4416
+[18376.445ms] CWND Update (Congestion Event): 7306055 -> 8641461 (RecoveryWindow)
+[18411.177ms] LOSS EVENT: CWnd=7306055, InFlight=2569360, LostBytes=4416
+[18411.201ms] CWND Update (Congestion Event): 7306055 -> 9105141 (RecoveryWindow)
+[18417.109ms] LOSS EVENT: CWnd=7306055, InFlight=2563508, LostBytes=1472
+[18417.110ms] CWND Update (Congestion Event): 7306055 -> 9109557 (RecoveryWindow)
+[18459.211ms] LOSS EVENT: CWnd=7306055, InFlight=2148440, LostBytes=64768
+[18459.214ms] CWND Update (Congestion Event): 7306055 -> 9459893 (RecoveryWindow)
+[18561.402ms] LOSS EVENT: CWnd=7306055, InFlight=1087817, LostBytes=1472
+[18561.414ms] CWND Update (Congestion Event): 7306055 -> 10731701 (RecoveryWindow)
+[18567.973ms] LOSS EVENT: CWnd=7306055, InFlight=1026029, LostBytes=4416
+[18567.985ms] CWND Update (Congestion Event): 7306055 -> 10789109 (RecoveryWindow)
+[18604.557ms] LOSS EVENT: CWnd=7306055, InFlight=618321, LostBytes=63296
+[18604.569ms] CWND Update (Congestion Event): 7306055 -> 11133557 (RecoveryWindow)
+[18608.473ms] LOSS EVENT: CWnd=7306055, InFlight=566837, LostBytes=1472
+[18608.484ms] CWND Update (Congestion Event): 7306055 -> 11183605 (RecoveryWindow)
+[18823.007ms] CWND Update (BBR): 7306055 -> 7296465
+[19111.179ms] LOSS EVENT: CWnd=7296465, InFlight=7297468, LostBytes=33435
+[19111.184ms] CWND Update (Congestion Event): 7296465 -> 7230598 (RecoveryWindow)
+[19209.085ms] LOSS EVENT: CWnd=7273931, InFlight=7274773, LostBytes=29440
+[19209.087ms] CWND Update (Congestion Event): 7296465 -> 7244491 (RecoveryWindow)
+[19215.833ms] LOSS EVENT: CWnd=7245333, InFlight=7246175, LostBytes=3995
+[19215.834ms] CWND Update (Congestion Event): 7296465 -> 7241338 (RecoveryWindow)
+[19316.989ms] LOSS EVENT: CWnd=7255022, InFlight=7255864, LostBytes=32384
+[19316.993ms] CWND Update (Congestion Event): 7296465 -> 7222638 (RecoveryWindow)
+[19349.179ms] LOSS EVENT: CWnd=7223480, InFlight=7224322, LostBytes=1051
+[19349.181ms] CWND Update (Congestion Event): 7296465 -> 7222429 (RecoveryWindow)
+[19414.497ms] LOSS EVENT: CWnd=7229383, InFlight=7230225, LostBytes=29440
+[19414.500ms] CWND Update (Congestion Event): 7296465 -> 7199943 (RecoveryWindow)
+[19437.130ms] LOSS EVENT: CWnd=7200785, InFlight=7201627, LostBytes=3995
+[19437.132ms] CWND Update (Congestion Event): 7296465 -> 7196790 (RecoveryWindow)
+[19524.888ms] LOSS EVENT: CWnd=7204580, InFlight=6683112, LostBytes=32384
+[19524.891ms] CWND Update (Congestion Event): 7296465 -> 7172196 (RecoveryWindow)
+[19538.141ms] LOSS EVENT: CWnd=7172196, InFlight=6648241, LostBytes=1051
+[19538.143ms] CWND Update (Congestion Event): 7296465 -> 7171145 (RecoveryWindow)
+[19641.401ms] LOSS EVENT: CWnd=7171145, InFlight=5395797, LostBytes=2944
+[19641.403ms] CWND Update (Congestion Event): 7296465 -> 7168201 (RecoveryWindow)
+[19684.943ms] LOSS EVENT: CWnd=7168201, InFlight=4846777, LostBytes=1472
+[19684.945ms] CWND Update (Congestion Event): 7296465 -> 7166729 (RecoveryWindow)
+[19684.952ms] LOSS EVENT: CWnd=7166729, InFlight=4790841, LostBytes=2944
+[19684.953ms] CWND Update (Congestion Event): 7296465 -> 7163785 (RecoveryWindow)
+[19701.096ms] CWND Update (BBR): 7296465 -> 5203597
+[19817.126ms] LOSS EVENT: CWnd=5203597, InFlight=4135837, LostBytes=1472
+[19817.128ms] CWND Update (Congestion Event): 5203597 -> 7608329 (RecoveryWindow)
+[19833.729ms] CWND Update (BBR): 5203597 -> 5243048
+[19833.738ms] CWND Update (BBR): 5243048 -> 5309156
+[19833.745ms] CWND Update (BBR): 5309156 -> 5375293
+[19834.017ms] CWND Update (BBR): 5375293 -> 5440489
+[19834.026ms] CWND Update (BBR): 5440489 -> 5506597
+[19834.032ms] CWND Update (BBR): 5506597 -> 5572720
+[19834.035ms] CWND Update (BBR): 5572720 -> 5578534
+[19834.039ms] LOSS EVENT: CWnd=5578534, InFlight=3589762, LostBytes=4416
+[19834.040ms] CWND Update (Congestion Event): 5578534 -> 8150025 (RecoveryWindow)
+[19834.041ms] CWND Update (BBR): 5578534 -> 5647689
+[19834.068ms] CWND Update (BBR): 5647689 -> 5713504
+[19834.075ms] CWND Update (BBR): 5713504 -> 5781128
+[19834.082ms] CWND Update (BBR): 5781128 -> 5850209
+[19834.128ms] CWND Update (BBR): 5850209 -> 5920763
+[19834.134ms] CWND Update (BBR): 5920763 -> 5990744
+[19834.144ms] CWND Update (BBR): 5990744 -> 6059796
+[19834.149ms] LOSS EVENT: CWnd=6059796, InFlight=3106982, LostBytes=2944
+[19834.170ms] CWND Update (Congestion Event): 6059796 -> 8629897 (RecoveryWindow)
+[19834.172ms] CWND Update (BBR): 6059796 -> 6108270
+[19834.195ms] CWND Update (BBR): 6108270 -> 6176808
+[19834.439ms] CWND Update (BBR): 6176808 -> 6240972
+[19866.773ms] LOSS EVENT: CWnd=6240972, InFlight=2646282, LostBytes=61824
+[19866.775ms] CWND Update (Congestion Event): 6240972 -> 9028809 (RecoveryWindow)
+[19866.781ms] LOSS EVENT: CWnd=6240972, InFlight=2525578, LostBytes=2944
+[19866.782ms] CWND Update (Congestion Event): 6240972 -> 9084745 (RecoveryWindow)
+[19903.582ms] LOSS EVENT: CWnd=6240972, InFlight=2172328, LostBytes=1472
+[19903.594ms] CWND Update (Congestion Event): 6240972 -> 9498377 (RecoveryWindow)
+[19951.640ms] LOSS EVENT: CWnd=6240972, InFlight=1686604, LostBytes=22080
+[19951.652ms] CWND Update (Congestion Event): 6240972 -> 9962057 (RecoveryWindow)
+[19951.691ms] LOSS EVENT: CWnd=6240972, InFlight=1635084, LostBytes=2944
+[19951.695ms] CWND Update (Congestion Event): 6240972 -> 9988553 (RecoveryWindow)
+[20060.073ms] LOSS EVENT: CWnd=6240972, InFlight=417776, LostBytes=60352
+[20060.085ms] CWND Update (Congestion Event): 6240972 -> 11167625 (RecoveryWindow)
+[20060.115ms] LOSS EVENT: CWnd=6240972, InFlight=327984, LostBytes=4416
+[20060.119ms] CWND Update (Congestion Event): 6240972 -> 11192649 (RecoveryWindow)
+[20064.395ms] CWND Update (BBR): 6240972 -> 5608128
+[20123.099ms] CWND Update (BBR): 5608128 -> 5601410
+[20341.378ms] LOSS EVENT: CWnd=5601410, InFlight=5534666, LostBytes=32384
+[20341.381ms] CWND Update (Congestion Event): 5601410 -> 5469898 (RecoveryWindow)
+[20346.945ms] LOSS EVENT: CWnd=5502282, InFlight=5503124, LostBytes=1051
+[20346.948ms] CWND Update (Congestion Event): 5601410 -> 5501231 (RecoveryWindow)
+[20442.829ms] LOSS EVENT: CWnd=5512601, InFlight=5513443, LostBytes=33435
+[20442.831ms] CWND Update (Congestion Event): 5601410 -> 5479166 (RecoveryWindow)
+[20547.423ms] LOSS EVENT: CWnd=5490748, InFlight=5491590, LostBytes=33435
+[20547.426ms] CWND Update (Congestion Event): 5601410 -> 5457313 (RecoveryWindow)
+[20651.005ms] LOSS EVENT: CWnd=5467632, InFlight=5467844, LostBytes=33435
+[20651.008ms] CWND Update (Congestion Event): 5601410 -> 5434197 (RecoveryWindow)
+[20763.395ms] LOSS EVENT: CWnd=5436096, InFlight=5365440, LostBytes=5888
+[20763.397ms] CWND Update (Congestion Event): 5601410 -> 5430208 (RecoveryWindow)
+[20857.522ms] LOSS EVENT: CWnd=5601410, InFlight=5602432, LostBytes=5888
+[20857.525ms] CWND Update (Congestion Event): 5601410 -> 6251584 (RecoveryWindow)
+[20911.125ms] LOSS EVENT: CWnd=5601410, InFlight=5602432, LostBytes=63296
+[20911.127ms] CWND Update (Congestion Event): 5601410 -> 6768256 (RecoveryWindow)
+[20911.134ms] LOSS EVENT: CWnd=5601410, InFlight=5494976, LostBytes=1472
+[20911.134ms] CWND Update (Congestion Event): 5601410 -> 6810944 (RecoveryWindow)
+[21019.149ms] LOSS EVENT: CWnd=5601410, InFlight=5536192, LostBytes=13248
+[21019.151ms] CWND Update (Congestion Event): 5601410 -> 8054784 (RecoveryWindow)
+[21023.236ms] LOSS EVENT: CWnd=5601410, InFlight=5602432, LostBytes=1472
+[21023.238ms] CWND Update (Congestion Event): 5601410 -> 8076864 (RecoveryWindow)
+[21091.234ms] LOSS EVENT: CWnd=5601410, InFlight=5602432, LostBytes=4416
+[21091.236ms] CWND Update (Congestion Event): 5601410 -> 8898240 (RecoveryWindow)
+[21140.658ms] LOSS EVENT: CWnd=5601410, InFlight=5602432, LostBytes=1472
+[21140.660ms] CWND Update (Congestion Event): 5601410 -> 9542976 (RecoveryWindow)
+[21188.974ms] LOSS EVENT: CWnd=5601410, InFlight=5602432, LostBytes=64768
+[21188.976ms] CWND Update (Congestion Event): 5601410 -> 10018432 (RecoveryWindow)
+[21263.132ms] CWND Update (BBR): 5601410 -> 5410414
+[21263.142ms] LOSS EVENT: CWnd=5410414, InFlight=5399296, LostBytes=64768
+[21263.143ms] CWND Update (Congestion Event): 5410414 -> 10489472 (RecoveryWindow)
+[21344.945ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=61824
+[21344.947ms] CWND Update (Congestion Event): 5410414 -> 11792192 (RecoveryWindow)
+[21355.788ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[21355.790ms] CWND Update (Congestion Event): 5410414 -> 11801024 (RecoveryWindow)
+[21410.664ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[21410.666ms] CWND Update (Congestion Event): 5410414 -> 12386880 (RecoveryWindow)
+[21450.874ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=5888
+[21450.876ms] CWND Update (Congestion Event): 5410414 -> 12887360 (RecoveryWindow)
+[21450.884ms] LOSS EVENT: CWnd=5410414, InFlight=5363968, LostBytes=4416
+[21450.884ms] CWND Update (Congestion Event): 5410414 -> 12924160 (RecoveryWindow)
+[21481.940ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=8832
+[21481.942ms] CWND Update (Congestion Event): 5410414 -> 13331904 (RecoveryWindow)
+[21519.593ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[21519.595ms] CWND Update (Congestion Event): 5410414 -> 13780864 (RecoveryWindow)
+[21553.510ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=63296
+[21553.512ms] CWND Update (Congestion Event): 5410414 -> 14197440 (RecoveryWindow)
+[21558.470ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[21558.472ms] CWND Update (Congestion Event): 5410414 -> 14201856 (RecoveryWindow)
+[21670.614ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[21670.619ms] CWND Update (Congestion Event): 5410414 -> 15516352 (RecoveryWindow)
+[21710.650ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[21710.652ms] CWND Update (Congestion Event): 5410414 -> 15999168 (RecoveryWindow)
+[21760.777ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=5888
+[21760.779ms] CWND Update (Congestion Event): 5410414 -> 16470208 (RecoveryWindow)
+[21792.851ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[21792.853ms] CWND Update (Congestion Event): 5410414 -> 16930944 (RecoveryWindow)
+[21816.967ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=60352
+[21816.969ms] CWND Update (Congestion Event): 5410414 -> 17223872 (RecoveryWindow)
+[21826.763ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=4416
+[21826.765ms] CWND Update (Congestion Event): 5410414 -> 17285696 (RecoveryWindow)
+[21857.199ms] LOSS EVENT: CWnd=5410414, InFlight=5343360, LostBytes=61824
+[21857.201ms] CWND Update (Congestion Event): 5410414 -> 17634560 (RecoveryWindow)
+[21858.590ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[21858.592ms] CWND Update (Congestion Event): 5410414 -> 17668416 (RecoveryWindow)
+[21961.166ms] LOSS EVENT: CWnd=5410414, InFlight=5341888, LostBytes=4416
+[21961.169ms] CWND Update (Congestion Event): 5410414 -> 18893120 (RecoveryWindow)
+[22006.913ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=7360
+[22006.915ms] CWND Update (Congestion Event): 5410414 -> 19311168 (RecoveryWindow)
+[22045.213ms] LOSS EVENT: CWnd=5410414, InFlight=5344832, LostBytes=2944
+[22045.218ms] CWND Update (Congestion Event): 5410414 -> 19857280 (RecoveryWindow)
+[22049.143ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[22049.148ms] CWND Update (Congestion Event): 5410414 -> 19908800 (RecoveryWindow)
+[22083.468ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=61824
+[22083.473ms] CWND Update (Congestion Event): 5410414 -> 20250304 (RecoveryWindow)
+[22089.391ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[22089.393ms] CWND Update (Congestion Event): 5410414 -> 20260608 (RecoveryWindow)
+[22190.877ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=60352
+[22190.880ms] CWND Update (Congestion Event): 5410414 -> 21466176 (RecoveryWindow)
+[22198.190ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=4416
+[22198.192ms] CWND Update (Congestion Event): 5410414 -> 21514752 (RecoveryWindow)
+[22242.855ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=4416
+[22242.857ms] CWND Update (Congestion Event): 5410414 -> 22071168 (RecoveryWindow)
+[22289.886ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=61824
+[22289.888ms] CWND Update (Congestion Event): 5410414 -> 22556928 (RecoveryWindow)
+[22289.924ms] LOSS EVENT: CWnd=5410414, InFlight=5290368, LostBytes=2944
+[22289.924ms] CWND Update (Congestion Event): 5410414 -> 22612864 (RecoveryWindow)
+[22339.019ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[22339.021ms] CWND Update (Congestion Event): 5410414 -> 23085376 (RecoveryWindow)
+[22339.327ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[22339.329ms] CWND Update (Congestion Event): 5410414 -> 23126592 (RecoveryWindow)
+[22365.836ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[22365.838ms] CWND Update (Congestion Event): 5410414 -> 23537280 (RecoveryWindow)
+[22375.158ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[22375.160ms] CWND Update (Congestion Event): 5410414 -> 23599104 (RecoveryWindow)
+[22417.874ms] LOSS EVENT: CWnd=5410414, InFlight=5340416, LostBytes=4416
+[22417.876ms] CWND Update (Congestion Event): 5410414 -> 24074560 (RecoveryWindow)
+[22447.274ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=61824
+[22447.276ms] CWND Update (Congestion Event): 5410414 -> 24376320 (RecoveryWindow)
+[22453.688ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[22453.690ms] CWND Update (Congestion Event): 5410414 -> 24436672 (RecoveryWindow)
+[22484.923ms] LOSS EVENT: CWnd=5410414, InFlight=5340416, LostBytes=2944
+[22484.925ms] CWND Update (Congestion Event): 5410414 -> 24779648 (RecoveryWindow)
+[22527.115ms] LOSS EVENT: CWnd=5410414, InFlight=5340416, LostBytes=1472
+[22527.117ms] CWND Update (Congestion Event): 5410414 -> 25107904 (RecoveryWindow)
+[22527.128ms] LOSS EVENT: CWnd=5410414, InFlight=5277120, LostBytes=1472
+[22527.129ms] CWND Update (Congestion Event): 5410414 -> 25168256 (RecoveryWindow)
+[22549.438ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[22549.440ms] CWND Update (Congestion Event): 5410414 -> 25580416 (RecoveryWindow)
+[22576.665ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=4416
+[22576.667ms] CWND Update (Congestion Event): 5410414 -> 25849792 (RecoveryWindow)
+[22582.571ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=1472
+[22582.573ms] CWND Update (Congestion Event): 5410414 -> 25914560 (RecoveryWindow)
+[22598.364ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=60352
+[22598.366ms] CWND Update (Congestion Event): 5410414 -> 26132416 (RecoveryWindow)
+[22602.271ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=4416
+[22602.273ms] CWND Update (Congestion Event): 5410414 -> 26180992 (RecoveryWindow)
+[22713.969ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=63296
+[22713.971ms] CWND Update (Congestion Event): 5410414 -> 27349760 (RecoveryWindow)
+[22713.979ms] LOSS EVENT: CWnd=5410414, InFlight=5300672, LostBytes=1472
+[22713.980ms] CWND Update (Congestion Event): 5410414 -> 27395392 (RecoveryWindow)
+[22886.013ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=5888
+[22886.016ms] CWND Update (Congestion Event): 5410414 -> 28689280 (RecoveryWindow)
+[22923.265ms] LOSS EVENT: CWnd=5410414, InFlight=5343360, LostBytes=61824
+[22923.267ms] CWND Update (Congestion Event): 5410414 -> 29887488 (RecoveryWindow)
+[22927.706ms] LOSS EVENT: CWnd=5410414, InFlight=5411072, LostBytes=2944
+[22927.708ms] CWND Update (Congestion Event): 5410414 -> 29890432 (RecoveryWindow)
+[22947.390ms] CWND Update (BBR): 5410414 -> 5438204
+[23036.943ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=2944
+[23036.947ms] CWND Update (Congestion Event): 5438204 -> 31128384 (RecoveryWindow)
+[23036.963ms] LOSS EVENT: CWnd=5438204, InFlight=5366912, LostBytes=2944
+[23036.964ms] CWND Update (Congestion Event): 5438204 -> 31194624 (RecoveryWindow)
+[23142.007ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=1472
+[23142.009ms] CWND Update (Congestion Event): 5438204 -> 32409024 (RecoveryWindow)
+[23180.803ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=60352
+[23180.806ms] CWND Update (Congestion Event): 5438204 -> 32893312 (RecoveryWindow)
+[23188.520ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=4416
+[23188.522ms] CWND Update (Congestion Event): 5438204 -> 32924224 (RecoveryWindow)
+[23292.350ms] LOSS EVENT: CWnd=5438204, InFlight=5238848, LostBytes=61824
+[23292.352ms] CWND Update (Congestion Event): 5438204 -> 34087104 (RecoveryWindow)
+[23292.396ms] LOSS EVENT: CWnd=5438204, InFlight=5126976, LostBytes=2944
+[23292.396ms] CWND Update (Congestion Event): 5438204 -> 34134208 (RecoveryWindow)
+[23394.460ms] LOSS EVENT: CWnd=5438204, InFlight=5368384, LostBytes=61824
+[23394.462ms] CWND Update (Congestion Event): 5438204 -> 35388352 (RecoveryWindow)
+[23406.279ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=2944
+[23406.281ms] CWND Update (Congestion Event): 5438204 -> 35403072 (RecoveryWindow)
+[23510.469ms] LOSS EVENT: CWnd=5438204, InFlight=5425792, LostBytes=2944
+[23510.472ms] CWND Update (Congestion Event): 5438204 -> 36648384 (RecoveryWindow)
+[23550.700ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=60352
+[23550.702ms] CWND Update (Congestion Event): 5438204 -> 37067904 (RecoveryWindow)
+[23556.654ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=4416
+[23556.656ms] CWND Update (Congestion Event): 5438204 -> 37128256 (RecoveryWindow)
+[23661.075ms] LOSS EVENT: CWnd=5438204, InFlight=5369856, LostBytes=61824
+[23661.078ms] CWND Update (Congestion Event): 5438204 -> 38366208 (RecoveryWindow)
+[23665.006ms] LOSS EVENT: CWnd=5438204, InFlight=5439040, LostBytes=2944
+[23665.008ms] CWND Update (Congestion Event): 5438204 -> 38375040 (RecoveryWindow)
+[23694.969ms] CWND Update (BBR): 5438204 -> 5504444
+[23700.834ms] CWND Update (BBR): 5504444 -> 5545058
+[23700.851ms] CWND Update (BBR): 5545058 -> 5601644
+[23768.884ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=4416
+[23768.886ms] CWND Update (Congestion Event): 5601644 -> 39648320 (RecoveryWindow)
+[23869.226ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=64768
+[23869.229ms] CWND Update (Congestion Event): 5601644 -> 40815616 (RecoveryWindow)
+[24013.352ms] LOSS EVENT: CWnd=5601644, InFlight=5536192, LostBytes=5888
+[24013.354ms] CWND Update (Congestion Event): 5601644 -> 42146304 (RecoveryWindow)
+[24085.044ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=4416
+[24085.048ms] CWND Update (Congestion Event): 5601644 -> 43318016 (RecoveryWindow)
+[24094.621ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=1472
+[24094.623ms] CWND Update (Congestion Event): 5601644 -> 43376896 (RecoveryWindow)
+[24129.685ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=10304
+[24129.687ms] CWND Update (Congestion Event): 5601644 -> 43920064 (RecoveryWindow)
+[24193.250ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=1472
+[24193.252ms] CWND Update (Congestion Event): 5601644 -> 44619264 (RecoveryWindow)
+[24240.943ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=4416
+[24240.945ms] CWND Update (Congestion Event): 5601644 -> 45203648 (RecoveryWindow)
+[24293.236ms] LOSS EVENT: CWnd=5601644, InFlight=5602432, LostBytes=4416
+[24293.238ms] CWND Update (Congestion Event): 5601644 -> 45676160 (RecoveryWindow)
+[24293.247ms] CWND Update (BBR): 5601644 -> 4569608
+[24293.254ms] CWND Update (BBR): 4569608 -> 4637231
+[24322.017ms] CWND Update (BBR): 4637231 -> 4671410
+[24322.025ms] CWND Update (BBR): 4671410 -> 4740504
+[24333.099ms] LOSS EVENT: CWnd=4740504, InFlight=5050432, LostBytes=1472
+[24333.101ms] CWND Update (Congestion Event): 4740504 -> 46222272 (RecoveryWindow)
+[24337.034ms] CWND Update (BBR): 4740504 -> 4755685
+[24361.392ms] LOSS EVENT: CWnd=4755685, InFlight=4633856, LostBytes=5888
+[24361.394ms] CWND Update (Congestion Event): 4755685 -> 46631488 (RecoveryWindow)
+[24361.399ms] LOSS EVENT: CWnd=4755685, InFlight=4622080, LostBytes=4416
+[24361.399ms] CWND Update (Congestion Event): 4755685 -> 46632960 (RecoveryWindow)
+[24413.794ms] LOSS EVENT: CWnd=4755685, InFlight=4622080, LostBytes=63296
+[24413.796ms] CWND Update (Congestion Event): 4755685 -> 47051008 (RecoveryWindow)
+[24413.800ms] LOSS EVENT: CWnd=4755685, InFlight=4552896, LostBytes=1472
+[24413.801ms] CWND Update (Congestion Event): 4755685 -> 47055424 (RecoveryWindow)
+[24414.012ms] CWND Update (BBR): 4755685 -> 4807364
+[24506.804ms] LOSS EVENT: CWnd=4807364, InFlight=4741312, LostBytes=64768
+[24506.806ms] CWND Update (Congestion Event): 4807364 -> 48293376 (RecoveryWindow)
+[24577.336ms] CWND Update (BBR): 4807364 -> 4877191
+[24577.344ms] CWND Update (BBR): 4877191 -> 4946273
+[24577.349ms] CWND Update (BBR): 4946273 -> 5012423
+[24622.478ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[24622.480ms] CWND Update (Congestion Event): 5012423 -> 49624064 (RecoveryWindow)
+[24721.227ms] LOSS EVENT: CWnd=5012423, InFlight=4942976, LostBytes=2944
+[24721.231ms] CWND Update (Congestion Event): 5012423 -> 50786944 (RecoveryWindow)
+[24725.175ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[24725.177ms] CWND Update (Congestion Event): 5012423 -> 50839936 (RecoveryWindow)
+[24769.730ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[24769.732ms] CWND Update (Congestion Event): 5012423 -> 51387520 (RecoveryWindow)
+[24777.135ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[24777.137ms] CWND Update (Congestion Event): 5012423 -> 51449344 (RecoveryWindow)
+[24825.203ms] LOSS EVENT: CWnd=5012423, InFlight=4942976, LostBytes=1472
+[24825.205ms] CWND Update (Congestion Event): 5012423 -> 52057280 (RecoveryWindow)
+[24881.175ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=10304
+[24881.177ms] CWND Update (Congestion Event): 5012423 -> 52643136 (RecoveryWindow)
+[24882.194ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[24882.196ms] CWND Update (Congestion Event): 5012423 -> 52706432 (RecoveryWindow)
+[24919.490ms] LOSS EVENT: CWnd=5012423, InFlight=4878208, LostBytes=4416
+[24919.492ms] CWND Update (Congestion Event): 5012423 -> 53180416 (RecoveryWindow)
+[24929.808ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[24929.810ms] CWND Update (Congestion Event): 5012423 -> 53193664 (RecoveryWindow)
+[24957.928ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=60352
+[24957.930ms] CWND Update (Congestion Event): 5012423 -> 53542528 (RecoveryWindow)
+[24965.345ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[24965.347ms] CWND Update (Congestion Event): 5012423 -> 53596992 (RecoveryWindow)
+[25069.908ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[25069.911ms] CWND Update (Congestion Event): 5012423 -> 54890880 (RecoveryWindow)
+[25078.189ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25078.191ms] CWND Update (Congestion Event): 5012423 -> 54912960 (RecoveryWindow)
+[25117.562ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25117.563ms] CWND Update (Congestion Event): 5012423 -> 55392832 (RecoveryWindow)
+[25155.857ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25155.859ms] CWND Update (Congestion Event): 5012423 -> 55855040 (RecoveryWindow)
+[25181.212ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25181.213ms] CWND Update (Congestion Event): 5012423 -> 56199488 (RecoveryWindow)
+[25189.132ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25189.133ms] CWND Update (Congestion Event): 5012423 -> 56268672 (RecoveryWindow)
+[25223.904ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25223.905ms] CWND Update (Congestion Event): 5012423 -> 56669056 (RecoveryWindow)
+[25257.181ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25257.182ms] CWND Update (Congestion Event): 5012423 -> 57060608 (RecoveryWindow)
+[25278.658ms] LOSS EVENT: CWnd=5012423, InFlight=4944448, LostBytes=63296
+[25278.659ms] CWND Update (Congestion Event): 5012423 -> 57268160 (RecoveryWindow)
+[25282.624ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25282.625ms] CWND Update (Congestion Event): 5012423 -> 57332928 (RecoveryWindow)
+[25317.214ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[25317.216ms] CWND Update (Congestion Event): 5012423 -> 57684736 (RecoveryWindow)
+[25341.050ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=60352
+[25341.051ms] CWND Update (Congestion Event): 5012423 -> 57965888 (RecoveryWindow)
+[25341.056ms] LOSS EVENT: CWnd=5012423, InFlight=4934144, LostBytes=4416
+[25341.057ms] CWND Update (Congestion Event): 5012423 -> 57980608 (RecoveryWindow)
+[25449.918ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25449.942ms] CWND Update (Congestion Event): 5012423 -> 59275968 (RecoveryWindow)
+[25477.532ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=5888
+[25477.534ms] CWND Update (Congestion Event): 5012423 -> 59677824 (RecoveryWindow)
+[25489.229ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25489.231ms] CWND Update (Congestion Event): 5012423 -> 59701376 (RecoveryWindow)
+[25513.932ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=5888
+[25513.933ms] CWND Update (Congestion Event): 5012423 -> 60038464 (RecoveryWindow)
+[25542.848ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[25542.849ms] CWND Update (Congestion Event): 5012423 -> 60368192 (RecoveryWindow)
+[25580.760ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25580.761ms] CWND Update (Congestion Event): 5012423 -> 60761216 (RecoveryWindow)
+[25583.064ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[25583.066ms] CWND Update (Congestion Event): 5012423 -> 60825984 (RecoveryWindow)
+[25617.920ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[25617.921ms] CWND Update (Congestion Event): 5012423 -> 61167488 (RecoveryWindow)
+[25632.911ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[25632.912ms] CWND Update (Congestion Event): 5012423 -> 61433920 (RecoveryWindow)
+[25659.335ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[25659.336ms] CWND Update (Congestion Event): 5012423 -> 61775424 (RecoveryWindow)
+[25665.238ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[25665.239ms] CWND Update (Congestion Event): 5012423 -> 61816640 (RecoveryWindow)
+[25693.218ms] LOSS EVENT: CWnd=5012423, InFlight=4945920, LostBytes=60352
+[25693.219ms] CWND Update (Congestion Event): 5012423 -> 61957952 (RecoveryWindow)
+[25693.387ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[25693.388ms] CWND Update (Congestion Event): 5012423 -> 62012416 (RecoveryWindow)
+[25807.553ms] LOSS EVENT: CWnd=5012423, InFlight=4872320, LostBytes=60352
+[25807.555ms] CWND Update (Congestion Event): 5012423 -> 63154688 (RecoveryWindow)
+[25807.562ms] LOSS EVENT: CWnd=5012423, InFlight=4741312, LostBytes=4416
+[25807.562ms] CWND Update (Congestion Event): 5012423 -> 63220928 (RecoveryWindow)
+[25897.317ms] LOSS EVENT: CWnd=5012423, InFlight=4945920, LostBytes=60352
+[25897.319ms] CWND Update (Congestion Event): 5012423 -> 64460352 (RecoveryWindow)
+[25916.142ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[25916.144ms] CWND Update (Congestion Event): 5012423 -> 64485376 (RecoveryWindow)
+[26009.618ms] LOSS EVENT: CWnd=5012423, InFlight=4809024, LostBytes=4416
+[26009.620ms] CWND Update (Congestion Event): 5012423 -> 65702720 (RecoveryWindow)
+[26125.840ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=63296
+[26125.842ms] CWND Update (Congestion Event): 5012423 -> 66936256 (RecoveryWindow)
+[26125.847ms] LOSS EVENT: CWnd=5012423, InFlight=4920896, LostBytes=1472
+[26125.848ms] CWND Update (Congestion Event): 5012423 -> 66964224 (RecoveryWindow)
+[26157.901ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=2944
+[26157.902ms] CWND Update (Congestion Event): 5012423 -> 67442624 (RecoveryWindow)
+[26213.586ms] LOSS EVENT: CWnd=5012423, InFlight=4875264, LostBytes=60352
+[26213.587ms] CWND Update (Congestion Event): 5012423 -> 68053504 (RecoveryWindow)
+[26218.948ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[26218.949ms] CWND Update (Congestion Event): 5012423 -> 68107968 (RecoveryWindow)
+[26329.000ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=4416
+[26329.001ms] CWND Update (Congestion Event): 5012423 -> 69425408 (RecoveryWindow)
+[26329.007ms] LOSS EVENT: CWnd=5012423, InFlight=5003328, LostBytes=1472
+[26329.008ms] CWND Update (Congestion Event): 5012423 -> 69429824 (RecoveryWindow)
+[26385.681ms] LOSS EVENT: CWnd=5012423, InFlight=5013632, LostBytes=1472
+[26385.682ms] CWND Update (Congestion Event): 5012423 -> 70104000 (RecoveryWindow)
+[26500.482ms] LOSS EVENT: CWnd=5012423, InFlight=4944448, LostBytes=1472
+[26500.505ms] CWND Update (Congestion Event): 5012423 -> 70650112 (RecoveryWindow)
+[26500.512ms] LOSS EVENT: CWnd=5012423, InFlight=4884096, LostBytes=1472
+[26500.513ms] CWND Update (Congestion Event): 5012423 -> 70707520 (RecoveryWindow)
+[26500.791ms] CWND Update (BBR): 5012423 -> 5068049
+[26500.797ms] CWND Update (BBR): 5068049 -> 5135684
+[26500.802ms] LOSS EVENT: CWnd=5135684, InFlight=4607360, LostBytes=4416
+[26500.803ms] CWND Update (Congestion Event): 5135684 -> 71178560 (RecoveryWindow)
+[26500.804ms] CWND Update (BBR): 5135684 -> 5203319
+[26501.254ms] CWND Update (BBR): 5203319 -> 5265263
+[26501.260ms] CWND Update (BBR): 5265263 -> 5334358
+[26501.265ms] CWND Update (BBR): 5334358 -> 5403478
+[26503.081ms] CWND Update (BBR): 5403478 -> 5447938
+[26515.239ms] LOSS EVENT: CWnd=5447938, InFlight=5378688, LostBytes=13248
+[26515.241ms] CWND Update (Congestion Event): 5447938 -> 71645184 (RecoveryWindow)
+[26515.242ms] CWND Update (BBR): 5447938 -> 5474587
+[26522.137ms] LOSS EVENT: CWnd=5474587, InFlight=5475840, LostBytes=4416
+[26522.139ms] CWND Update (Congestion Event): 5474587 -> 71684928 (RecoveryWindow)
+[26554.554ms] LOSS EVENT: CWnd=5474587, InFlight=5475840, LostBytes=5888
+[26554.556ms] CWND Update (Congestion Event): 5474587 -> 72080896 (RecoveryWindow)
+[26663.005ms] LOSS EVENT: CWnd=5474587, InFlight=5475840, LostBytes=2944
+[26663.007ms] CWND Update (Congestion Event): 5474587 -> 72519552 (RecoveryWindow)
+[26663.049ms] LOSS EVENT: CWnd=5474587, InFlight=5060736, LostBytes=58880
+[26663.050ms] CWND Update (Congestion Event): 5474587 -> 72872832 (RecoveryWindow)
+[26663.087ms] LOSS EVENT: CWnd=5474587, InFlight=4960640, LostBytes=4416
+[26663.088ms] CWND Update (Congestion Event): 5474587 -> 72909632 (RecoveryWindow)
+[26674.060ms] CWND Update (BBR): 5474587 -> 5527857
+[26678.535ms] CWND Update (BBR): 5527857 -> 5538234
+[26738.267ms] LOSS EVENT: CWnd=5538234, InFlight=5472896, LostBytes=1472
+[26738.269ms] CWND Update (Congestion Event): 5538234 -> 74206464 (RecoveryWindow)
+[26773.989ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=64768
+[26773.991ms] CWND Update (Congestion Event): 5538234 -> 74655424 (RecoveryWindow)
+[26882.567ms] LOSS EVENT: CWnd=5538234, InFlight=5472896, LostBytes=60352
+[26882.568ms] CWND Update (Congestion Event): 5538234 -> 75896320 (RecoveryWindow)
+[26893.830ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=4416
+[26893.831ms] CWND Update (Congestion Event): 5538234 -> 75924288 (RecoveryWindow)
+[27004.706ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=1472
+[27004.708ms] CWND Update (Congestion Event): 5538234 -> 77263808 (RecoveryWindow)
+[27138.431ms] LOSS EVENT: CWnd=5538234, InFlight=5508224, LostBytes=22080
+[27138.442ms] CWND Update (Congestion Event): 5538234 -> 78423744 (RecoveryWindow)
+[27138.625ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=2944
+[27138.627ms] CWND Update (Congestion Event): 5538234 -> 78485568 (RecoveryWindow)
+[27160.831ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=1472
+[27160.832ms] CWND Update (Congestion Event): 5538234 -> 79093504 (RecoveryWindow)
+[27209.078ms] LOSS EVENT: CWnd=5538234, InFlight=5469952, LostBytes=60352
+[27209.080ms] CWND Update (Congestion Event): 5538234 -> 79646976 (RecoveryWindow)
+[27209.214ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=4416
+[27209.215ms] CWND Update (Congestion Event): 5538234 -> 79672000 (RecoveryWindow)
+[27321.174ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=60352
+[27321.175ms] CWND Update (Congestion Event): 5538234 -> 80846656 (RecoveryWindow)
+[27325.087ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=4416
+[27325.088ms] CWND Update (Congestion Event): 5538234 -> 80911424 (RecoveryWindow)
+[27430.161ms] LOSS EVENT: CWnd=5538234, InFlight=5468480, LostBytes=2944
+[27430.163ms] CWND Update (Congestion Event): 5538234 -> 82205312 (RecoveryWindow)
+[27434.600ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=2944
+[27434.602ms] CWND Update (Congestion Event): 5538234 -> 82239168 (RecoveryWindow)
+[27576.700ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=60352
+[27576.723ms] CWND Update (Congestion Event): 5538234 -> 83407936 (RecoveryWindow)
+[27576.730ms] LOSS EVENT: CWnd=5538234, InFlight=5450816, LostBytes=4416
+[27576.731ms] CWND Update (Congestion Event): 5538234 -> 83431488 (RecoveryWindow)
+[27582.065ms] LOSS EVENT: CWnd=5538234, InFlight=5400768, LostBytes=63296
+[27582.067ms] CWND Update (Congestion Event): 5538234 -> 83904000 (RecoveryWindow)
+[27596.839ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=1472
+[27596.841ms] CWND Update (Congestion Event): 5538234 -> 83908416 (RecoveryWindow)
+[27654.305ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=2944
+[27654.307ms] CWND Update (Congestion Event): 5538234 -> 84507520 (RecoveryWindow)
+[27654.316ms] LOSS EVENT: CWnd=5538234, InFlight=5468480, LostBytes=2944
+[27654.316ms] CWND Update (Congestion Event): 5538234 -> 84572288 (RecoveryWindow)
+[27693.362ms] LOSS EVENT: CWnd=5538234, InFlight=5471424, LostBytes=5888
+[27693.364ms] CWND Update (Congestion Event): 5538234 -> 85186112 (RecoveryWindow)
+[27749.929ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=10304
+[27749.931ms] CWND Update (Congestion Event): 5538234 -> 85626240 (RecoveryWindow)
+[27778.262ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=7360
+[27778.265ms] CWND Update (Congestion Event): 5538234 -> 86150272 (RecoveryWindow)
+[27804.872ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=2944
+[27804.874ms] CWND Update (Congestion Event): 5538234 -> 86538880 (RecoveryWindow)
+[27810.286ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=2944
+[27810.288ms] CWND Update (Congestion Event): 5538234 -> 86593344 (RecoveryWindow)
+[27849.375ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=1472
+[27849.377ms] CWND Update (Congestion Event): 5538234 -> 86995200 (RecoveryWindow)
+[27849.385ms] LOSS EVENT: CWnd=5538234, InFlight=5469952, LostBytes=2944
+[27849.385ms] CWND Update (Congestion Event): 5538234 -> 87059968 (RecoveryWindow)
+[27882.727ms] LOSS EVENT: CWnd=5538234, InFlight=5469952, LostBytes=60352
+[27882.729ms] CWND Update (Congestion Event): 5538234 -> 87341120 (RecoveryWindow)
+[27882.735ms] LOSS EVENT: CWnd=5538234, InFlight=5372800, LostBytes=4416
+[27882.735ms] CWND Update (Congestion Event): 5538234 -> 87373504 (RecoveryWindow)
+[27906.350ms] LOSS EVENT: CWnd=5538234, InFlight=5472896, LostBytes=2944
+[27906.352ms] CWND Update (Congestion Event): 5538234 -> 87709120 (RecoveryWindow)
+[27911.284ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=1472
+[27911.286ms] CWND Update (Congestion Event): 5538234 -> 87713536 (RecoveryWindow)
+[27941.184ms] LOSS EVENT: CWnd=5538234, InFlight=5468480, LostBytes=1472
+[27941.186ms] CWND Update (Congestion Event): 5538234 -> 88119808 (RecoveryWindow)
+[27946.101ms] LOSS EVENT: CWnd=5538234, InFlight=5539136, LostBytes=1472
+[27946.103ms] CWND Update (Congestion Event): 5538234 -> 88124224 (RecoveryWindow)
+[27970.219ms] LOSS EVENT: CWnd=5538234, InFlight=5523086, LostBytes=64768
+[27970.221ms] CWND Update (Congestion Event): 5538234 -> 88336192 (RecoveryWindow)
+[28074.288ms] LOSS EVENT: CWnd=5538234, InFlight=4229234, LostBytes=60352
+[28074.291ms] CWND Update (Congestion Event): 5538234 -> 89569728 (RecoveryWindow)
+[28074.293ms] CWND Update (BBR): 5538234 -> 5445398
+[28089.074ms] LOSS EVENT: CWnd=5445398, InFlight=4329416, LostBytes=4416
+[28089.076ms] CWND Update (Congestion Event): 5445398 -> 89633024 (RecoveryWindow)
+[28221.711ms] LOSS EVENT: CWnd=5445398, InFlight=3069420, LostBytes=64768
+[28221.714ms] CWND Update (Congestion Event): 5445398 -> 90828288 (RecoveryWindow)
+[28288.310ms] LOSS EVENT: CWnd=5445398, InFlight=1810896, LostBytes=5888
+[28288.322ms] CWND Update (Congestion Event): 5445398 -> 92080960 (RecoveryWindow)
+[28292.758ms] LOSS EVENT: CWnd=5445398, InFlight=1771188, LostBytes=2944
+[28292.770ms] CWND Update (Congestion Event): 5445398 -> 92117760 (RecoveryWindow)
+[28391.191ms] LOSS EVENT: CWnd=5445398, InFlight=600984, LostBytes=2944
+[28391.203ms] CWND Update (Congestion Event): 5445398 -> 93285056 (RecoveryWindow)
+[28395.178ms] LOSS EVENT: CWnd=5445398, InFlight=565692, LostBytes=2944
+[28395.261ms] CWND Update (Congestion Event): 5445398 -> 93317440 (RecoveryWindow)
+[28456.649ms] CWND Update (BBR): 5445398 -> 5370644
+[28586.953ms] CWND Update (BBR): 5370644 -> 5306680
+[28865.483ms] LOSS EVENT: CWnd=5306680, InFlight=5307560, LostBytes=29440
+[28865.487ms] CWND Update (Congestion Event): 5306680 -> 5248680 (RecoveryWindow)
+[28875.773ms] LOSS EVENT: CWnd=5278120, InFlight=5278962, LostBytes=3995
+[28875.775ms] CWND Update (Congestion Event): 5306680 -> 5274125 (RecoveryWindow)
+[28976.108ms] LOSS EVENT: CWnd=5281076, InFlight=5281921, LostBytes=32384
+[28976.110ms] CWND Update (Congestion Event): 5306680 -> 5248692 (RecoveryWindow)
+[28976.116ms] LOSS EVENT: CWnd=5249537, InFlight=5182667, LostBytes=1051
+[28976.116ms] CWND Update (Congestion Event): 5306680 -> 5248486 (RecoveryWindow)
+[29028.462ms] LOSS EVENT: CWnd=5249752, InFlight=4977856, LostBytes=30912
+[29028.464ms] CWND Update (Congestion Event): 5306680 -> 5218840 (RecoveryWindow)
+[29028.470ms] LOSS EVENT: CWnd=5218840, InFlight=4885962, LostBytes=2523
+[29028.471ms] CWND Update (Congestion Event): 5306680 -> 5216317 (RecoveryWindow)
+[29077.190ms] LOSS EVENT: CWnd=5221375, InFlight=5222217, LostBytes=33435
+[29077.194ms] CWND Update (Congestion Event): 5306680 -> 5187940 (RecoveryWindow)
+[29128.774ms] LOSS EVENT: CWnd=5192574, InFlight=5193416, LostBytes=33435
+[29128.777ms] CWND Update (Congestion Event): 5306680 -> 5159139 (RecoveryWindow)
+[29176.582ms] LOSS EVENT: CWnd=5162719, InFlight=5163773, LostBytes=29440
+[29176.584ms] CWND Update (Congestion Event): 5306680 -> 5133279 (RecoveryWindow)
+[29182.305ms] LOSS EVENT: CWnd=5134333, InFlight=5135175, LostBytes=3995
+[29182.307ms] CWND Update (Congestion Event): 5306680 -> 5130338 (RecoveryWindow)
+[29217.744ms] LOSS EVENT: CWnd=5132864, InFlight=5132864, LostBytes=60352
+[29217.746ms] CWND Update (Congestion Event): 5306680 -> 5072512 (RecoveryWindow)
+[29226.129ms] LOSS EVENT: CWnd=5072512, InFlight=5072512, LostBytes=4416
+[29226.131ms] CWND Update (Congestion Event): 5306680 -> 5068096 (RecoveryWindow)
+[29286.688ms] LOSS EVENT: CWnd=5068096, InFlight=5068096, LostBytes=4416
+[29286.690ms] CWND Update (Congestion Event): 5306680 -> 5063680 (RecoveryWindow)
+[29287.040ms] LOSS EVENT: CWnd=5063680, InFlight=4862016, LostBytes=8832
+[29287.042ms] CWND Update (Congestion Event): 5306680 -> 5054848 (RecoveryWindow)
+[29324.718ms] LOSS EVENT: CWnd=5306680, InFlight=5308032, LostBytes=1472
+[29324.720ms] CWND Update (Congestion Event): 5306680 -> 5511168 (RecoveryWindow)
+[29350.009ms] CWND Update (BBR): 5306680 -> 5311494
+[29353.993ms] LOSS EVENT: CWnd=5311494, InFlight=5312448, LostBytes=61824
+[29353.995ms] CWND Update (Congestion Event): 5311494 -> 5795264 (RecoveryWindow)
+[29353.997ms] CWND Update (BBR): 5311494 -> 5317908
+[29409.643ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=2944
+[29409.646ms] CWND Update (Congestion Event): 5317908 -> 5849728 (RecoveryWindow)
+[29460.659ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=1472
+[29460.662ms] CWND Update (Congestion Event): 5317908 -> 7084736 (RecoveryWindow)
+[29497.437ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=4416
+[29497.439ms] CWND Update (Congestion Event): 5317908 -> 7125952 (RecoveryWindow)
+[29535.032ms] LOSS EVENT: CWnd=5317908, InFlight=5249152, LostBytes=64768
+[29535.039ms] CWND Update (Congestion Event): 5317908 -> 7439488 (RecoveryWindow)
+[29554.921ms] LOSS EVENT: CWnd=5317908, InFlight=5247680, LostBytes=1472
+[29554.927ms] CWND Update (Congestion Event): 5317908 -> 7747136 (RecoveryWindow)
+[29555.051ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=2944
+[29555.052ms] CWND Update (Congestion Event): 5317908 -> 7797184 (RecoveryWindow)
+[29605.537ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=7360
+[29605.539ms] CWND Update (Congestion Event): 5317908 -> 8166656 (RecoveryWindow)
+[29605.545ms] LOSS EVENT: CWnd=5317908, InFlight=5287424, LostBytes=2944
+[29605.546ms] CWND Update (Congestion Event): 5317908 -> 8187264 (RecoveryWindow)
+[29606.008ms] LOSS EVENT: CWnd=5317908, InFlight=5247680, LostBytes=51520
+[29606.029ms] CWND Update (Congestion Event): 5317908 -> 8346240 (RecoveryWindow)
+[29695.004ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=60352
+[29695.009ms] CWND Update (Congestion Event): 5317908 -> 9659264 (RecoveryWindow)
+[29697.951ms] LOSS EVENT: CWnd=5317908, InFlight=5318336, LostBytes=4416
+[29697.953ms] CWND Update (Congestion Event): 5317908 -> 9697536 (RecoveryWindow)
+[29811.041ms] LOSS EVENT: CWnd=5317908, InFlight=4486883, LostBytes=13248
+[29811.043ms] CWND Update (Congestion Event): 5317908 -> 10987008 (RecoveryWindow)
+[29916.539ms] LOSS EVENT: CWnd=5317908, InFlight=3222471, LostBytes=61824
+[29916.541ms] CWND Update (Congestion Event): 5317908 -> 12189632 (RecoveryWindow)
+[29916.596ms] LOSS EVENT: CWnd=5317908, InFlight=3204843, LostBytes=2944
+[29916.597ms] CWND Update (Congestion Event): 5317908 -> 12204352 (RecoveryWindow)
+[29954.687ms] LOSS EVENT: CWnd=5317908, InFlight=2657295, LostBytes=60352
+[29954.689ms] CWND Update (Congestion Event): 5317908 -> 12691584 (RecoveryWindow)
+[29964.246ms] LOSS EVENT: CWnd=5317908, InFlight=2639667, LostBytes=4416
+[29964.248ms] CWND Update (Congestion Event): 5317908 -> 12704832 (RecoveryWindow)
+[30065.816ms] LOSS EVENT: CWnd=5317908, InFlight=1364951, LostBytes=63296
+[30065.826ms] CWND Update (Congestion Event): 5317908 -> 13916288 (RecoveryWindow)
+[30071.735ms] LOSS EVENT: CWnd=5317908, InFlight=1350267, LostBytes=1472
+[30071.747ms] CWND Update (Congestion Event): 5317908 -> 13929536 (RecoveryWindow)
+[30524.486ms] LOSS EVENT: CWnd=5317908, InFlight=5318915, LostBytes=30912
+[30524.488ms] CWND Update (Congestion Event): 5317908 -> 5257091 (RecoveryWindow)
+[30532.967ms] LOSS EVENT: CWnd=5288003, InFlight=5288845, LostBytes=2523
+[30532.969ms] CWND Update (Congestion Event): 5317908 -> 5285480 (RecoveryWindow)
+[30635.141ms] LOSS EVENT: CWnd=5296008, InFlight=5296220, LostBytes=29440
+[30635.142ms] CWND Update (Congestion Event): 5317908 -> 5266568 (RecoveryWindow)
+[30645.111ms] LOSS EVENT: CWnd=5266780, InFlight=5267622, LostBytes=3995
+[30645.112ms] CWND Update (Congestion Event): 5317908 -> 5262785 (RecoveryWindow)
+[30735.911ms] LOSS EVENT: CWnd=5274997, InFlight=5275839, LostBytes=30912
+[30735.913ms] CWND Update (Congestion Event): 5317908 -> 5244085 (RecoveryWindow)
+[30740.030ms] LOSS EVENT: CWnd=5244927, InFlight=5245769, LostBytes=2523
+[30740.031ms] CWND Update (Congestion Event): 5317908 -> 5242404 (RecoveryWindow)
+[30839.620ms] LOSS EVENT: CWnd=5253774, InFlight=5254616, LostBytes=29440
+[30839.623ms] CWND Update (Congestion Event): 5317908 -> 5224334 (RecoveryWindow)
+[30839.628ms] LOSS EVENT: CWnd=5225176, InFlight=5177442, LostBytes=3995
+[30839.628ms] CWND Update (Congestion Event): 5317908 -> 5221181 (RecoveryWindow)
+[30943.925ms] LOSS EVENT: CWnd=5222656, InFlight=5222656, LostBytes=63296
+[30943.927ms] CWND Update (Congestion Event): 5317908 -> 5159360 (RecoveryWindow)
+[30975.386ms] LOSS EVENT: CWnd=5159360, InFlight=5159360, LostBytes=1472
+[30975.389ms] CWND Update (Congestion Event): 5317908 -> 5157888 (RecoveryWindow)
+[30975.391ms] CWND Update (BBR): 5317908 -> 5287875
+[31055.948ms] LOSS EVENT: CWnd=5287875, InFlight=5153472, LostBytes=5888
+[31055.950ms] CWND Update (Congestion Event): 5287875 -> 6387008 (RecoveryWindow)
+[31056.006ms] LOSS EVENT: CWnd=5287875, InFlight=5112256, LostBytes=2944
+[31056.007ms] CWND Update (Congestion Event): 5287875 -> 6419392 (RecoveryWindow)
+[31162.278ms] LOSS EVENT: CWnd=5287875, InFlight=5152000, LostBytes=1472
+[31162.281ms] CWND Update (Congestion Event): 5287875 -> 7576384 (RecoveryWindow)
+[31165.257ms] LOSS EVENT: CWnd=5287875, InFlight=5288896, LostBytes=1472
+[31165.259ms] CWND Update (Congestion Event): 5287875 -> 7636736 (RecoveryWindow)
+[31243.032ms] LOSS EVENT: CWnd=5287875, InFlight=5247680, LostBytes=2944
+[31243.036ms] CWND Update (Congestion Event): 5287875 -> 8227008 (RecoveryWindow)
+[31264.957ms] LOSS EVENT: CWnd=5287875, InFlight=5288896, LostBytes=4416
+[31264.959ms] CWND Update (Congestion Event): 5287875 -> 8901184 (RecoveryWindow)
+[31323.087ms] LOSS EVENT: CWnd=5287875, InFlight=5288896, LostBytes=2944
+[31323.111ms] CWND Update (Congestion Event): 5287875 -> 9444352 (RecoveryWindow)
+[31323.401ms] LOSS EVENT: CWnd=5287875, InFlight=5288896, LostBytes=1472
+[31323.402ms] CWND Update (Congestion Event): 5287875 -> 9484096 (RecoveryWindow)
+[31362.918ms] LOSS EVENT: CWnd=5287875, InFlight=5288896, LostBytes=61824
+[31362.919ms] CWND Update (Congestion Event): 5287875 -> 9893312 (RecoveryWindow)
+[31364.903ms] LOSS EVENT: CWnd=5287875, InFlight=5288896, LostBytes=2944
+[31364.904ms] CWND Update (Congestion Event): 5287875 -> 9961024 (RecoveryWindow)
+[31377.223ms] CWND Update (BBR): 5287875 -> 4950431
+[31377.259ms] CWND Update (Forced by Resync): 4950431 -> 5888
+[31478.063ms] LOSS EVENT: CWnd=5888, InFlight=4183424, LostBytes=60352
+[31478.068ms] CWND Update (Congestion Event): 4950431 -> 11140096 (RecoveryWindow)
+[31478.074ms] LOSS EVENT: CWnd=5888, InFlight=4099520, LostBytes=4416
+[31478.074ms] CWND Update (Congestion Event): 4950431 -> 11159232 (RecoveryWindow)
+[31569.359ms] LOSS EVENT: CWnd=5888, InFlight=2870400, LostBytes=17664
+[31569.361ms] CWND Update (Congestion Event): 4950431 -> 12366272 (RecoveryWindow)
+[31683.587ms] LOSS EVENT: CWnd=5888, InFlight=1636864, LostBytes=2944
+[31683.591ms] CWND Update (Congestion Event): 4950431 -> 13579200 (RecoveryWindow)
+[31683.599ms] LOSS EVENT: CWnd=5888, InFlight=1605952, LostBytes=4416
+[31683.599ms] CWND Update (Congestion Event): 4950431 -> 13602752 (RecoveryWindow)
+[31735.346ms] LOSS EVENT: CWnd=5888, InFlight=995072, LostBytes=2944
+[31735.349ms] CWND Update (Congestion Event): 4950431 -> 14206272 (RecoveryWindow)
+[31787.992ms] LOSS EVENT: CWnd=5888, InFlight=266432, LostBytes=1472
+[31788.004ms] CWND Update (Congestion Event): 4950431 -> 14930496 (RecoveryWindow)
+[32219.544ms] CWND Update (BBR): 4950431 -> 4956319
+[32395.199ms] CWND Update (BBR): 4956319 -> 5022559
+[32401.021ms] CWND Update (BBR): 5022559 -> 5028833
+[32520.584ms] LOSS EVENT: CWnd=5028833, InFlight=4963584, LostBytes=60352
+[32520.586ms] CWND Update (Congestion Event): 5028833 -> 4842880 (RecoveryWindow)
+[32520.591ms] LOSS EVENT: CWnd=4903232, InFlight=4859072, LostBytes=4416
+[32520.592ms] CWND Update (Congestion Event): 5028833 -> 4898816 (RecoveryWindow)
+[32609.826ms] LOSS EVENT: CWnd=4898816, InFlight=4898816, LostBytes=63296
+[32609.828ms] CWND Update (Congestion Event): 5028833 -> 4835520 (RecoveryWindow)
+[32619.080ms] LOSS EVENT: CWnd=4835520, InFlight=4835520, LostBytes=1472
+[32619.082ms] CWND Update (Congestion Event): 5028833 -> 4834048 (RecoveryWindow)
+[32731.622ms] LOSS EVENT: CWnd=4834048, InFlight=4834048, LostBytes=63296
+[32731.624ms] CWND Update (Congestion Event): 5028833 -> 4770752 (RecoveryWindow)
+[32731.631ms] LOSS EVENT: CWnd=4770752, InFlight=4716288, LostBytes=1472
+[32731.631ms] CWND Update (Congestion Event): 5028833 -> 4769280 (RecoveryWindow)
+[32900.318ms] LOSS EVENT: CWnd=4769280, InFlight=4703040, LostBytes=61824
+[32900.320ms] CWND Update (Congestion Event): 5028833 -> 4707456 (RecoveryWindow)
+[32900.326ms] LOSS EVENT: CWnd=4707456, InFlight=4620608, LostBytes=2944
+[32900.327ms] CWND Update (Congestion Event): 5028833 -> 4704512 (RecoveryWindow)
+[32900.923ms] CWND Update (BBR): 5028833 -> 5081219
+[32912.297ms] CWND Update (BBR): 5081219 -> 5139137
+[32961.402ms] LOSS EVENT: CWnd=5139137, InFlight=5100480, LostBytes=1472
+[32961.404ms] CWND Update (Congestion Event): 5139137 -> 5361024 (RecoveryWindow)
+[33125.209ms] LOSS EVENT: CWnd=5139137, InFlight=4938560, LostBytes=63296
+[33125.213ms] CWND Update (Congestion Event): 5139137 -> 6518016 (RecoveryWindow)
+[33125.219ms] LOSS EVENT: CWnd=5139137, InFlight=4857600, LostBytes=1472
+[33125.220ms] CWND Update (Congestion Event): 5139137 -> 6534208 (RecoveryWindow)
+[33125.259ms] CWND Update (BBR): 5139137 -> 5200877
+[33125.266ms] CWND Update (BBR): 5200877 -> 5267041
+[33125.273ms] CWND Update (BBR): 5267041 -> 5333192
+[33125.998ms] CWND Update (BBR): 5333192 -> 5390198
+[33126.014ms] CWND Update (BBR): 5390198 -> 5460765
+[33126.055ms] CWND Update (BBR): 5460765 -> 5466450
+[33126.061ms] CWND Update (BBR): 5466450 -> 5532181
+[33126.090ms] CWND Update (BBR): 5532181 -> 5598065
+[33161.921ms] LOSS EVENT: CWnd=5598065, InFlight=5528832, LostBytes=4416
+[33161.923ms] CWND Update (Congestion Event): 5598065 -> 7760384 (RecoveryWindow)
+[33168.889ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[33168.891ms] CWND Update (Congestion Event): 5598065 -> 7806016 (RecoveryWindow)
+[33262.044ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=61824
+[33262.049ms] CWND Update (Congestion Event): 5598065 -> 8905600 (RecoveryWindow)
+[33267.419ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[33267.422ms] CWND Update (Congestion Event): 5598065 -> 8967424 (RecoveryWindow)
+[33382.498ms] LOSS EVENT: CWnd=5598065, InFlight=5459648, LostBytes=42688
+[33382.502ms] CWND Update (Congestion Event): 5598065 -> 10152384 (RecoveryWindow)
+[33382.772ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[33382.773ms] CWND Update (Congestion Event): 5598065 -> 10214208 (RecoveryWindow)
+[33481.644ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=61824
+[33481.647ms] CWND Update (Congestion Event): 5598065 -> 11390336 (RecoveryWindow)
+[33485.435ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[33485.437ms] CWND Update (Congestion Event): 5598065 -> 11422720 (RecoveryWindow)
+[33592.925ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[33592.927ms] CWND Update (Congestion Event): 5598065 -> 12656256 (RecoveryWindow)
+[33596.882ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[33596.884ms] CWND Update (Congestion Event): 5598065 -> 12723968 (RecoveryWindow)
+[33687.217ms] LOSS EVENT: CWnd=5598065, InFlight=5531776, LostBytes=63296
+[33687.220ms] CWND Update (Congestion Event): 5598065 -> 13813248 (RecoveryWindow)
+[33698.536ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[33698.538ms] CWND Update (Congestion Event): 5598065 -> 13866240 (RecoveryWindow)
+[33746.125ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[33746.127ms] CWND Update (Congestion Event): 5598065 -> 14475648 (RecoveryWindow)
+[33819.311ms] LOSS EVENT: CWnd=5598065, InFlight=5462592, LostBytes=1472
+[33819.314ms] CWND Update (Congestion Event): 5598065 -> 15096832 (RecoveryWindow)
+[33845.771ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=60352
+[33845.773ms] CWND Update (Congestion Event): 5598065 -> 15645888 (RecoveryWindow)
+[33850.728ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=4416
+[33850.730ms] CWND Update (Congestion Event): 5598065 -> 15676800 (RecoveryWindow)
+[33951.109ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=64768
+[33951.111ms] CWND Update (Congestion Event): 5598065 -> 16847040 (RecoveryWindow)
+[34007.164ms] LOSS EVENT: CWnd=5598065, InFlight=5593600, LostBytes=1472
+[34007.166ms] CWND Update (Congestion Event): 5598065 -> 17505024 (RecoveryWindow)
+[34098.436ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=5888
+[34098.453ms] CWND Update (Congestion Event): 5598065 -> 17989312 (RecoveryWindow)
+[34098.462ms] LOSS EVENT: CWnd=5598065, InFlight=5534720, LostBytes=1472
+[34098.463ms] CWND Update (Congestion Event): 5598065 -> 18046720 (RecoveryWindow)
+[34098.722ms] LOSS EVENT: CWnd=5598065, InFlight=5399296, LostBytes=63296
+[34098.722ms] CWND Update (Congestion Event): 5598065 -> 18392640 (RecoveryWindow)
+[34098.729ms] LOSS EVENT: CWnd=5598065, InFlight=5283008, LostBytes=1472
+[34098.729ms] CWND Update (Congestion Event): 5598065 -> 18444160 (RecoveryWindow)
+[34217.058ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=4416
+[34217.061ms] CWND Update (Congestion Event): 5598065 -> 19679168 (RecoveryWindow)
+[34217.069ms] LOSS EVENT: CWnd=5598065, InFlight=5549440, LostBytes=4416
+[34217.069ms] CWND Update (Congestion Event): 5598065 -> 19720384 (RecoveryWindow)
+[34249.497ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=63296
+[34249.499ms] CWND Update (Congestion Event): 5598065 -> 20207616 (RecoveryWindow)
+[34254.724ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[34254.726ms] CWND Update (Congestion Event): 5598065 -> 20267968 (RecoveryWindow)
+[34406.818ms] LOSS EVENT: CWnd=5598065, InFlight=5344832, LostBytes=2944
+[34406.820ms] CWND Update (Congestion Event): 5598065 -> 21545664 (RecoveryWindow)
+[34407.074ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[34407.076ms] CWND Update (Congestion Event): 5598065 -> 21601600 (RecoveryWindow)
+[34467.100ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=7360
+[34467.102ms] CWND Update (Congestion Event): 5598065 -> 22793920 (RecoveryWindow)
+[34472.988ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[34472.990ms] CWND Update (Congestion Event): 5598065 -> 22854272 (RecoveryWindow)
+[34521.734ms] LOSS EVENT: CWnd=5598065, InFlight=5528832, LostBytes=63296
+[34521.736ms] CWND Update (Congestion Event): 5598065 -> 23332672 (RecoveryWindow)
+[34521.975ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[34521.977ms] CWND Update (Congestion Event): 5598065 -> 23342976 (RecoveryWindow)
+[34618.615ms] LOSS EVENT: CWnd=5598065, InFlight=5533248, LostBytes=5888
+[34618.617ms] CWND Update (Congestion Event): 5598065 -> 24563264 (RecoveryWindow)
+[34685.616ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=5888
+[34685.619ms] CWND Update (Congestion Event): 5598065 -> 25366976 (RecoveryWindow)
+[34744.922ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=61824
+[34744.924ms] CWND Update (Congestion Event): 5598065 -> 25983744 (RecoveryWindow)
+[34750.831ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[34750.833ms] CWND Update (Congestion Event): 5598065 -> 26019072 (RecoveryWindow)
+[34843.107ms] LOSS EVENT: CWnd=5598065, InFlight=5533248, LostBytes=61824
+[34843.109ms] CWND Update (Congestion Event): 5598065 -> 27186368 (RecoveryWindow)
+[34862.773ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[34862.775ms] CWND Update (Congestion Event): 5598065 -> 27224640 (RecoveryWindow)
+[34965.636ms] LOSS EVENT: CWnd=5598065, InFlight=5543552, LostBytes=2944
+[34965.638ms] CWND Update (Congestion Event): 5598065 -> 28508224 (RecoveryWindow)
+[35062.981ms] LOSS EVENT: CWnd=5598065, InFlight=5528832, LostBytes=2944
+[35062.984ms] CWND Update (Congestion Event): 5598065 -> 29722624 (RecoveryWindow)
+[35063.151ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[35063.152ms] CWND Update (Congestion Event): 5598065 -> 29738816 (RecoveryWindow)
+[35129.626ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[35129.628ms] CWND Update (Congestion Event): 5598065 -> 30346752 (RecoveryWindow)
+[35164.455ms] LOSS EVENT: CWnd=5598065, InFlight=5530304, LostBytes=61824
+[35164.457ms] CWND Update (Congestion Event): 5598065 -> 30891392 (RecoveryWindow)
+[35169.278ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[35169.280ms] CWND Update (Congestion Event): 5598065 -> 30956160 (RecoveryWindow)
+[35237.208ms] LOSS EVENT: CWnd=5598065, InFlight=5533248, LostBytes=2944
+[35237.209ms] CWND Update (Congestion Event): 5598065 -> 31478720 (RecoveryWindow)
+[35237.215ms] LOSS EVENT: CWnd=5598065, InFlight=5461120, LostBytes=1472
+[35237.216ms] CWND Update (Congestion Event): 5598065 -> 31546432 (RecoveryWindow)
+[35257.497ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=60352
+[35257.499ms] CWND Update (Congestion Event): 5598065 -> 31895296 (RecoveryWindow)
+[35262.135ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=4416
+[35262.137ms] CWND Update (Congestion Event): 5598065 -> 31958592 (RecoveryWindow)
+[35369.188ms] LOSS EVENT: CWnd=5598065, InFlight=5531776, LostBytes=1472
+[35369.190ms] CWND Update (Congestion Event): 5598065 -> 33252480 (RecoveryWindow)
+[35417.935ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=58880
+[35417.937ms] CWND Update (Congestion Event): 5598065 -> 33710272 (RecoveryWindow)
+[35420.894ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[35420.895ms] CWND Update (Congestion Event): 5598065 -> 33772096 (RecoveryWindow)
+[35526.954ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[35526.956ms] CWND Update (Congestion Event): 5598065 -> 35073344 (RecoveryWindow)
+[35623.233ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=4416
+[35623.235ms] CWND Update (Congestion Event): 5598065 -> 36274496 (RecoveryWindow)
+[35669.515ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=60352
+[35669.516ms] CWND Update (Congestion Event): 5598065 -> 36770560 (RecoveryWindow)
+[35680.959ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=4416
+[35680.960ms] CWND Update (Congestion Event): 5598065 -> 36801472 (RecoveryWindow)
+[35782.954ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=5888
+[35782.956ms] CWND Update (Congestion Event): 5598065 -> 38093888 (RecoveryWindow)
+[35857.147ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[35857.149ms] CWND Update (Congestion Event): 5598065 -> 38950592 (RecoveryWindow)
+[35913.158ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=60352
+[35913.159ms] CWND Update (Congestion Event): 5598065 -> 39508480 (RecoveryWindow)
+[35913.166ms] LOSS EVENT: CWnd=5598065, InFlight=5503808, LostBytes=4416
+[35913.166ms] CWND Update (Congestion Event): 5598065 -> 39539392 (RecoveryWindow)
+[36045.479ms] LOSS EVENT: CWnd=5598065, InFlight=5459648, LostBytes=60352
+[36045.481ms] CWND Update (Congestion Event): 5598065 -> 40812672 (RecoveryWindow)
+[36045.486ms] LOSS EVENT: CWnd=5598065, InFlight=5387520, LostBytes=4416
+[36045.487ms] CWND Update (Congestion Event): 5598065 -> 40820032 (RecoveryWindow)
+[36149.933ms] LOSS EVENT: CWnd=5598065, InFlight=5533248, LostBytes=26496
+[36149.935ms] CWND Update (Congestion Event): 5598065 -> 42027072 (RecoveryWindow)
+[36149.975ms] LOSS EVENT: CWnd=5598065, InFlight=5467008, LostBytes=4416
+[36149.976ms] CWND Update (Congestion Event): 5598065 -> 42062400 (RecoveryWindow)
+[36268.941ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=7360
+[36268.943ms] CWND Update (Congestion Event): 5598065 -> 43222336 (RecoveryWindow)
+[36281.121ms] LOSS EVENT: CWnd=5598065, InFlight=5464064, LostBytes=7360
+[36281.123ms] CWND Update (Congestion Event): 5598065 -> 43895040 (RecoveryWindow)
+[36283.545ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[36283.547ms] CWND Update (Congestion Event): 5598065 -> 43905344 (RecoveryWindow)
+[36329.191ms] LOSS EVENT: CWnd=5598065, InFlight=5530304, LostBytes=1472
+[36329.193ms] CWND Update (Congestion Event): 5598065 -> 44529472 (RecoveryWindow)
+[36340.999ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=2944
+[36341.001ms] CWND Update (Congestion Event): 5598065 -> 44530944 (RecoveryWindow)
+[36411.309ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=5888
+[36411.311ms] CWND Update (Congestion Event): 5598065 -> 45072640 (RecoveryWindow)
+[36411.625ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=1472
+[36411.627ms] CWND Update (Congestion Event): 5598065 -> 45103552 (RecoveryWindow)
+[36441.746ms] LOSS EVENT: CWnd=5598065, InFlight=5599488, LostBytes=4416
+[36441.748ms] CWND Update (Congestion Event): 5598065 -> 45580480 (RecoveryWindow)
+[36483.994ms] LOSS EVENT: CWnd=5598065, InFlight=5464064, LostBytes=63296
+[36483.996ms] CWND Update (Congestion Event): 5598065 -> 46063296 (RecoveryWindow)
+[36484.001ms] LOSS EVENT: CWnd=5598065, InFlight=5381632, LostBytes=1472
+[36484.002ms] CWND Update (Congestion Event): 5598065 -> 46080960 (RecoveryWindow)
+[36581.983ms] LOSS EVENT: CWnd=5598065, InFlight=5164368, LostBytes=63296
+[36581.986ms] CWND Update (Congestion Event): 5598065 -> 47330688 (RecoveryWindow)
+[36583.898ms] LOSS EVENT: CWnd=5598065, InFlight=5158516, LostBytes=1472
+[36583.900ms] CWND Update (Congestion Event): 5598065 -> 47335104 (RecoveryWindow)
+[36689.105ms] LOSS EVENT: CWnd=5598065, InFlight=3861720, LostBytes=63296
+[36689.107ms] CWND Update (Congestion Event): 5598065 -> 48568640 (RecoveryWindow)
+[36693.075ms] LOSS EVENT: CWnd=5598065, InFlight=3854396, LostBytes=1472
+[36693.077ms] CWND Update (Congestion Event): 5598065 -> 48574528 (RecoveryWindow)
+[36813.589ms] LOSS EVENT: CWnd=5598065, InFlight=2616480, LostBytes=1472
+[36813.592ms] CWND Update (Congestion Event): 5598065 -> 49811008 (RecoveryWindow)
+[36813.601ms] LOSS EVENT: CWnd=5598065, InFlight=2573792, LostBytes=1472
+[36813.623ms] CWND Update (Congestion Event): 5598065 -> 49850752 (RecoveryWindow)
+[36894.404ms] LOSS EVENT: CWnd=5598065, InFlight=1416836, LostBytes=60352
+[36894.416ms] CWND Update (Congestion Event): 5598065 -> 50948864 (RecoveryWindow)
+[36901.587ms] LOSS EVENT: CWnd=5598065, InFlight=1369768, LostBytes=4416
+[36901.599ms] CWND Update (Congestion Event): 5598065 -> 50991552 (RecoveryWindow)
+[37006.305ms] LOSS EVENT: CWnd=5598065, InFlight=5594320, LostBytes=1472
+[37006.307ms] CWND Update (Congestion Event): 5598065 -> 52292028 (RecoveryWindow)
+[37073.154ms] LOSS EVENT: CWnd=5598065, InFlight=5598700, LostBytes=36
+[37073.156ms] CWND Update (Congestion Event): 5598065 -> 52293500 (RecoveryWindow)
+[37188.297ms] LOSS EVENT: CWnd=5598065, InFlight=5598398, LostBytes=30912
+[37188.301ms] CWND Update (Congestion Event): 5598065 -> 53620038 (RecoveryWindow)
+[37192.817ms] LOSS EVENT: CWnd=5598065, InFlight=5599240, LostBytes=2523
+[37192.819ms] CWND Update (Congestion Event): 5598065 -> 53665249 (RecoveryWindow)
+[37290.499ms] LOSS EVENT: CWnd=5598065, InFlight=5488422, LostBytes=30912
+[37290.502ms] CWND Update (Congestion Event): 5598065 -> 54832530 (RecoveryWindow)
+[37296.915ms] LOSS EVENT: CWnd=5598065, InFlight=5482990, LostBytes=2523
+[37296.917ms] CWND Update (Congestion Event): 5598065 -> 54835474 (RecoveryWindow)
+[37391.748ms] LOSS EVENT: CWnd=5598065, InFlight=4255784, LostBytes=32384
+[37391.750ms] CWND Update (Congestion Event): 5598065 -> 56030302 (RecoveryWindow)
+[37399.635ms] LOSS EVENT: CWnd=5598065, InFlight=4211030, LostBytes=1051
+[37399.637ms] CWND Update (Congestion Event): 5598065 -> 56074041 (RecoveryWindow)
+[37517.887ms] LOSS EVENT: CWnd=5598065, InFlight=3004212, LostBytes=2944
+[37517.890ms] CWND Update (Congestion Event): 5598065 -> 57277922 (RecoveryWindow)
+[37549.433ms] CWND Update (BBR): 5598065 -> 4454427
+[37549.441ms] CWND Update (BBR): 4454427 -> 4520555
+[37549.447ms] LOSS EVENT: CWnd=4520555, InFlight=2464024, LostBytes=1472
+[37549.448ms] CWND Update (Congestion Event): 4520555 -> 57816674 (RecoveryWindow)
+[37549.449ms] CWND Update (BBR): 4520555 -> 4591135
+[37562.700ms] LOSS EVENT: CWnd=4591135, InFlight=2393404, LostBytes=2944
+[37562.702ms] CWND Update (Congestion Event): 4591135 -> 57884386 (RecoveryWindow)
+[37590.638ms] CWND Update (BBR): 4591135 -> 4615279
+[37608.598ms] LOSS EVENT: CWnd=4615279, InFlight=1784032, LostBytes=61824
+[37608.603ms] CWND Update (Congestion Event): 4615279 -> 58431970 (RecoveryWindow)
+[37608.618ms] LOSS EVENT: CWnd=4615279, InFlight=1658912, LostBytes=2944
+[37608.619ms] CWND Update (Congestion Event): 4615279 -> 58492322 (RecoveryWindow)
+[37648.626ms] LOSS EVENT: CWnd=4615279, InFlight=1173188, LostBytes=1472
+[37648.639ms] CWND Update (Congestion Event): 4615279 -> 59038434 (RecoveryWindow)
+[37673.302ms] LOSS EVENT: CWnd=4615279, InFlight=1162920, LostBytes=4416
+[37673.304ms] CWND Update (Congestion Event): 4615279 -> 59044322 (RecoveryWindow)
+[37715.272ms] LOSS EVENT: CWnd=4615279, InFlight=634508, LostBytes=2944
+[37715.277ms] CWND Update (Congestion Event): 4615279 -> 59569826 (RecoveryWindow)
+[37736.642ms] LOSS EVENT: CWnd=4615279, InFlight=159088, LostBytes=27968
+[37736.648ms] CWND Update (Congestion Event): 4615279 -> 60017314 (RecoveryWindow)
+[37741.424ms] LOSS EVENT: CWnd=4615279, InFlight=265153, LostBytes=2979
+[37741.427ms] CWND Update (Congestion Event): 4615279 -> 60026729 (RecoveryWindow)
+[37741.430ms] CWND Update (BBR): 4615279 -> 4514329
+[38201.178ms] CWND Update (BBR): 4514329 -> 4542549
+[38201.190ms] CWND Update (BBR): 4542549 -> 4609236
+[38201.197ms] LOSS EVENT: CWnd=4609236, InFlight=4377689, LostBytes=33435
+[38201.198ms] CWND Update (Congestion Event): 4609236 -> 4310819 (RecoveryWindow)
+[38201.199ms] CWND Update (BBR): 4609236 -> 4658344
+[38201.204ms] CWND Update (BBR): 4658344 -> 4728060
+[38201.209ms] CWND Update (BBR): 4728060 -> 4797813
+[38231.470ms] LOSS EVENT: CWnd=4347204, InFlight=4280334, LostBytes=32384
+[38231.472ms] CWND Update (Congestion Event): 4797813 -> 4314820 (RecoveryWindow)
+[38238.761ms] LOSS EVENT: CWnd=4314820, InFlight=4316083, LostBytes=1051
+[38238.783ms] CWND Update (Congestion Event): 4797813 -> 4313769 (RecoveryWindow)
+[38277.679ms] LOSS EVENT: CWnd=4319242, InFlight=4252372, LostBytes=29440
+[38277.681ms] CWND Update (Congestion Event): 4797813 -> 4289802 (RecoveryWindow)
+[38277.686ms] LOSS EVENT: CWnd=4289802, InFlight=4193913, LostBytes=3995
+[38277.687ms] CWND Update (Congestion Event): 4797813 -> 4285807 (RecoveryWindow)
+[38299.108ms] CWND Update (BBR): 4797813 -> 4799872
+[38371.057ms] LOSS EVENT: CWnd=4295496, InFlight=4296338, LostBytes=32384
+[38371.059ms] CWND Update (Congestion Event): 4799872 -> 4263112 (RecoveryWindow)
+[38385.495ms] LOSS EVENT: CWnd=4263954, InFlight=4264375, LostBytes=1051
+[38385.497ms] CWND Update (Congestion Event): 4799872 -> 4262903 (RecoveryWindow)
+[38427.060ms] LOSS EVENT: CWnd=4265432, InFlight=4265644, LostBytes=32384
+[38427.062ms] CWND Update (Congestion Event): 4799872 -> 4233048 (RecoveryWindow)
+[38427.068ms] LOSS EVENT: CWnd=4233260, InFlight=4175222, LostBytes=1051
+[38427.069ms] CWND Update (Congestion Event): 4799872 -> 4232209 (RecoveryWindow)
+[38443.672ms] CWND Update (BBR): 4799872 -> 4808414
+[38478.626ms] LOSS EVENT: CWnd=4233472, InFlight=4164288, LostBytes=60352
+[38478.628ms] CWND Update (Congestion Event): 4808414 -> 4173120 (RecoveryWindow)
+[38484.256ms] LOSS EVENT: CWnd=4173120, InFlight=4173120, LostBytes=4416
+[38484.258ms] CWND Update (Congestion Event): 4808414 -> 4168704 (RecoveryWindow)
+[38519.743ms] CWND Update (BBR): 4808414 -> 4877598
+[38519.752ms] CWND Update (BBR): 4877598 -> 4946782
+[38520.070ms] CWND Update (BBR): 4946782 -> 5013022
+[38525.006ms] CWND Update (BBR): 5013022 -> 5056460
+[38592.294ms] LOSS EVENT: CWnd=4917952, InFlight=4785472, LostBytes=1472
+[38592.296ms] CWND Update (Congestion Event): 5056460 -> 4916480 (RecoveryWindow)
+[38608.353ms] LOSS EVENT: CWnd=4928256, InFlight=4928256, LostBytes=1472
+[38608.355ms] CWND Update (Congestion Event): 5056460 -> 4926784 (RecoveryWindow)
+[38662.644ms] LOSS EVENT: CWnd=5056460, InFlight=4987136, LostBytes=61824
+[38662.646ms] CWND Update (Congestion Event): 5056460 -> 5620096 (RecoveryWindow)
+[38674.228ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[38674.230ms] CWND Update (Congestion Event): 5056460 -> 5642176 (RecoveryWindow)
+[38725.106ms] LOSS EVENT: CWnd=5056460, InFlight=4987136, LostBytes=63296
+[38725.109ms] CWND Update (Congestion Event): 5056460 -> 6260416 (RecoveryWindow)
+[38725.114ms] LOSS EVENT: CWnd=5056460, InFlight=4900288, LostBytes=1472
+[38725.115ms] CWND Update (Congestion Event): 5056460 -> 6282496 (RecoveryWindow)
+[38852.101ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[38852.104ms] CWND Update (Congestion Event): 5056460 -> 7592576 (RecoveryWindow)
+[38891.239ms] LOSS EVENT: CWnd=5056460, InFlight=4923840, LostBytes=5888
+[38891.242ms] CWND Update (Congestion Event): 5056460 -> 8331520 (RecoveryWindow)
+[38955.880ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[38955.882ms] CWND Update (Congestion Event): 5056460 -> 8955648 (RecoveryWindow)
+[38955.888ms] LOSS EVENT: CWnd=5056460, InFlight=5006272, LostBytes=4416
+[38955.889ms] CWND Update (Congestion Event): 5056460 -> 9001280 (RecoveryWindow)
+[39003.439ms] LOSS EVENT: CWnd=5056460, InFlight=4987136, LostBytes=64768
+[39003.441ms] CWND Update (Congestion Event): 5056460 -> 9559168 (RecoveryWindow)
+[39123.451ms] LOSS EVENT: CWnd=5056460, InFlight=5025408, LostBytes=2944
+[39123.454ms] CWND Update (Congestion Event): 5056460 -> 10883968 (RecoveryWindow)
+[39166.517ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=60352
+[39166.519ms] CWND Update (Congestion Event): 5056460 -> 11440384 (RecoveryWindow)
+[39171.259ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=4416
+[39171.261ms] CWND Update (Congestion Event): 5056460 -> 11460992 (RecoveryWindow)
+[39280.777ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=4416
+[39280.779ms] CWND Update (Congestion Event): 5056460 -> 12763712 (RecoveryWindow)
+[39377.519ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=5888
+[39377.542ms] CWND Update (Congestion Event): 5056460 -> 13920704 (RecoveryWindow)
+[39386.202ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=4416
+[39386.204ms] CWND Update (Congestion Event): 5056460 -> 13975168 (RecoveryWindow)
+[39456.362ms] LOSS EVENT: CWnd=5056460, InFlight=4991552, LostBytes=63296
+[39456.364ms] CWND Update (Congestion Event): 5056460 -> 14525696 (RecoveryWindow)
+[39456.369ms] LOSS EVENT: CWnd=5056460, InFlight=4916480, LostBytes=1472
+[39456.369ms] CWND Update (Congestion Event): 5056460 -> 14536000 (RecoveryWindow)
+[39542.248ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[39542.251ms] CWND Update (Congestion Event): 5056460 -> 15846080 (RecoveryWindow)
+[39552.649ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[39552.651ms] CWND Update (Congestion Event): 5056460 -> 15859328 (RecoveryWindow)
+[39619.803ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[39619.805ms] CWND Update (Congestion Event): 5056460 -> 16629184 (RecoveryWindow)
+[39619.813ms] LOSS EVENT: CWnd=5056460, InFlight=4993024, LostBytes=2944
+[39619.814ms] CWND Update (Congestion Event): 5056460 -> 16688064 (RecoveryWindow)
+[39677.130ms] LOSS EVENT: CWnd=5056460, InFlight=4987136, LostBytes=1472
+[39677.132ms] CWND Update (Congestion Event): 5056460 -> 17309248 (RecoveryWindow)
+[39677.137ms] LOSS EVENT: CWnd=5056460, InFlight=4979776, LostBytes=1472
+[39677.137ms] CWND Update (Congestion Event): 5056460 -> 17313664 (RecoveryWindow)
+[39724.990ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[39724.995ms] CWND Update (Congestion Event): 5056460 -> 17859776 (RecoveryWindow)
+[39730.661ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=4416
+[39730.663ms] CWND Update (Congestion Event): 5056460 -> 17909824 (RecoveryWindow)
+[39762.656ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[39762.658ms] CWND Update (Congestion Event): 5056460 -> 18386752 (RecoveryWindow)
+[39767.087ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[39767.089ms] CWND Update (Congestion Event): 5056460 -> 18450048 (RecoveryWindow)
+[39804.891ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=10304
+[39804.893ms] CWND Update (Congestion Event): 5056460 -> 18848960 (RecoveryWindow)
+[39845.464ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=16192
+[39845.466ms] CWND Update (Congestion Event): 5056460 -> 19300864 (RecoveryWindow)
+[39886.802ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[39886.804ms] CWND Update (Congestion Event): 5056460 -> 19701248 (RecoveryWindow)
+[39906.201ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=22080
+[39906.203ms] CWND Update (Congestion Event): 5056460 -> 20092800 (RecoveryWindow)
+[39926.424ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[39926.426ms] CWND Update (Congestion Event): 5056460 -> 20136960 (RecoveryWindow)
+[39950.910ms] LOSS EVENT: CWnd=5056460, InFlight=4991552, LostBytes=4416
+[39950.912ms] CWND Update (Congestion Event): 5056460 -> 20475520 (RecoveryWindow)
+[39977.270ms] LOSS EVENT: CWnd=5056460, InFlight=4920896, LostBytes=4416
+[39977.272ms] CWND Update (Congestion Event): 5056460 -> 20880320 (RecoveryWindow)
+[40002.316ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=4416
+[40002.318ms] CWND Update (Congestion Event): 5056460 -> 21167360 (RecoveryWindow)
+[40002.325ms] LOSS EVENT: CWnd=5056460, InFlight=4994496, LostBytes=1472
+[40002.325ms] CWND Update (Congestion Event): 5056460 -> 21224768 (RecoveryWindow)
+[40025.022ms] LOSS EVENT: CWnd=5056460, InFlight=4990080, LostBytes=5888
+[40025.024ms] CWND Update (Congestion Event): 5056460 -> 21495616 (RecoveryWindow)
+[40025.046ms] LOSS EVENT: CWnd=5056460, InFlight=4978304, LostBytes=2944
+[40025.047ms] CWND Update (Congestion Event): 5056460 -> 21498560 (RecoveryWindow)
+[40049.175ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=61824
+[40049.177ms] CWND Update (Congestion Event): 5056460 -> 21713472 (RecoveryWindow)
+[40062.026ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[40062.028ms] CWND Update (Congestion Event): 5056460 -> 21773824 (RecoveryWindow)
+[40166.933ms] LOSS EVENT: CWnd=5056460, InFlight=4988608, LostBytes=64768
+[40166.936ms] CWND Update (Congestion Event): 5056460 -> 23010304 (RecoveryWindow)
+[40270.270ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[40270.272ms] CWND Update (Congestion Event): 5056460 -> 24321856 (RecoveryWindow)
+[40301.337ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=2944
+[40301.339ms] CWND Update (Congestion Event): 5056460 -> 24324800 (RecoveryWindow)
+[40402.436ms] LOSS EVENT: CWnd=5056460, InFlight=4987136, LostBytes=61824
+[40402.439ms] CWND Update (Congestion Event): 5056460 -> 25490624 (RecoveryWindow)
+[40402.444ms] LOSS EVENT: CWnd=5056460, InFlight=4910592, LostBytes=2944
+[40402.445ms] CWND Update (Congestion Event): 5056460 -> 25502400 (RecoveryWindow)
+[40495.181ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=63296
+[40495.184ms] CWND Update (Congestion Event): 5056460 -> 26709440 (RecoveryWindow)
+[40495.192ms] LOSS EVENT: CWnd=5056460, InFlight=4929728, LostBytes=1472
+[40495.193ms] CWND Update (Congestion Event): 5056460 -> 26772736 (RecoveryWindow)
+[40609.273ms] LOSS EVENT: CWnd=5056460, InFlight=4917952, LostBytes=5888
+[40609.275ms] CWND Update (Congestion Event): 5056460 -> 28069568 (RecoveryWindow)
+[40609.281ms] LOSS EVENT: CWnd=5056460, InFlight=4906176, LostBytes=1472
+[40609.281ms] CWND Update (Congestion Event): 5056460 -> 28073984 (RecoveryWindow)
+[40705.564ms] LOSS EVENT: CWnd=5056460, InFlight=4707456, LostBytes=63296
+[40705.567ms] CWND Update (Congestion Event): 5056460 -> 29183872 (RecoveryWindow)
+[40705.962ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=1472
+[40705.964ms] CWND Update (Congestion Event): 5056460 -> 29247168 (RecoveryWindow)
+[40817.194ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=63296
+[40817.196ms] CWND Update (Congestion Event): 5056460 -> 30442432 (RecoveryWindow)
+[40817.205ms] LOSS EVENT: CWnd=5056460, InFlight=4938560, LostBytes=1472
+[40817.205ms] CWND Update (Congestion Event): 5056460 -> 30496896 (RecoveryWindow)
+[40918.354ms] LOSS EVENT: CWnd=5056460, InFlight=5057792, LostBytes=64768
+[40918.356ms] CWND Update (Congestion Event): 5056460 -> 31674496 (RecoveryWindow)
+[40999.933ms] CWND Update (BBR): 5056460 -> 5107962
+[41051.200ms] LOSS EVENT: CWnd=5107962, InFlight=5040128, LostBytes=4416
+[41051.202ms] CWND Update (Congestion Event): 5107962 -> 32975744 (RecoveryWindow)
+[41051.209ms] LOSS EVENT: CWnd=5107962, InFlight=4994496, LostBytes=1472
+[41051.209ms] CWND Update (Congestion Event): 5107962 -> 33015488 (RecoveryWindow)
+[41164.050ms] LOSS EVENT: CWnd=5107962, InFlight=5041600, LostBytes=64768
+[41164.052ms] CWND Update (Congestion Event): 5107962 -> 34112128 (RecoveryWindow)
+[41177.188ms] LOSS EVENT: CWnd=5107962, InFlight=5041600, LostBytes=52992
+[41177.190ms] CWND Update (Congestion Event): 5107962 -> 34667072 (RecoveryWindow)
+[41187.027ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=1472
+[41187.029ms] CWND Update (Congestion Event): 5107962 -> 34714176 (RecoveryWindow)
+[41289.032ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=2944
+[41289.038ms] CWND Update (Congestion Event): 5107962 -> 36003648 (RecoveryWindow)
+[41298.897ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=4416
+[41298.899ms] CWND Update (Congestion Event): 5107962 -> 36059584 (RecoveryWindow)
+[41365.173ms] LOSS EVENT: CWnd=5107962, InFlight=5043072, LostBytes=38272
+[41365.178ms] CWND Update (Congestion Event): 5107962 -> 36838272 (RecoveryWindow)
+[41422.527ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=4416
+[41422.530ms] CWND Update (Congestion Event): 5107962 -> 37474176 (RecoveryWindow)
+[41427.950ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=1472
+[41427.951ms] CWND Update (Congestion Event): 5107962 -> 37533056 (RecoveryWindow)
+[41461.871ms] LOSS EVENT: CWnd=5107962, InFlight=5038656, LostBytes=60352
+[41461.873ms] CWND Update (Congestion Event): 5107962 -> 37952576 (RecoveryWindow)
+[41468.854ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=4416
+[41468.855ms] CWND Update (Congestion Event): 5107962 -> 38001152 (RecoveryWindow)
+[41516.369ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=1472
+[41516.371ms] CWND Update (Congestion Event): 5107962 -> 38548736 (RecoveryWindow)
+[41557.595ms] LOSS EVENT: CWnd=5107962, InFlight=5041600, LostBytes=63296
+[41557.596ms] CWND Update (Congestion Event): 5107962 -> 38956480 (RecoveryWindow)
+[41581.214ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=1472
+[41581.216ms] CWND Update (Congestion Event): 5107962 -> 39008000 (RecoveryWindow)
+[41661.115ms] LOSS EVENT: CWnd=5107962, InFlight=5038656, LostBytes=61824
+[41661.117ms] CWND Update (Congestion Event): 5107962 -> 40169408 (RecoveryWindow)
+[41671.850ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=2944
+[41671.851ms] CWND Update (Congestion Event): 5107962 -> 40207680 (RecoveryWindow)
+[41794.753ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=61824
+[41794.756ms] CWND Update (Congestion Event): 5107962 -> 41386752 (RecoveryWindow)
+[41794.764ms] LOSS EVENT: CWnd=5107962, InFlight=4988608, LostBytes=2944
+[41794.765ms] CWND Update (Congestion Event): 5107962 -> 41442688 (RecoveryWindow)
+[41872.875ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=54464
+[41872.877ms] CWND Update (Congestion Event): 5107962 -> 42556992 (RecoveryWindow)
+[41976.384ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=8832
+[41976.387ms] CWND Update (Congestion Event): 5107962 -> 43844992 (RecoveryWindow)
+[42085.273ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=63296
+[42085.276ms] CWND Update (Congestion Event): 5107962 -> 45041728 (RecoveryWindow)
+[42085.283ms] LOSS EVENT: CWnd=5107962, InFlight=5023936, LostBytes=1472
+[42085.284ms] CWND Update (Congestion Event): 5107962 -> 45062336 (RecoveryWindow)
+[42127.139ms] LOSS EVENT: CWnd=5107962, InFlight=4959168, LostBytes=2944
+[42127.140ms] CWND Update (Congestion Event): 5107962 -> 45617280 (RecoveryWindow)
+[42181.785ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=61824
+[42181.787ms] CWND Update (Congestion Event): 5107962 -> 46176640 (RecoveryWindow)
+[42190.954ms] LOSS EVENT: CWnd=5107962, InFlight=5109312, LostBytes=2944
+[42190.956ms] CWND Update (Congestion Event): 5107962 -> 46234048 (RecoveryWindow)
+[42223.206ms] CWND Update (RTT Expired): 5107962 -> 5888
+[42310.094ms] LOSS EVENT: CWnd=5888, InFlight=4224640, LostBytes=64768
+[42310.096ms] CWND Update (Congestion Event): 5107962 -> 47393984 (RecoveryWindow)
+[42404.590ms] LOSS EVENT: CWnd=5888, InFlight=2880704, LostBytes=60352
+[42404.592ms] CWND Update (Congestion Event): 5107962 -> 48612800 (RecoveryWindow)
+[42404.597ms] LOSS EVENT: CWnd=5888, InFlight=2768832, LostBytes=4416
+[42404.598ms] CWND Update (Congestion Event): 5107962 -> 48659904 (RecoveryWindow)
+[42510.167ms] LOSS EVENT: CWnd=5888, InFlight=1482304, LostBytes=64768
+[42510.179ms] CWND Update (Congestion Event): 5107962 -> 49877248 (RecoveryWindow)
+[42640.739ms] LOSS EVENT: CWnd=5888, InFlight=64768, LostBytes=1472
+[42640.750ms] CWND Update (Congestion Event): 5107962 -> 51228544 (RecoveryWindow)
+[42843.243ms] CWND Update (BBR): 5107962 -> 5113850
+[43020.079ms] CWND Update (BBR): 5113850 -> 5177146
+[43025.039ms] CWND Update (BBR): 5177146 -> 5247802
+[43031.246ms] CWND Update (BBR): 5247802 -> 5274291
+[43123.159ms] LOSS EVENT: CWnd=5274291, InFlight=5209408, LostBytes=64768
+[43123.162ms] CWND Update (Congestion Event): 5274291 -> 5079872 (RecoveryWindow)
+[43242.663ms] LOSS EVENT: CWnd=5144640, InFlight=5075456, LostBytes=64768
+[43242.665ms] CWND Update (Congestion Event): 5274291 -> 5079872 (RecoveryWindow)
+[43365.812ms] LOSS EVENT: CWnd=5079872, InFlight=4667712, LostBytes=64768
+[43365.814ms] CWND Update (Congestion Event): 5274291 -> 5015104 (RecoveryWindow)
+[43365.824ms] CWND Update (BBR): 5274291 -> 5291057
+[43367.671ms] CWND Update (BBR): 5291057 -> 5336542
+[43435.431ms] CWND Update (BBR): 5336542 -> 5201968
+[43464.920ms] LOSS EVENT: CWnd=5015104, InFlight=5015104, LostBytes=4416
+[43464.922ms] CWND Update (Congestion Event): 5201968 -> 5010688 (RecoveryWindow)
+[43571.651ms] LOSS EVENT: CWnd=5201968, InFlight=5135808, LostBytes=5888
+[43571.674ms] CWND Update (Congestion Event): 5201968 -> 5269760 (RecoveryWindow)
+[43622.435ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=2944
+[43622.438ms] CWND Update (Congestion Event): 5201968 -> 5839424 (RecoveryWindow)
+[43623.259ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=2944
+[43623.261ms] CWND Update (Congestion Event): 5201968 -> 5890944 (RecoveryWindow)
+[43677.607ms] LOSS EVENT: CWnd=5201968, InFlight=5132864, LostBytes=64768
+[43677.609ms] CWND Update (Congestion Event): 5201968 -> 6441472 (RecoveryWindow)
+[43725.326ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=63296
+[43725.329ms] CWND Update (Congestion Event): 5201968 -> 6918400 (RecoveryWindow)
+[43737.706ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=1472
+[43737.708ms] CWND Update (Congestion Event): 5201968 -> 6974336 (RecoveryWindow)
+[43842.811ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=4416
+[43842.814ms] CWND Update (Congestion Event): 5201968 -> 8274112 (RecoveryWindow)
+[43894.442ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=2944
+[43894.444ms] CWND Update (Congestion Event): 5201968 -> 8912960 (RecoveryWindow)
+[43978.180ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=2944
+[43978.182ms] CWND Update (Congestion Event): 5201968 -> 9445824 (RecoveryWindow)
+[43978.415ms] LOSS EVENT: CWnd=5201968, InFlight=5066624, LostBytes=58880
+[43978.416ms] CWND Update (Congestion Event): 5201968 -> 9800576 (RecoveryWindow)
+[44085.269ms] LOSS EVENT: CWnd=5201968, InFlight=5135808, LostBytes=1472
+[44085.273ms] CWND Update (Congestion Event): 5201968 -> 11229888 (RecoveryWindow)
+[44087.768ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=4416
+[44087.770ms] CWND Update (Congestion Event): 5201968 -> 11231360 (RecoveryWindow)
+[44133.643ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=61824
+[44133.646ms] CWND Update (Congestion Event): 5201968 -> 11712704 (RecoveryWindow)
+[44144.442ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=2944
+[44144.444ms] CWND Update (Congestion Event): 5201968 -> 11758336 (RecoveryWindow)
+[44185.547ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=4416
+[44185.550ms] CWND Update (Congestion Event): 5201968 -> 12311808 (RecoveryWindow)
+[44227.983ms] LOSS EVENT: CWnd=5201968, InFlight=5202048, LostBytes=64768
+[44227.985ms] CWND Update (Congestion Event): 5201968 -> 12787264 (RecoveryWindow)
+[44342.113ms] CWND Update (BBR): 5201968 -> 5203282
+[44342.120ms] LOSS EVENT: CWnd=5203282, InFlight=4881152, LostBytes=2944
+[44342.121ms] CWND Update (Congestion Event): 5203282 -> 14123840 (RecoveryWindow)
+[44342.122ms] CWND Update (BBR): 5203282 -> 5269435
+[44345.490ms] CWND Update (BBR): 5269435 -> 5295441
+[44396.514ms] LOSS EVENT: CWnd=5295441, InFlight=5296256, LostBytes=64768
+[44396.516ms] CWND Update (Congestion Event): 5295441 -> 14656704 (RecoveryWindow)
+[44502.596ms] LOSS EVENT: CWnd=5295441, InFlight=5296256, LostBytes=4416
+[44502.598ms] CWND Update (Congestion Event): 5295441 -> 15965312 (RecoveryWindow)
+[44508.988ms] LOSS EVENT: CWnd=5295441, InFlight=5296256, LostBytes=4416
+[44508.990ms] CWND Update (Congestion Event): 5295441 -> 16009472 (RecoveryWindow)
+[44601.400ms] LOSS EVENT: CWnd=5295441, InFlight=5296256, LostBytes=60352
+[44601.402ms] CWND Update (Congestion Event): 5295441 -> 17117888 (RecoveryWindow)
+[44606.441ms] LOSS EVENT: CWnd=5295441, InFlight=5296256, LostBytes=4416
+[44606.443ms] CWND Update (Congestion Event): 5295441 -> 17163520 (RecoveryWindow)
+[44716.077ms] LOSS EVENT: CWnd=5295441, InFlight=5296256, LostBytes=64768
+[44716.079ms] CWND Update (Congestion Event): 5295441 -> 18332288 (RecoveryWindow)
+[44823.972ms] CWND Update (BBR): 5295441 -> 5299568
+[44823.980ms] CWND Update (BBR): 5299568 -> 5368652
+[44823.988ms] LOSS EVENT: CWnd=5368652, InFlight=4359967, LostBytes=64768
+[44823.988ms] CWND Update (Congestion Event): 5368652 -> 19549632 (RecoveryWindow)
+[44823.990ms] CWND Update (BBR): 5368652 -> 5436277
+[44866.153ms] CWND Update (BBR): 5436277 -> 5460067
+[44870.598ms] CWND Update (BBR): 5460067 -> 5470961
+[44907.174ms] CWND Update (BBR): 5470961 -> 5490784
+[44928.034ms] LOSS EVENT: CWnd=5490784, InFlight=3130892, LostBytes=64768
+[44928.035ms] CWND Update (Congestion Event): 5490784 -> 20847936 (RecoveryWindow)
+[45033.450ms] LOSS EVENT: CWnd=5490784, InFlight=2069580, LostBytes=4416
+[45033.452ms] CWND Update (Congestion Event): 5490784 -> 22094720 (RecoveryWindow)
+[45039.447ms] LOSS EVENT: CWnd=5490784, InFlight=2247776, LostBytes=2944
+[45039.450ms] CWND Update (Congestion Event): 5490784 -> 22127104 (RecoveryWindow)
+[45143.747ms] LOSS EVENT: CWnd=5490784, InFlight=1273342, LostBytes=44160
+[45143.759ms] CWND Update (Congestion Event): 5490784 -> 23247296 (RecoveryWindow)
+[45143.803ms] LOSS EVENT: CWnd=5490784, InFlight=1162942, LostBytes=2944
+[45143.806ms] CWND Update (Congestion Event): 5490784 -> 23310592 (RecoveryWindow)
+[45533.977ms] CWND Update (BBR): 5490784 -> 5483286
+[45639.734ms] LOSS EVENT: CWnd=5483286, InFlight=5484618, LostBytes=33435
+[45639.736ms] CWND Update (Congestion Event): 5483286 -> 5417748 (RecoveryWindow)
+[45737.409ms] LOSS EVENT: CWnd=5462553, InFlight=5463395, LostBytes=33435
+[45737.412ms] CWND Update (Congestion Event): 5483286 -> 5429118 (RecoveryWindow)
+[45846.329ms] LOSS EVENT: CWnd=5443644, InFlight=5444486, LostBytes=30912
+[45846.331ms] CWND Update (Congestion Event): 5483286 -> 5412732 (RecoveryWindow)
+[45859.573ms] LOSS EVENT: CWnd=5413574, InFlight=5414416, LostBytes=2523
+[45859.574ms] CWND Update (Congestion Event): 5483286 -> 5411051 (RecoveryWindow)
+[45957.699ms] LOSS EVENT: CWnd=5424523, InFlight=5424735, LostBytes=33435
+[45957.701ms] CWND Update (Congestion Event): 5483286 -> 5391088 (RecoveryWindow)
+[46060.413ms] LOSS EVENT: CWnd=5394880, InFlight=5394880, LostBytes=60352
+[46060.415ms] CWND Update (Congestion Event): 5483286 -> 5334528 (RecoveryWindow)
+[46064.453ms] LOSS EVENT: CWnd=5334528, InFlight=5334528, LostBytes=4416
+[46064.454ms] CWND Update (Congestion Event): 5483286 -> 5330112 (RecoveryWindow)
+[46162.945ms] LOSS EVENT: CWnd=5483286, InFlight=5484672, LostBytes=63296
+[46162.947ms] CWND Update (Congestion Event): 5483286 -> 6295744 (RecoveryWindow)
+[46167.083ms] LOSS EVENT: CWnd=5483286, InFlight=5484672, LostBytes=1472
+[46167.084ms] CWND Update (Congestion Event): 5483286 -> 6331072 (RecoveryWindow)
+[46315.299ms] LOSS EVENT: CWnd=5483286, InFlight=5044544, LostBytes=2944
+[46315.301ms] CWND Update (Congestion Event): 5483286 -> 7558720 (RecoveryWindow)
+[46315.357ms] CWND Update (BBR): 5483286 -> 5518488
+[46315.363ms] CWND Update (BBR): 5518488 -> 5584653
+[46315.368ms] CWND Update (BBR): 5584653 -> 5650831
+[46315.374ms] CWND Update (BBR): 5650831 -> 5719953
+[46319.873ms] LOSS EVENT: CWnd=5719953, InFlight=5720192, LostBytes=1472
+[46319.874ms] CWND Update (Congestion Event): 5719953 -> 8103360 (RecoveryWindow)
+[46319.936ms] CWND Update (BBR): 5719953 -> 5785301
+[46352.402ms] CWND Update (BBR): 5785301 -> 5798926
+[46377.372ms] LOSS EVENT: CWnd=5798926, InFlight=5799680, LostBytes=2944
+[46377.374ms] CWND Update (Congestion Event): 5798926 -> 8826112 (RecoveryWindow)
+[46440.622ms] LOSS EVENT: CWnd=5798926, InFlight=5799680, LostBytes=1472
+[46440.624ms] CWND Update (Congestion Event): 5798926 -> 9435520 (RecoveryWindow)
+[46457.814ms] LOSS EVENT: CWnd=5798926, InFlight=5799680, LostBytes=2944
+[46457.816ms] CWND Update (Congestion Event): 5798926 -> 9847680 (RecoveryWindow)
+[46464.810ms] LOSS EVENT: CWnd=5798926, InFlight=5799680, LostBytes=2944
+[46464.811ms] CWND Update (Congestion Event): 5798926 -> 9906560 (RecoveryWindow)
+[46508.902ms] LOSS EVENT: CWnd=5798926, InFlight=5799680, LostBytes=1472
+[46508.904ms] CWND Update (Congestion Event): 5798926 -> 10374656 (RecoveryWindow)
+[46514.147ms] LOSS EVENT: CWnd=5798926, InFlight=5799680, LostBytes=2944
+[46514.148ms] CWND Update (Congestion Event): 5798926 -> 10424704 (RecoveryWindow)
+[46521.035ms] CWND Update (BBR): 5798926 -> 5750206
+[46545.949ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=61824
+[46545.951ms] CWND Update (Congestion Event): 5750206 -> 10773568 (RecoveryWindow)
+[46550.319ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=2944
+[46550.344ms] CWND Update (Congestion Event): 5750206 -> 10782400 (RecoveryWindow)
+[46588.932ms] LOSS EVENT: CWnd=5750206, InFlight=5475840, LostBytes=5888
+[46588.934ms] CWND Update (Congestion Event): 5750206 -> 11185728 (RecoveryWindow)
+[46607.572ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=35328
+[46607.573ms] CWND Update (Congestion Event): 5750206 -> 11503680 (RecoveryWindow)
+[46719.501ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=64768
+[46719.504ms] CWND Update (Congestion Event): 5750206 -> 12803456 (RecoveryWindow)
+[46823.311ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=60352
+[46823.313ms] CWND Update (Congestion Event): 5750206 -> 13988416 (RecoveryWindow)
+[46836.404ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=4416
+[46836.405ms] CWND Update (Congestion Event): 5750206 -> 14009024 (RecoveryWindow)
+[46953.049ms] LOSS EVENT: CWnd=5750206, InFlight=5684864, LostBytes=7360
+[46953.051ms] CWND Update (Congestion Event): 5750206 -> 15251392 (RecoveryWindow)
+[46953.198ms] LOSS EVENT: CWnd=5750206, InFlight=5751104, LostBytes=1472
+[46953.199ms] CWND Update (Congestion Event): 5750206 -> 15283776 (RecoveryWindow)
+[47046.166ms] LOSS EVENT: CWnd=5750206, InFlight=5617152, LostBytes=64768
+[47046.169ms] CWND Update (Congestion Event): 5750206 -> 16431936 (RecoveryWindow)
+[47091.715ms] CWND Update (BBR): 5750206 -> 5817918
+[47119.062ms] CWND Update (BBR): 5817918 -> 5878292
+[47145.054ms] LOSS EVENT: CWnd=5878292, InFlight=5811456, LostBytes=4416
+[47145.056ms] CWND Update (Congestion Event): 5878292 -> 17730240 (RecoveryWindow)
+[47153.437ms] LOSS EVENT: CWnd=5878292, InFlight=5879168, LostBytes=4416
+[47153.439ms] CWND Update (Congestion Event): 5878292 -> 17786176 (RecoveryWindow)
+[47259.662ms] LOSS EVENT: CWnd=5878292, InFlight=5861504, LostBytes=1472
+[47259.664ms] CWND Update (Congestion Event): 5878292 -> 19024128 (RecoveryWindow)
+[47297.393ms] LOSS EVENT: CWnd=5878292, InFlight=5879168, LostBytes=64768
+[47297.394ms] CWND Update (Congestion Event): 5878292 -> 19505472 (RecoveryWindow)
+[47369.233ms] LOSS EVENT: CWnd=5878292, InFlight=5564606, LostBytes=1472
+[47369.234ms] CWND Update (Congestion Event): 5878292 -> 20220864 (RecoveryWindow)
+[47369.256ms] LOSS EVENT: CWnd=5878292, InFlight=5552866, LostBytes=4416
+[47369.257ms] CWND Update (Congestion Event): 5878292 -> 20228224 (RecoveryWindow)
+[47414.405ms] LOSS EVENT: CWnd=5878292, InFlight=5003846, LostBytes=2944
+[47414.407ms] CWND Update (Congestion Event): 5878292 -> 20774336 (RecoveryWindow)
+[47453.076ms] LOSS EVENT: CWnd=5878292, InFlight=4487210, LostBytes=1472
+[47453.078ms] CWND Update (Congestion Event): 5878292 -> 21289536 (RecoveryWindow)
+[47457.478ms] LOSS EVENT: CWnd=5878292, InFlight=4447502, LostBytes=2944
+[47457.480ms] CWND Update (Congestion Event): 5878292 -> 21326336 (RecoveryWindow)
+[47505.249ms] LOSS EVENT: CWnd=5878292, InFlight=4041266, LostBytes=1472
+[47505.251ms] CWND Update (Congestion Event): 5878292 -> 21731136 (RecoveryWindow)
+[47505.267ms] LOSS EVENT: CWnd=5878292, InFlight=3970646, LostBytes=4416
+[47505.268ms] CWND Update (Congestion Event): 5878292 -> 21797376 (RecoveryWindow)
+[47540.930ms] LOSS EVENT: CWnd=5878292, InFlight=3557050, LostBytes=4416
+[47540.932ms] CWND Update (Congestion Event): 5878292 -> 22206592 (RecoveryWindow)
+[47568.610ms] LOSS EVENT: CWnd=5878292, InFlight=3143454, LostBytes=61824
+[47568.611ms] CWND Update (Congestion Event): 5878292 -> 22558400 (RecoveryWindow)
+[47573.390ms] LOSS EVENT: CWnd=5878292, InFlight=3090498, LostBytes=2944
+[47573.392ms] CWND Update (Congestion Event): 5878292 -> 22608448 (RecoveryWindow)
+[47669.495ms] LOSS EVENT: CWnd=5878292, InFlight=1861414, LostBytes=5888
+[47669.497ms] CWND Update (Congestion Event): 5878292 -> 23831680 (RecoveryWindow)
+[47679.157ms] LOSS EVENT: CWnd=5878292, InFlight=1805514, LostBytes=2944
+[47679.160ms] CWND Update (Congestion Event): 5878292 -> 23884672 (RecoveryWindow)
+[47719.263ms] LOSS EVENT: CWnd=5878292, InFlight=1394862, LostBytes=4416
+[47719.274ms] CWND Update (Congestion Event): 5878292 -> 24290944 (RecoveryWindow)
+[47719.386ms] LOSS EVENT: CWnd=5878292, InFlight=1333038, LostBytes=2944
+[47719.390ms] CWND Update (Congestion Event): 5878292 -> 24345408 (RecoveryWindow)
+[47747.443ms] LOSS EVENT: CWnd=5878292, InFlight=978322, LostBytes=1472
+[47747.445ms] CWND Update (Congestion Event): 5878292 -> 24703104 (RecoveryWindow)
+[47771.504ms] LOSS EVENT: CWnd=5878292, InFlight=635382, LostBytes=5888
+[47771.507ms] CWND Update (Congestion Event): 5878292 -> 25040192 (RecoveryWindow)
+[47771.788ms] LOSS EVENT: CWnd=5878292, InFlight=576502, LostBytes=4416
+[47771.789ms] CWND Update (Congestion Event): 5878292 -> 25088768 (RecoveryWindow)
+[47808.667ms] LOSS EVENT: CWnd=5878292, InFlight=5863684, LostBytes=4416
+[47808.669ms] CWND Update (Congestion Event): 5878292 -> 25444992 (RecoveryWindow)
+[47845.518ms] CWND Update (BBR): 5878292 -> 5872762
+[47871.082ms] CWND Update (BBR): 5872762 -> 5717534
+[48059.938ms] LOSS EVENT: CWnd=5717534, InFlight=5650536, LostBytes=32384
+[48059.940ms] CWND Update (Congestion Event): 5717534 -> 26903452 (RecoveryWindow)
+[48060.062ms] LOSS EVENT: CWnd=5717534, InFlight=5718669, LostBytes=1051
+[48060.064ms] CWND Update (Congestion Event): 5717534 -> 26937308 (RecoveryWindow)
+[48094.831ms] LOSS EVENT: CWnd=5717534, InFlight=5718254, LostBytes=32384
+[48094.833ms] CWND Update (Congestion Event): 5717534 -> 27307616 (RecoveryWindow)
+[48096.496ms] LOSS EVENT: CWnd=5717534, InFlight=5717624, LostBytes=1051
+[48096.497ms] CWND Update (Congestion Event): 5717534 -> 27371963 (RecoveryWindow)
+[48139.075ms] LOSS EVENT: CWnd=5717534, InFlight=5718051, LostBytes=32384
+[48139.077ms] CWND Update (Congestion Event): 5717534 -> 27809141 (RecoveryWindow)
+[48145.213ms] LOSS EVENT: CWnd=5717534, InFlight=5718893, LostBytes=1051
+[48145.215ms] CWND Update (Congestion Event): 5717534 -> 27873488 (RecoveryWindow)
+[48173.241ms] LOSS EVENT: CWnd=5717534, InFlight=5718478, LostBytes=32384
+[48173.243ms] CWND Update (Congestion Event): 5717534 -> 28248212 (RecoveryWindow)
+[48179.013ms] LOSS EVENT: CWnd=5717534, InFlight=5717848, LostBytes=1051
+[48179.014ms] CWND Update (Congestion Event): 5717534 -> 28308143 (RecoveryWindow)
+[48217.226ms] LOSS EVENT: CWnd=5717534, InFlight=5718905, LostBytes=30912
+[48217.227ms] CWND Update (Congestion Event): 5717534 -> 28682867 (RecoveryWindow)
+[48222.998ms] LOSS EVENT: CWnd=5717534, InFlight=5718275, LostBytes=2523
+[48222.999ms] CWND Update (Congestion Event): 5717534 -> 28741326 (RecoveryWindow)
+[48319.292ms] LOSS EVENT: CWnd=5717534, InFlight=5717660, LostBytes=32384
+[48319.294ms] CWND Update (Congestion Event): 5717534 -> 29918490 (RecoveryWindow)
+[48320.585ms] LOSS EVENT: CWnd=5717534, InFlight=5718081, LostBytes=1051
+[48320.587ms] CWND Update (Congestion Event): 5717534 -> 29946458 (RecoveryWindow)
+[48368.581ms] LOSS EVENT: CWnd=5717534, InFlight=5718508, LostBytes=29440
+[48368.583ms] CWND Update (Congestion Event): 5717534 -> 30386580 (RecoveryWindow)
+[48368.665ms] LOSS EVENT: CWnd=5717534, InFlight=5717878, LostBytes=3995
+[48368.666ms] CWND Update (Congestion Event): 5717534 -> 30445039 (RecoveryWindow)
+[48465.929ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=63296
+[48465.931ms] CWND Update (Congestion Event): 5717534 -> 31607498 (RecoveryWindow)
+[48476.232ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=1472
+[48476.234ms] CWND Update (Congestion Event): 5717534 -> 31647242 (RecoveryWindow)
+[48639.948ms] LOSS EVENT: CWnd=5717534, InFlight=5511168, LostBytes=1472
+[48639.950ms] CWND Update (Congestion Event): 5717534 -> 32947018 (RecoveryWindow)
+[48682.696ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=22080
+[48682.697ms] CWND Update (Congestion Event): 5717534 -> 34130506 (RecoveryWindow)
+[48693.921ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=4416
+[48693.923ms] CWND Update (Congestion Event): 5717534 -> 34139338 (RecoveryWindow)
+[48794.104ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=61824
+[48794.107ms] CWND Update (Congestion Event): 5717534 -> 35296330 (RecoveryWindow)
+[48794.255ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=2944
+[48794.278ms] CWND Update (Congestion Event): 5717534 -> 35349322 (RecoveryWindow)
+[48893.014ms] LOSS EVENT: CWnd=5717534, InFlight=5104309, LostBytes=2944
+[48893.016ms] CWND Update (Congestion Event): 5717534 -> 36571082 (RecoveryWindow)
+[48893.022ms] LOSS EVENT: CWnd=5717534, InFlight=5077813, LostBytes=2944
+[48893.022ms] CWND Update (Congestion Event): 5717534 -> 36591690 (RecoveryWindow)
+[48963.201ms] LOSS EVENT: CWnd=5717534, InFlight=4536153, LostBytes=63296
+[48963.203ms] CWND Update (Congestion Event): 5717534 -> 37073034 (RecoveryWindow)
+[48963.327ms] LOSS EVENT: CWnd=5717534, InFlight=4598444, LostBytes=1472
+[48963.328ms] CWND Update (Congestion Event): 5717534 -> 37106890 (RecoveryWindow)
+[48996.248ms] LOSS EVENT: CWnd=5717534, InFlight=3940496, LostBytes=1472
+[48996.250ms] CWND Update (Congestion Event): 5717534 -> 37763402 (RecoveryWindow)
+[49000.857ms] LOSS EVENT: CWnd=5717534, InFlight=3915508, LostBytes=2944
+[49000.859ms] CWND Update (Congestion Event): 5717534 -> 37785482 (RecoveryWindow)
+[49047.178ms] LOSS EVENT: CWnd=5717534, InFlight=3369432, LostBytes=61824
+[49047.179ms] CWND Update (Congestion Event): 5717534 -> 38269770 (RecoveryWindow)
+[49047.229ms] LOSS EVENT: CWnd=5717534, InFlight=3345880, LostBytes=2944
+[49047.230ms] CWND Update (Congestion Event): 5717534 -> 38290378 (RecoveryWindow)
+[49161.381ms] LOSS EVENT: CWnd=5717534, InFlight=2052028, LostBytes=1472
+[49161.394ms] CWND Update (Congestion Event): 5717534 -> 39582794 (RecoveryWindow)
+[49201.373ms] LOSS EVENT: CWnd=5717534, InFlight=1503008, LostBytes=4416
+[49201.385ms] CWND Update (Congestion Event): 5717534 -> 40127434 (RecoveryWindow)
+[49279.968ms] LOSS EVENT: CWnd=5717534, InFlight=968708, LostBytes=48576
+[49279.980ms] CWND Update (Congestion Event): 5717534 -> 40613194 (RecoveryWindow)
+[49280.023ms] LOSS EVENT: CWnd=5717534, InFlight=859780, LostBytes=4416
+[49280.027ms] CWND Update (Congestion Event): 5717534 -> 40669130 (RecoveryWindow)
+[49679.959ms] LOSS EVENT: CWnd=5717534, InFlight=5717824, LostBytes=29440
+[49679.962ms] CWND Update (Congestion Event): 5717534 -> 5658944 (RecoveryWindow)
+[49684.738ms] LOSS EVENT: CWnd=5688384, InFlight=5689226, LostBytes=3995
+[49684.739ms] CWND Update (Congestion Event): 5717534 -> 5684389 (RecoveryWindow)
+[49745.373ms] LOSS EVENT: CWnd=5691967, InFlight=5625097, LostBytes=30912
+[49745.375ms] CWND Update (Congestion Event): 5717534 -> 5661055 (RecoveryWindow)
+[49745.380ms] LOSS EVENT: CWnd=5661055, InFlight=5530259, LostBytes=2523
+[49745.380ms] CWND Update (Congestion Event): 5717534 -> 5658532 (RecoveryWindow)
+[49847.544ms] LOSS EVENT: CWnd=5671586, InFlight=5601772, LostBytes=33435
+[49847.545ms] CWND Update (Congestion Event): 5717534 -> 5638151 (RecoveryWindow)
+[49951.696ms] LOSS EVENT: CWnd=5648891, InFlight=5649733, LostBytes=30912
+[49951.698ms] CWND Update (Congestion Event): 5717534 -> 5617979 (RecoveryWindow)
+[49951.764ms] LOSS EVENT: CWnd=5618821, InFlight=5619663, LostBytes=2523
+[49951.765ms] CWND Update (Congestion Event): 5717534 -> 5616298 (RecoveryWindow)
+[50060.331ms] LOSS EVENT: CWnd=5625984, InFlight=5625984, LostBytes=1472
+[50060.333ms] CWND Update (Congestion Event): 5717534 -> 5624512 (RecoveryWindow)
+[50060.338ms] LOSS EVENT: CWnd=5624512, InFlight=5612736, LostBytes=1472
+[50060.339ms] CWND Update (Congestion Event): 5717534 -> 5623040 (RecoveryWindow)
+[50153.661ms] LOSS EVENT: CWnd=5717534, InFlight=5624512, LostBytes=1472
+[50153.663ms] CWND Update (Congestion Event): 5717534 -> 5758464 (RecoveryWindow)
+[50161.532ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=1472
+[50161.534ms] CWND Update (Congestion Event): 5717534 -> 5792320 (RecoveryWindow)
+[50204.124ms] LOSS EVENT: CWnd=5717534, InFlight=5651008, LostBytes=61824
+[50204.126ms] CWND Update (Congestion Event): 5717534 -> 6275136 (RecoveryWindow)
+[50212.175ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=2944
+[50212.177ms] CWND Update (Congestion Event): 5717534 -> 6334016 (RecoveryWindow)
+[50265.917ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=1472
+[50265.941ms] CWND Update (Congestion Event): 5717534 -> 7015552 (RecoveryWindow)
+[50312.446ms] LOSS EVENT: CWnd=5717534, InFlight=5648064, LostBytes=60352
+[50312.448ms] CWND Update (Congestion Event): 5717534 -> 7533696 (RecoveryWindow)
+[50321.610ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=4416
+[50321.611ms] CWND Update (Congestion Event): 5717534 -> 7552832 (RecoveryWindow)
+[50428.527ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=1472
+[50428.529ms] CWND Update (Congestion Event): 5717534 -> 8842304 (RecoveryWindow)
+[50469.566ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=63296
+[50469.568ms] CWND Update (Congestion Event): 5717534 -> 9328064 (RecoveryWindow)
+[50480.139ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=1472
+[50480.140ms] CWND Update (Congestion Event): 5717534 -> 9388416 (RecoveryWindow)
+[50584.284ms] LOSS EVENT: CWnd=5717534, InFlight=5652480, LostBytes=1472
+[50584.286ms] CWND Update (Congestion Event): 5717534 -> 10674944 (RecoveryWindow)
+[50684.965ms] LOSS EVENT: CWnd=5717534, InFlight=5652480, LostBytes=2944
+[50684.967ms] CWND Update (Congestion Event): 5717534 -> 11873152 (RecoveryWindow)
+[50736.689ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=4416
+[50736.691ms] CWND Update (Congestion Event): 5717534 -> 12464896 (RecoveryWindow)
+[50736.697ms] LOSS EVENT: CWnd=5717534, InFlight=5652480, LostBytes=1472
+[50736.698ms] CWND Update (Congestion Event): 5717534 -> 12525248 (RecoveryWindow)
+[50793.619ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=5888
+[50793.621ms] CWND Update (Congestion Event): 5717534 -> 13125824 (RecoveryWindow)
+[50793.712ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=2944
+[50793.713ms] CWND Update (Congestion Event): 5717534 -> 13172928 (RecoveryWindow)
+[50881.071ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=63296
+[50881.073ms] CWND Update (Congestion Event): 5717534 -> 13663104 (RecoveryWindow)
+[50881.078ms] LOSS EVENT: CWnd=5717534, InFlight=5595072, LostBytes=1472
+[50881.079ms] CWND Update (Congestion Event): 5717534 -> 13721984 (RecoveryWindow)
+[50984.688ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=5888
+[50984.690ms] CWND Update (Congestion Event): 5717534 -> 15023232 (RecoveryWindow)
+[51021.246ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=2944
+[51021.248ms] CWND Update (Congestion Event): 5717534 -> 15625280 (RecoveryWindow)
+[51048.292ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=36800
+[51048.294ms] CWND Update (Congestion Event): 5717534 -> 16112512 (RecoveryWindow)
+[51052.576ms] LOSS EVENT: CWnd=5717534, InFlight=5718720, LostBytes=2944
+[51052.578ms] CWND Update (Congestion Event): 5717534 -> 16171392 (RecoveryWindow)
+[51058.976ms] CWND Update (BBR): 5717534 -> 5097810
+[51068.244ms] CWND Update (Forced by Resync): 5097810 -> 5888
+[51159.601ms] LOSS EVENT: CWnd=5888, InFlight=4549952, LostBytes=1472
+[51159.604ms] CWND Update (Congestion Event): 5097810 -> 17404928 (RecoveryWindow)
+[51165.490ms] LOSS EVENT: CWnd=5888, InFlight=4502848, LostBytes=2944
+[51165.491ms] CWND Update (Congestion Event): 5097810 -> 17447616 (RecoveryWindow)
+[51223.666ms] LOSS EVENT: CWnd=5888, InFlight=3881664, LostBytes=1472
+[51223.668ms] CWND Update (Congestion Event): 5097810 -> 18064384 (RecoveryWindow)
+[51273.574ms] LOSS EVENT: CWnd=5888, InFlight=3203072, LostBytes=1472
+[51273.576ms] CWND Update (Congestion Event): 5097810 -> 18740032 (RecoveryWindow)
+[51277.884ms] LOSS EVENT: CWnd=5888, InFlight=3155968, LostBytes=4416
+[51277.886ms] CWND Update (Congestion Event): 5097810 -> 18781248 (RecoveryWindow)
+[51325.823ms] LOSS EVENT: CWnd=5888, InFlight=2608384, LostBytes=60352
+[51325.824ms] CWND Update (Congestion Event): 5097810 -> 19264064 (RecoveryWindow)
+[51328.595ms] LOSS EVENT: CWnd=5888, InFlight=2483264, LostBytes=4416
+[51328.596ms] CWND Update (Congestion Event): 5097810 -> 19324416 (RecoveryWindow)
+[51436.630ms] LOSS EVENT: CWnd=5888, InFlight=1246784, LostBytes=64768
+[51436.642ms] CWND Update (Congestion Event): 5097810 -> 20491712 (RecoveryWindow)
+[51920.901ms] CWND Update (BBR): 5097810 -> 5066714
+[52204.034ms] LOSS EVENT: CWnd=5066714, InFlight=5068096, LostBytes=60352
+[52204.036ms] CWND Update (Congestion Event): 5066714 -> 4947392 (RecoveryWindow)
+[52208.988ms] LOSS EVENT: CWnd=5007744, InFlight=5007744, LostBytes=4416
+[52208.990ms] CWND Update (Congestion Event): 5066714 -> 5003328 (RecoveryWindow)
+[52312.943ms] LOSS EVENT: CWnd=5003328, InFlight=5003328, LostBytes=63296
+[52312.945ms] CWND Update (Congestion Event): 5066714 -> 4940032 (RecoveryWindow)
+[52321.672ms] LOSS EVENT: CWnd=4940032, InFlight=4940032, LostBytes=1472
+[52321.674ms] CWND Update (Congestion Event): 5066714 -> 4938560 (RecoveryWindow)
+[52428.941ms] LOSS EVENT: CWnd=4938560, InFlight=4938560, LostBytes=61824
+[52428.943ms] CWND Update (Congestion Event): 5066714 -> 4876736 (RecoveryWindow)
+[52433.616ms] LOSS EVENT: CWnd=4876736, InFlight=4876736, LostBytes=2944
+[52433.618ms] CWND Update (Congestion Event): 5066714 -> 4873792 (RecoveryWindow)
+[52517.109ms] CWND Update (BBR): 5066714 -> 4964466
+[52541.090ms] LOSS EVENT: CWnd=4873792, InFlight=4873792, LostBytes=60352
+[52541.092ms] CWND Update (Congestion Event): 4964466 -> 4813440 (RecoveryWindow)
+[52544.896ms] LOSS EVENT: CWnd=4813440, InFlight=4813440, LostBytes=4416
+[52544.898ms] CWND Update (Congestion Event): 4964466 -> 4809024 (RecoveryWindow)
+[52553.892ms] CWND Update (BBR): 4964466 -> 4975856
+[52665.064ms] LOSS EVENT: CWnd=4975856, InFlight=4976832, LostBytes=4416
+[52665.065ms] CWND Update (Congestion Event): 4975856 -> 5341888 (RecoveryWindow)
+[52754.948ms] LOSS EVENT: CWnd=4975856, InFlight=4910592, LostBytes=63296
+[52754.950ms] CWND Update (Congestion Event): 4975856 -> 6437056 (RecoveryWindow)
+[52754.956ms] LOSS EVENT: CWnd=4975856, InFlight=4785472, LostBytes=1472
+[52754.957ms] CWND Update (Congestion Event): 4975856 -> 6497408 (RecoveryWindow)
+[52892.152ms] LOSS EVENT: CWnd=4975856, InFlight=4909120, LostBytes=61824
+[52892.154ms] CWND Update (Congestion Event): 4975856 -> 7658816 (RecoveryWindow)
+[52892.160ms] LOSS EVENT: CWnd=4975856, InFlight=4784000, LostBytes=2944
+[52892.161ms] CWND Update (Congestion Event): 4975856 -> 7719168 (RecoveryWindow)
+[52892.187ms] CWND Update (BBR): 4975856 -> 5000698
+[52895.213ms] CWND Update (BBR): 5000698 -> 5033806
+[52903.871ms] CWND Update (BBR): 5033806 -> 5061761
+[52963.299ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=7360
+[52963.301ms] CWND Update (Congestion Event): 5061761 -> 8945344 (RecoveryWindow)
+[53073.145ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=4416
+[53073.147ms] CWND Update (Congestion Event): 5061761 -> 10215680 (RecoveryWindow)
+[53079.161ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=1472
+[53079.163ms] CWND Update (Congestion Event): 5061761 -> 10249536 (RecoveryWindow)
+[53114.695ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=52992
+[53114.697ms] CWND Update (Congestion Event): 5061761 -> 10738240 (RecoveryWindow)
+[53125.141ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[53125.142ms] CWND Update (Congestion Event): 5061761 -> 10741184 (RecoveryWindow)
+[53229.023ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=4416
+[53229.025ms] CWND Update (Congestion Event): 5061761 -> 11968832 (RecoveryWindow)
+[53298.642ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=63296
+[53298.644ms] CWND Update (Congestion Event): 5061761 -> 12800512 (RecoveryWindow)
+[53304.568ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=1472
+[53304.569ms] CWND Update (Congestion Event): 5061761 -> 12810816 (RecoveryWindow)
+[53404.747ms] LOSS EVENT: CWnd=5061761, InFlight=4991552, LostBytes=61824
+[53404.749ms] CWND Update (Congestion Event): 5061761 -> 13975168 (RecoveryWindow)
+[53405.191ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[53405.192ms] CWND Update (Congestion Event): 5061761 -> 14007552 (RecoveryWindow)
+[53512.976ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[53512.979ms] CWND Update (Congestion Event): 5061761 -> 15241088 (RecoveryWindow)
+[53609.003ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=1472
+[53609.028ms] CWND Update (Congestion Event): 5061761 -> 16420160 (RecoveryWindow)
+[53617.227ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[53617.229ms] CWND Update (Congestion Event): 5061761 -> 16486400 (RecoveryWindow)
+[53663.535ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=64768
+[53663.537ms] CWND Update (Congestion Event): 5061761 -> 16972160 (RecoveryWindow)
+[53775.712ms] LOSS EVENT: CWnd=5061761, InFlight=4994496, LostBytes=64768
+[53775.715ms] CWND Update (Congestion Event): 5061761 -> 18260160 (RecoveryWindow)
+[53889.316ms] LOSS EVENT: CWnd=5061761, InFlight=4994496, LostBytes=61824
+[53889.318ms] CWND Update (Congestion Event): 5061761 -> 19461312 (RecoveryWindow)
+[53889.455ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[53889.456ms] CWND Update (Congestion Event): 5061761 -> 19493696 (RecoveryWindow)
+[53993.408ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=1472
+[53993.410ms] CWND Update (Congestion Event): 5061761 -> 20744896 (RecoveryWindow)
+[54029.162ms] LOSS EVENT: CWnd=5061761, InFlight=4995968, LostBytes=2944
+[54029.163ms] CWND Update (Congestion Event): 5061761 -> 21285120 (RecoveryWindow)
+[54087.897ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=4416
+[54087.899ms] CWND Update (Congestion Event): 5061761 -> 21909248 (RecoveryWindow)
+[54140.954ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[54140.957ms] CWND Update (Congestion Event): 5061761 -> 22561344 (RecoveryWindow)
+[54185.277ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=61824
+[54185.279ms] CWND Update (Congestion Event): 5061761 -> 22973504 (RecoveryWindow)
+[54192.191ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[54192.192ms] CWND Update (Congestion Event): 5061761 -> 23039744 (RecoveryWindow)
+[54230.707ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=5888
+[54230.708ms] CWND Update (Congestion Event): 5061761 -> 23509312 (RecoveryWindow)
+[54230.714ms] LOSS EVENT: CWnd=5061761, InFlight=5032768, LostBytes=2944
+[54230.715ms] CWND Update (Congestion Event): 5061761 -> 23529920 (RecoveryWindow)
+[54260.291ms] LOSS EVENT: CWnd=5061761, InFlight=4994496, LostBytes=5888
+[54260.293ms] CWND Update (Congestion Event): 5061761 -> 23858176 (RecoveryWindow)
+[54274.263ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[54274.265ms] CWND Update (Congestion Event): 5061761 -> 23925888 (RecoveryWindow)
+[54303.026ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=30912
+[54303.028ms] CWND Update (Congestion Event): 5061761 -> 24237952 (RecoveryWindow)
+[54303.037ms] LOSS EVENT: CWnd=5061761, InFlight=4969472, LostBytes=4416
+[54303.037ms] CWND Update (Congestion Event): 5061761 -> 24295360 (RecoveryWindow)
+[54323.207ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=1472
+[54323.209ms] CWND Update (Congestion Event): 5061761 -> 24641280 (RecoveryWindow)
+[54356.432ms] LOSS EVENT: CWnd=5061761, InFlight=4912944, LostBytes=60352
+[54356.433ms] CWND Update (Congestion Event): 5061761 -> 24991616 (RecoveryWindow)
+[54365.660ms] LOSS EVENT: CWnd=5061761, InFlight=4854100, LostBytes=4416
+[54365.661ms] CWND Update (Congestion Event): 5061761 -> 25046080 (RecoveryWindow)
+[54481.575ms] LOSS EVENT: CWnd=5061761, InFlight=3622072, LostBytes=1472
+[54481.577ms] CWND Update (Congestion Event): 5061761 -> 26276672 (RecoveryWindow)
+[54507.028ms] LOSS EVENT: CWnd=5061761, InFlight=3189340, LostBytes=1472
+[54507.029ms] CWND Update (Congestion Event): 5061761 -> 26707968 (RecoveryWindow)
+[54533.025ms] LOSS EVENT: CWnd=5061761, InFlight=2843456, LostBytes=1472
+[54533.027ms] CWND Update (Congestion Event): 5061761 -> 27052416 (RecoveryWindow)
+[54543.238ms] LOSS EVENT: CWnd=5061761, InFlight=2786084, LostBytes=2944
+[54543.239ms] CWND Update (Congestion Event): 5061761 -> 27106880 (RecoveryWindow)
+[54609.579ms] LOSS EVENT: CWnd=5061761, InFlight=2510856, LostBytes=64768
+[54609.591ms] CWND Update (Congestion Event): 5061761 -> 27317376 (RecoveryWindow)
+[54697.870ms] LOSS EVENT: CWnd=5061761, InFlight=5062647, LostBytes=63296
+[54697.872ms] CWND Update (Congestion Event): 5061761 -> 28631872 (RecoveryWindow)
+[54697.900ms] LOSS EVENT: CWnd=5061761, InFlight=4987575, LostBytes=1472
+[54697.901ms] CWND Update (Congestion Event): 5061761 -> 28642176 (RecoveryWindow)
+[54895.719ms] LOSS EVENT: CWnd=5061761, InFlight=5061972, LostBytes=29440
+[54895.722ms] CWND Update (Congestion Event): 5061761 -> 30886179 (RecoveryWindow)
+[54895.728ms] LOSS EVENT: CWnd=5061761, InFlight=4977438, LostBytes=3995
+[54895.729ms] CWND Update (Congestion Event): 5061761 -> 30937278 (RecoveryWindow)
+[54995.432ms] LOSS EVENT: CWnd=5061761, InFlight=5061778, LostBytes=29440
+[54995.435ms] CWND Update (Congestion Event): 5061761 -> 32100143 (RecoveryWindow)
+[54999.699ms] LOSS EVENT: CWnd=5061761, InFlight=5062199, LostBytes=3995
+[54999.701ms] CWND Update (Congestion Event): 5061761 -> 32107503 (RecoveryWindow)
+[55043.462ms] LOSS EVENT: CWnd=5061761, InFlight=5061996, LostBytes=29440
+[55043.464ms] CWND Update (Congestion Event): 5061761 -> 32623327 (RecoveryWindow)
+[55049.128ms] LOSS EVENT: CWnd=5061761, InFlight=5062838, LostBytes=3995
+[55049.130ms] CWND Update (Congestion Event): 5061761 -> 32675898 (RecoveryWindow)
+[55101.930ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=63296
+[55101.932ms] CWND Update (Congestion Event): 5061761 -> 33224533 (RecoveryWindow)
+[55107.455ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=1472
+[55107.457ms] CWND Update (Congestion Event): 5061761 -> 33286357 (RecoveryWindow)
+[55153.338ms] LOSS EVENT: CWnd=5061761, InFlight=4994496, LostBytes=4416
+[55153.341ms] CWND Update (Congestion Event): 5061761 -> 33895765 (RecoveryWindow)
+[55212.308ms] LOSS EVENT: CWnd=5061761, InFlight=4620608, LostBytes=2944
+[55212.310ms] CWND Update (Congestion Event): 5061761 -> 34421269 (RecoveryWindow)
+[55238.194ms] LOSS EVENT: CWnd=5061761, InFlight=5062208, LostBytes=2944
+[55238.196ms] CWND Update (Congestion Event): 5061761 -> 34826069 (RecoveryWindow)
+[55238.198ms] CWND Update (BBR): 5061761 -> 5069289
+[55238.204ms] LOSS EVENT: CWnd=5069289, InFlight=5000384, LostBytes=2944
+[55238.204ms] CWND Update (Congestion Event): 5069289 -> 34882005 (RecoveryWindow)
+[55285.000ms] LOSS EVENT: CWnd=5069289, InFlight=4932672, LostBytes=1472
+[55285.002ms] CWND Update (Congestion Event): 5069289 -> 35351573 (RecoveryWindow)
+[55315.096ms] LOSS EVENT: CWnd=5069289, InFlight=4832576, LostBytes=26496
+[55315.098ms] CWND Update (Congestion Event): 5069289 -> 35697493 (RecoveryWindow)
+[55345.889ms] CWND Update (BBR): 5069289 -> 5128741
+[55349.828ms] CWND Update (BBR): 5128741 -> 5144869
+[55354.711ms] CWND Update (BBR): 5144869 -> 5152675
+[55430.105ms] LOSS EVENT: CWnd=5152675, InFlight=5094592, LostBytes=2944
+[55430.108ms] CWND Update (Congestion Event): 5152675 -> 37090005 (RecoveryWindow)
+[55458.215ms] LOSS EVENT: CWnd=5152675, InFlight=5153472, LostBytes=63296
+[55458.217ms] CWND Update (Congestion Event): 5152675 -> 37446229 (RecoveryWindow)
+[55466.590ms] LOSS EVENT: CWnd=5152675, InFlight=5153472, LostBytes=1472
+[55466.592ms] CWND Update (Congestion Event): 5152675 -> 37456533 (RecoveryWindow)
+[55496.652ms] LOSS EVENT: CWnd=5152675, InFlight=5153472, LostBytes=4416
+[55496.654ms] CWND Update (Congestion Event): 5152675 -> 37795093 (RecoveryWindow)
+[55500.095ms] LOSS EVENT: CWnd=5152675, InFlight=5153472, LostBytes=1472
+[55500.097ms] CWND Update (Congestion Event): 5152675 -> 37858389 (RecoveryWindow)
+[55531.067ms] LOSS EVENT: CWnd=5152675, InFlight=5087232, LostBytes=1472
+[55531.069ms] CWND Update (Congestion Event): 5152675 -> 38196949 (RecoveryWindow)
+[55557.694ms] LOSS EVENT: CWnd=5152675, InFlight=5153472, LostBytes=2944
+[55557.696ms] CWND Update (Congestion Event): 5152675 -> 38526677 (RecoveryWindow)
+[55589.928ms] LOSS EVENT: CWnd=5152675, InFlight=5087232, LostBytes=64768
+[55589.930ms] CWND Update (Congestion Event): 5152675 -> 38866709 (RecoveryWindow)
+[55702.773ms] LOSS EVENT: CWnd=5152675, InFlight=4180661, LostBytes=60352
+[55702.775ms] CWND Update (Congestion Event): 5152675 -> 40054613 (RecoveryWindow)
+[55702.782ms] LOSS EVENT: CWnd=5152675, InFlight=4084981, LostBytes=4416
+[55702.783ms] CWND Update (Congestion Event): 5152675 -> 40085525 (RecoveryWindow)
+[55856.530ms] LOSS EVENT: CWnd=5152675, InFlight=2905909, LostBytes=1472
+[55856.533ms] CWND Update (Congestion Event): 5152675 -> 41323477 (RecoveryWindow)
+[55856.540ms] LOSS EVENT: CWnd=5152675, InFlight=2869109, LostBytes=2944
+[55856.541ms] CWND Update (Congestion Event): 5152675 -> 41355861 (RecoveryWindow)
+[55856.615ms] CWND Update (BBR): 5152675 -> 5155037
+[55856.622ms] CWND Update (BBR): 5155037 -> 5225604
+[55856.628ms] CWND Update (BBR): 5225604 -> 5291755
+[55915.535ms] LOSS EVENT: CWnd=5291755, InFlight=1694489, LostBytes=64768
+[55915.544ms] CWND Update (Congestion Event): 5291755 -> 42467221 (RecoveryWindow)
+[55956.196ms] LOSS EVENT: CWnd=5291755, InFlight=1080701, LostBytes=2944
+[55956.208ms] CWND Update (Congestion Event): 5291755 -> 43078101 (RecoveryWindow)
+[55956.254ms] LOSS EVENT: CWnd=5291755, InFlight=1018877, LostBytes=2944
+[55956.258ms] CWND Update (Congestion Event): 5291755 -> 43134037 (RecoveryWindow)
+[56016.209ms] LOSS EVENT: CWnd=5291755, InFlight=415393, LostBytes=60352
+[56016.221ms] CWND Update (Congestion Event): 5291755 -> 43680149 (RecoveryWindow)
+[56016.250ms] LOSS EVENT: CWnd=5291755, InFlight=334433, LostBytes=4416
+[56016.254ms] CWND Update (Congestion Event): 5291755 -> 43696341 (RecoveryWindow)
+[56519.725ms] LOSS EVENT: CWnd=5291755, InFlight=5226600, LostBytes=30912
+[56519.729ms] CWND Update (Congestion Event): 5291755 -> 5164776 (RecoveryWindow)
+[56523.368ms] LOSS EVENT: CWnd=5195688, InFlight=5196530, LostBytes=2523
+[56523.370ms] CWND Update (Congestion Event): 5291755 -> 5193165 (RecoveryWindow)
+[56575.220ms] LOSS EVENT: CWnd=5199901, InFlight=5064689, LostBytes=33435
+[56575.222ms] CWND Update (Congestion Event): 5291755 -> 5166466 (RecoveryWindow)
+[56683.365ms] LOSS EVENT: CWnd=5180362, InFlight=5181204, LostBytes=29440
+[56683.368ms] CWND Update (Congestion Event): 5291755 -> 5150922 (RecoveryWindow)
+[56683.436ms] LOSS EVENT: CWnd=5151764, InFlight=5152606, LostBytes=3995
+[56683.437ms] CWND Update (Congestion Event): 5291755 -> 5147769 (RecoveryWindow)
+[56784.574ms] LOSS EVENT: CWnd=5157667, InFlight=5092269, LostBytes=33435
+[56784.576ms] CWND Update (Congestion Event): 5291755 -> 5124232 (RecoveryWindow)
+[56888.195ms] LOSS EVENT: CWnd=5129920, InFlight=5060736, LostBytes=64768
+[56888.197ms] CWND Update (Congestion Event): 5291755 -> 5065152 (RecoveryWindow)
+[56995.196ms] LOSS EVENT: CWnd=5291755, InFlight=5222656, LostBytes=5888
+[56995.199ms] CWND Update (Congestion Event): 5291755 -> 5776128 (RecoveryWindow)
+[57000.235ms] LOSS EVENT: CWnd=5291755, InFlight=5291840, LostBytes=2944
+[57000.237ms] CWND Update (Congestion Event): 5291755 -> 5801152 (RecoveryWindow)
+[57116.693ms] LOSS EVENT: CWnd=5291755, InFlight=5291840, LostBytes=4416
+[57116.695ms] CWND Update (Congestion Event): 5291755 -> 7021440 (RecoveryWindow)
+[57153.201ms] LOSS EVENT: CWnd=5291755, InFlight=5157888, LostBytes=64768
+[57153.203ms] CWND Update (Congestion Event): 5291755 -> 7502784 (RecoveryWindow)
+[57261.694ms] LOSS EVENT: CWnd=5291755, InFlight=5088704, LostBytes=1472
+[57261.696ms] CWND Update (Congestion Event): 5291755 -> 8852608 (RecoveryWindow)
+[57271.059ms] LOSS EVENT: CWnd=5291755, InFlight=5291840, LostBytes=4416
+[57271.061ms] CWND Update (Congestion Event): 5291755 -> 8902656 (RecoveryWindow)
+[57374.655ms] LOSS EVENT: CWnd=5291755, InFlight=5224128, LostBytes=8832
+[57374.657ms] CWND Update (Congestion Event): 5291755 -> 9653376 (RecoveryWindow)
+[57398.268ms] LOSS EVENT: CWnd=5291755, InFlight=5291840, LostBytes=36800
+[57398.270ms] CWND Update (Congestion Event): 5291755 -> 10352576 (RecoveryWindow)
+[57398.275ms] LOSS EVENT: CWnd=5291755, InFlight=5225600, LostBytes=1472
+[57398.276ms] CWND Update (Congestion Event): 5291755 -> 10380544 (RecoveryWindow)
+[57531.653ms] LOSS EVENT: CWnd=5291755, InFlight=4619136, LostBytes=1472
+[57531.655ms] CWND Update (Congestion Event): 5291755 -> 11728896 (RecoveryWindow)
+[57531.657ms] CWND Update (BBR): 5291755 -> 5360738
+[57531.663ms] CWND Update (BBR): 5360738 -> 5429795
+[57532.067ms] CWND Update (BBR): 5429795 -> 5495353
+[57532.097ms] CWND Update (BBR): 5495353 -> 5562684
+[57539.540ms] CWND Update (BBR): 5562684 -> 5602433
+[57549.851ms] CWND Update (BBR): 5602433 -> 5606901
+[57605.375ms] LOSS EVENT: CWnd=5606901, InFlight=5468480, LostBytes=2944
+[57605.381ms] CWND Update (Congestion Event): 5606901 -> 12413376 (RecoveryWindow)
+[57605.433ms] LOSS EVENT: CWnd=5606901, InFlight=5394880, LostBytes=1472
+[57605.434ms] CWND Update (Congestion Event): 5606901 -> 12482560 (RecoveryWindow)
+[57677.433ms] LOSS EVENT: CWnd=5606901, InFlight=5506752, LostBytes=1472
+[57677.438ms] CWND Update (Congestion Event): 5606901 -> 13211200 (RecoveryWindow)
+[57677.754ms] LOSS EVENT: CWnd=5606901, InFlight=5333056, LostBytes=4416
+[57677.755ms] CWND Update (Congestion Event): 5606901 -> 13691072 (RecoveryWindow)
+[57768.011ms] LOSS EVENT: CWnd=5606901, InFlight=5461120, LostBytes=60352
+[57768.014ms] CWND Update (Congestion Event): 5606901 -> 14181248 (RecoveryWindow)
+[57768.020ms] LOSS EVENT: CWnd=5606901, InFlight=5363968, LostBytes=4416
+[57768.021ms] CWND Update (Congestion Event): 5606901 -> 14213632 (RecoveryWindow)
+[57829.338ms] LOSS EVENT: CWnd=5606901, InFlight=5546496, LostBytes=60352
+[57829.340ms] CWND Update (Congestion Event): 5606901 -> 15433920 (RecoveryWindow)
+[57833.209ms] LOSS EVENT: CWnd=5606901, InFlight=5608320, LostBytes=4416
+[57833.211ms] CWND Update (Congestion Event): 5606901 -> 15453056 (RecoveryWindow)
+[57923.643ms] LOSS EVENT: CWnd=5606901, InFlight=5469952, LostBytes=11776
+[57923.645ms] CWND Update (Congestion Event): 5606901 -> 16013888 (RecoveryWindow)
+[57923.942ms] LOSS EVENT: CWnd=5606901, InFlight=5257984, LostBytes=61824
+[57923.943ms] CWND Update (Congestion Event): 5606901 -> 16473152 (RecoveryWindow)
+[57929.530ms] LOSS EVENT: CWnd=5606901, InFlight=5608320, LostBytes=2944
+[57929.532ms] CWND Update (Congestion Event): 5606901 -> 16499648 (RecoveryWindow)
+[58041.872ms] LOSS EVENT: CWnd=5606901, InFlight=5608320, LostBytes=63296
+[58041.874ms] CWND Update (Congestion Event): 5606901 -> 17744960 (RecoveryWindow)
+[58041.880ms] LOSS EVENT: CWnd=5606901, InFlight=5508224, LostBytes=1472
+[58041.881ms] CWND Update (Congestion Event): 5606901 -> 17780288 (RecoveryWindow)
+[58153.492ms] LOSS EVENT: CWnd=5606901, InFlight=5399296, LostBytes=60352
+[58153.496ms] CWND Update (Congestion Event): 5606901 -> 19016768 (RecoveryWindow)
+[58153.548ms] LOSS EVENT: CWnd=5606901, InFlight=5321280, LostBytes=4416
+[58153.549ms] CWND Update (Congestion Event): 5606901 -> 19030016 (RecoveryWindow)
+[58257.225ms] LOSS EVENT: CWnd=5606901, InFlight=5608320, LostBytes=1472
+[58257.228ms] CWND Update (Congestion Event): 5606901 -> 20254720 (RecoveryWindow)
+[58312.307ms] CWND Update (BBR): 5606901 -> 5674613
+[58314.912ms] CWND Update (BBR): 5674613 -> 5742325
+[58321.555ms] CWND Update (BBR): 5742325 -> 5810037
+[58326.727ms] CWND Update (BBR): 5810037 -> 5877749
+[58326.735ms] CWND Update (BBR): 5877749 -> 5945461
+[58351.840ms] CWND Update (BBR): 5945461 -> 5960519
+[58360.205ms] LOSS EVENT: CWnd=5960519, InFlight=5961600, LostBytes=63296
+[58360.207ms] CWND Update (Congestion Event): 5960519 -> 21405824 (RecoveryWindow)
+[58360.214ms] LOSS EVENT: CWnd=5960519, InFlight=5832064, LostBytes=1472
+[58360.214ms] CWND Update (Congestion Event): 5960519 -> 21470592 (RecoveryWindow)
+[58462.288ms] LOSS EVENT: CWnd=5960519, InFlight=5961600, LostBytes=61824
+[58462.290ms] CWND Update (Congestion Event): 5960519 -> 22639360 (RecoveryWindow)
+[58471.148ms] LOSS EVENT: CWnd=5960519, InFlight=5961600, LostBytes=2944
+[58471.150ms] CWND Update (Congestion Event): 5960519 -> 22677632 (RecoveryWindow)
+[58568.649ms] LOSS EVENT: CWnd=5960519, InFlight=5961600, LostBytes=2944
+[58568.651ms] CWND Update (Congestion Event): 5960519 -> 23945024 (RecoveryWindow)
+[58674.405ms] LOSS EVENT: CWnd=5960519, InFlight=5961600, LostBytes=2944
+[58674.407ms] CWND Update (Congestion Event): 5960519 -> 25163840 (RecoveryWindow)
+[58725.263ms] LOSS EVENT: CWnd=5960519, InFlight=5895360, LostBytes=2944
+[58725.265ms] CWND Update (Congestion Event): 5960519 -> 25733504 (RecoveryWind

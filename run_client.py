@@ -11,7 +11,7 @@ QUICSAMPLE_PATH = '/home/woochan/widen/msquic_leo/build/bin/Release/quicsample'
 PORTS_TO_TEST = [20001, 20002, 20003, 20004]
 
 # 포트별 실행 횟수
-RUNS_PER_PORT = 2
+RUNS_PER_PORT = 1
 
 # 로그를 저장할 디렉토리 이름 (스크립트를 실행하는 위치에 생성됩니다)
 LOG_DIRECTORY = 'client_log'
@@ -51,7 +51,7 @@ def run_experiment():
             command = [
                 QUICSAMPLE_PATH,
                 '-client',
-                '-target:163.152.192.70',
+                '-target:54.67.60.13',
                 f'-port:{port}',
                 '-unsecure',
                 '-download:1000000000'
