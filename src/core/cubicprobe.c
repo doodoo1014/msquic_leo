@@ -1609,17 +1609,35 @@ CubicProbeUpdate(
     const QUIC_PATH* Path = &QuicCongestionControlGetConnection(Cc)->Paths[0];
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
 
+    // [!!! 핵심 수정: 에포크 초기화 로직 추가 !!!]
+    if (Cubic->TimeOfCongAvoidStart == 0) {
+        // 지금을 새로운 에포크의 시작으로 기록
+        Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow;
+
+        // 이 시점을 기준으로 CUBIC 파라미터를 다시 계산
+        if (Cubic->CongestionWindow < Cubic->WindowMax) {
+            // W_max가 현재 윈도우보다 큰 경우 (Fast Convergence)
+            // K = cbrt((W_max - Cwnd) / C)
+            if (DatagramPayloadLength > 0) {
+                uint32_t W_max_in_mss = (Cubic->WindowMax - Cubic->CongestionWindow) / DatagramPayloadLength;
+                uint32_t radicand = (W_max_in_mss * (10) << 9) / TEN_TIMES_C_CUBIC; // beta 텀 제거
+                Cubic->KCubic = CubeRoot(radicand);
+                Cubic->KCubic = S_TO_MS(Cubic->KCubic);
+                Cubic->KCubic >>= 3;
+            } else {
+                Cubic->KCubic = 0;
+            }
+        } else {
+            // W_max가 현재 윈도우보다 작거나 같은 경우
+            // 새로운 고점을 찾아야 하므로 K=0
+            Cubic->KCubic = 0;
+            Cubic->WindowMax = Cubic->CongestionWindow; // Origin point 갱신
+        }
+    }
+
     // 1. CUBIC 목표 윈도우(W_cubic) 계산
     const uint32_t W_max_bytes = Cubic->WindowMax;
-
-    // [핵심 수정] 시간 계산 시 SmoothedRtt를 더하지 않음.
-    if (Cubic->TimeOfCongAvoidStart > AckEvent->TimeNow) { Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow; }
     const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, AckEvent->TimeNow);
-    
-    // ns-3 코드는 여기에 delay_min을 더하지만, 이는 HyStart의 잔재이며 CUBIC 표준이 아님.
-    // 여기서는 더하지 않는 것이 RFC 8312에 더 부합. 만약 ns-3과 100% 동일하게 하려면
-    // const uint64_t t_us = ... + CubicProbe->MinRttUs; 로 수정.
-    
     const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
 
     int64_t TimeDeltaUs = (int64_t)t_us - (int64_t)K_us;
@@ -1767,7 +1785,6 @@ CubicProbeCongestionControlOnCongestionEvent(
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
     uint32_t PrevCwnd = Cubic->CongestionWindow;
 
-    // 혼잡 발생 시 프로브 상태 및 카운터 리셋
     CubicProbeResetProbeState(CubicProbe);
     CubicProbe->AckCountForGrowth = 0;
     
@@ -1787,18 +1804,9 @@ CubicProbeCongestionControlOnCongestionEvent(
     if (Cubic->WindowLastMax > 0 && Cubic->CongestionWindow < Cubic->WindowLastMax) {
         Cubic->WindowMax = (uint32_t)(Cubic->CongestionWindow * (10.0 + TEN_TIMES_BETA_CUBIC) / 20.0);
     }
-
-    // K 계산
-    if (DatagramPayloadLength > 0) {
-        uint32_t W_max_in_mss = Cubic->WindowMax / DatagramPayloadLength;
-        uint32_t radicand = (W_max_in_mss * (10 - TEN_TIMES_BETA_CUBIC) << 9) / TEN_TIMES_C_CUBIC;
-        Cubic->KCubic = CubeRoot(radicand);
-        Cubic->KCubic = S_TO_MS(Cubic->KCubic);
-        Cubic->KCubic >>= 3;
-    } else {
-        Cubic->KCubic = 0;
-    }
-
+    
+    // [수정] K 계산 로직을 Update 함수로 이동
+    
     uint32_t MinCongestionWindow = 2 * DatagramPayloadLength;
     Cubic->SlowStartThreshold =
     Cubic->CongestionWindow =
@@ -1806,13 +1814,12 @@ CubicProbeCongestionControlOnCongestionEvent(
             MinCongestionWindow,
             (uint32_t)(Cubic->CongestionWindow * ((double)TEN_TIMES_BETA_CUBIC / 10.0)));
     
-    // 혼잡 회피 재시작을 위해 시간 초기화
+    // [수정] 혼잡 회피 재시작을 위해 에포크 시작 시간만 리셋
     Cubic->TimeOfCongAvoidStart = 0;
 
     printf("[Cubic][%p][%.3fms] CWND Update (Congestion Event): %u -> %u\n",
         (void*)Connection, (double)CxPlatTimeUs64() / 1000.0, PrevCwnd, Cubic->CongestionWindow);
 }
-
 
 // =================================================================================
 // 나머지 v-table 함수들 (기존 코드와 대부분 동일)
