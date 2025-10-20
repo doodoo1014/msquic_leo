@@ -1451,32 +1451,16 @@
 
 #include "cubicprobe.h"
 
-//
-// Note: The following fields must be added or verified in QUIC_CONGESTION_CONTROL_CUBICPROBE
-// in the corresponding header file (e.g., congestion_control.h)
-//
-// typedef struct QUIC_CONGESTION_CONTROL_CUBICPROBE {
-//     QUIC_CONGESTION_CONTROL_CUBIC Cubic;
-//     PROBE_STATE ProbeState;
-//     uint32_t CumulativeSuccessLevel;
-//     uint32_t RttCount;
-//     uint64_t RttAtProbeStartUs;
-//     // uint32_t AckCountSinceLastGrowth; // This is no longer needed
-// } QUIC_CONGESTION_CONTROL_CUBICPROBE;
-//
-
 // Constants from RFC8312 (for CUBIC)
 #define TEN_TIMES_BETA_CUBIC 7
 #define TEN_TIMES_C_CUBIC 4
 
 // Constants for CubicProbe logic
 #define PROBE_RTT_INTERVAL 2
-#define PROBE_RTT_INCREASE_NUMERATOR 21   // 1.1x RTT threshold
-#define PROBE_RTT_INCREASE_DENOMINATOR 20
+#define PROBE_RTT_INCREASE_NUMERATOR 11   // 1.1x RTT threshold
+#define PROBE_RTT_INCREASE_DENOMINATOR 10
 
-//
-// Forward declarations for all functions in the v-table and static helpers
-//
+// Forward declarations
 BOOLEAN CubicProbeCongestionControlCanSend(_In_ QUIC_CONGESTION_CONTROL* Cc);
 void CubicProbeCongestionControlSetExemption(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ uint8_t NumPackets);
 void CubicProbeCongestionControlReset(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ BOOLEAN FullReset);
@@ -1531,30 +1515,34 @@ CubicProbeResetProbeState(
     CubicProbe->RttAtProbeStartUs = 0;
 }
 
-// [NEW] Helper function to calculate CUBIC's target window (W_cubic)
+// Helper function to calculate CUBIC's target window (W_cubic)
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static uint32_t
 CubicProbeGetTargetWindow(
     _In_ QUIC_CONGESTION_CONTROL_CUBIC* Cubic,
     _In_ uint64_t TimeNow,
-    _In_ uint64_t SmoothedRtt,
     _In_ uint16_t DatagramPayloadLength
     )
 {
     const uint32_t W_max_bytes = Cubic->WindowMax;
     if (W_max_bytes == 0) {
-        return Cubic->CongestionWindow + DatagramPayloadLength;
+        // Before the first congestion event, CUBIC is not fully defined.
+        // We grow linearly by 1 MSS per RTT, which is what the TCP-friendly
+        // part of the main function will do. Returning current Cwnd ensures
+        // we take that path, which is a safe default.
+        return Cubic->CongestionWindow;
     }
 
     const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
     if (Cubic->TimeOfCongAvoidStart > TimeNow) {
         Cubic->TimeOfCongAvoidStart = TimeNow;
     }
-    const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, TimeNow) + SmoothedRtt;
+
+    const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, TimeNow);
+
     int64_t TimeDeltaUs = (int64_t)t_us - (int64_t)K_us;
     int64_t OffsetMs = (TimeDeltaUs / 1000);
 
-    // C(t - K)^3
     int64_t CubicTerm =
         ((((OffsetMs * OffsetMs) >> 10) * OffsetMs *
          (int64_t)(DatagramPayloadLength * TEN_TIMES_C_CUBIC / 10)) >> 20);
@@ -1568,8 +1556,6 @@ CubicProbeGetTargetWindow(
 
     return W_cubic_bytes;
 }
-
-// --- START OF COMPLETE V-TABLE FUNCTION IMPLEMENTATIONS ---
 
 _IRQL_requires_max_(DISPATCH_LEVEL)
 BOOLEAN
@@ -1618,7 +1604,6 @@ CubicProbeCongestionControlReset(
     Cubic->WindowLastMax = 0;
 
     CubicProbeResetProbeState(CubicProbe);
-    // CubicProbe->AckCountSinceLastGrowth = 0; // [REMOVED]
 }
 
 _IRQL_requires_max_(DISPATCH_LEVEL)
@@ -1699,7 +1684,6 @@ CubicProbeCongestionControlOnDataInvalidated(
     return CubicProbeCongestionControlUpdateBlockedState(Cc, PreviousCanSendState);
 }
 
-
 _IRQL_requires_max_(DISPATCH_LEVEL)
 BOOLEAN
 CubicProbeCongestionControlOnDataAcknowledged(
@@ -1731,7 +1715,6 @@ CubicProbeCongestionControlOnDataAcknowledged(
     }
 
     if (Cubic->CongestionWindow < Cubic->SlowStartThreshold) {
-        // Slow Start logic is unchanged.
         uint32_t PrevCwnd = Cubic->CongestionWindow;
         Cubic->CongestionWindow += BytesAcked;
         if (Cubic->CongestionWindow >= Cubic->SlowStartThreshold) {
@@ -1746,7 +1729,7 @@ CubicProbeCongestionControlOnDataAcknowledged(
         const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
         if (DatagramPayloadLength == 0) goto Exit;
 
-        // 1. Manage Probe State (unchanged)
+        // 1. Manage Probe State
         if (AckEvent->MinRttValid) {
             if (Cubic->WindowMax > 0 && Cubic->CongestionWindow >= Cubic->WindowMax) {
                 switch (CubicProbe->ProbeState) {
@@ -1761,18 +1744,15 @@ CubicProbeCongestionControlOnDataAcknowledged(
                         break;
                     case PROBE_TEST:
                     case PROBE_JUDGMENT:
-                        // [MODIFIED] Check if RTT exceeds 1.1x the starting RTT
                         if (CubicProbe->RttAtProbeStartUs == 0 ||
                             (AckEvent->MinRtt * PROBE_RTT_INCREASE_DENOMINATOR <= CubicProbe->RttAtProbeStartUs * PROBE_RTT_INCREASE_NUMERATOR)) {
-                            // Success: Increment success level and continue probing
                             CubicProbe->ProbeState = PROBE_TEST;
                             CubicProbe->CumulativeSuccessLevel++;
                         } else {
-                            // Failure: Treat RTT spike as a congestion event
                             printf("[Cubic][%p][%.3fms] PROBE FAILED (RTT Spike): CWnd=%u. Treating as congestion event.\n",
                                 (void*)Connection, (double)TimeNowUs / 1000.0, Cubic->CongestionWindow);
                             CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, FALSE);
-                            goto Exit; // Do not perform growth after a congestion event
+                            goto Exit;
                         }
                         break;
                 }
@@ -1783,40 +1763,38 @@ CubicProbeCongestionControlOnDataAcknowledged(
             }
         }
 
-        // 2. [NEW] Proportional growth on every ACK
-        uint32_t TargetWindow = CubicProbeGetTargetWindow(Cubic, TimeNowUs, Path->SmoothedRtt, DatagramPayloadLength);
+        // 2. [MODIFIED] Unified CUBIC growth logic (No TCP-friendly option)
+        uint32_t TargetWindow = CubicProbeGetTargetWindow(Cubic, TimeNowUs, DatagramPayloadLength);
         
-        // if (TargetWindow <= Cubic->CongestionWindow) {
-        //     // TCP-friendly region (Concave)
-        //     // Use standard CUBIC's gentle growth formula
-        //     uint64_t CwndGrowth = (uint64_t)100 * DatagramPayloadLength * BytesAcked;
-        //     CwndGrowth /= Cubic->CongestionWindow;
-        //     Cubic->CongestionWindow += (uint32_t)CwndGrowth;
+        // Do not grow if the window has already passed the calculated target
+        if (TargetWindow <= Cubic->CongestionWindow) {
+            // Before first congestion event (W_max=0), GetTargetWindow returns Cwnd.
+            // This case is a safe-guard and allows slow start to transition smoothly.
+            // In a normal concave region, Cwnd will be slightly less than TargetWindow,
+            // so this condition is rarely met unless Cwnd overshoots.
+            goto Exit;
+        }
 
-        // } else { // Aggressive growth region (Convex)
-
-            // Base proportional growth: (Target - Cwnd) / Cwnd * BytesAcked
-            uint64_t CwndGrowth = TargetWindow - Cubic->CongestionWindow;
+        // Always use CUBIC's proportional growth formula
+        uint64_t CwndGrowth = TargetWindow - Cubic->CongestionWindow;
+        if (Cubic->CongestionWindow > 0) {
             CwndGrowth = (CwndGrowth * BytesAcked) / Cubic->CongestionWindow;
+        }
 
-            // Apply acceleration factor based on probe success level
-            if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 0) {
-                uint32_t L = CubicProbe->CumulativeSuccessLevel;
-                // Acceleration Factor: (L*L)/2 + L  == (L*L + 2*L) / 2
-                uint64_t Numerator = (uint64_t)L * L + (uint64_t)2 * L;
-                
-                // Use 64-bit intermediates to prevent overflow before division
-                CwndGrowth = (CwndGrowth * Numerator) / 2;
-            }
+        // Apply custom acceleration ONLY after passing W_max (in Probe state)
+        if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 0) {
+            uint32_t L = CubicProbe->CumulativeSuccessLevel;
+            uint64_t Numerator = (uint64_t)L * L + (uint64_t)2 * L;
+            CwndGrowth = (CwndGrowth * Numerator) / 2;
+        }
 
-            uint32_t PrevCwnd = Cubic->CongestionWindow;
-            Cubic->CongestionWindow += (uint32_t)CwndGrowth;
+        uint32_t PrevCwnd = Cubic->CongestionWindow;
+        Cubic->CongestionWindow += (uint32_t)CwndGrowth;
 
-            if (CubicProbe->ProbeState != PROBE_INACTIVE) {
-                printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Growth=%u)\n",
-                    (void*)Connection, (double)TimeNowUs / 1000.0, CubicProbe->CumulativeSuccessLevel, PrevCwnd, Cubic->CongestionWindow, (uint32_t)CwndGrowth);
-            }
-        // }
+        if (CubicProbe->ProbeState != PROBE_INACTIVE) {
+            printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Growth=%u)\n",
+                (void*)Connection, (double)TimeNowUs / 1000.0, CubicProbe->CumulativeSuccessLevel, PrevCwnd, Cubic->CongestionWindow, (uint32_t)CwndGrowth);
+        }
     }
 
     if (Cubic->CongestionWindow > 2 * Cubic->BytesInFlightMax) {
@@ -1828,7 +1806,6 @@ Exit:
     Cubic->TimeOfLastAckValid = TRUE;
     return CubicProbeCongestionControlUpdateBlockedState(Cc, PreviousCanSendState);
 }
-
 
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static void
@@ -1846,7 +1823,6 @@ CubicProbeCongestionControlOnCongestionEvent(
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
     uint32_t PrevCwnd = Cubic->CongestionWindow;
 
-    // Reset all probing states on any congestion event
     CubicProbeResetProbeState(CubicProbe);
     
     if (!Cubic->IsInRecovery) {
@@ -1861,12 +1837,10 @@ CubicProbeCongestionControlOnCongestionEvent(
     Cubic->WindowLastMax = Cubic->WindowMax;
     Cubic->WindowMax = Cubic->CongestionWindow;
     
-    // Fast Convergence
     if (Cubic->WindowLastMax > 0 && Cubic->CongestionWindow < Cubic->WindowLastMax) {
         Cubic->WindowMax = (uint32_t)(Cubic->CongestionWindow * (10.0 + TEN_TIMES_BETA_CUBIC) / 20.0);
     }
 
-    // Calculate K
     if (DatagramPayloadLength > 0) {
         uint32_t W_max_in_mss = Cubic->WindowMax / DatagramPayloadLength;
         uint32_t radicand = (W_max_in_mss * (10 - TEN_TIMES_BETA_CUBIC) << 9) / TEN_TIMES_C_CUBIC;
@@ -2087,5 +2061,4 @@ CubicProbeCongestionControlInitialize(
     Cubic->WindowLastMax = 0;
 
     CubicProbeResetProbeState(CubicProbe);
-    // CubicProbe->AckCountSinceLastGrowth = 0; // [REMOVED]
 }
