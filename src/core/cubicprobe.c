@@ -1453,12 +1453,12 @@
 #include "cubicprobe.h"
 
 //
-// [추가] QUIC_CONGESTION_CONTROL_CUBICPROBE 구조체에 아래 필드를 추가해야 합니다.
+// Note: The following field must be added to the QUIC_CONGESTION_CONTROL_CUBICPROBE struct in the corresponding header file (e.g., congestion_control.h)
 //
 // typedef struct QUIC_CONGESTION_CONTROL_CUBICPROBE {
-//     ... (기존 필드)
-//     uint64_t RttAnchorUs; // 혼잡 이벤트 후 첫 Probe의 RTT를 고정하는 앵커 변수
-//     ... (기존 필드)
+//     ... (existing fields)
+//     uint64_t RttAnchorUs; // Anchor RTT for the first probe after a congestion event
+//     ... (existing fields)
 // } QUIC_CONGESTION_CONTROL_CUBICPROBE;
 //
 
@@ -1469,8 +1469,8 @@
 
 // Constants for CubicProbe logic (from ns-3 implementation)
 #define PROBE_RTT_INTERVAL 2
-#define PROBE_RTT_INCREASE_NUMERATOR 21   // Represents 1.1x RTT increase threshold
-#define PROBE_RTT_INCREASE_DENOMINATOR 20
+#define PROBE_RTT_INCREASE_NUMERATOR 11   // Represents 1.1x RTT increase threshold
+#define PROBE_RTT_INCREASE_DENOMINATOR 10
 
 //
 // Forward declarations for all functions in the v-table and static helpers
@@ -1577,7 +1577,7 @@ CubicProbeCongestionControlReset(
 
     CubicProbeResetProbeState(CubicProbe);
     CubicProbe->AckCountSinceLastGrowth = 0;
-    CubicProbe->RttAnchorUs = 0; // [추가] 앵커 RTT 초기화
+    CubicProbe->RttAnchorUs = 0;
 }
 
 _IRQL_requires_max_(DISPATCH_LEVEL)
@@ -1707,13 +1707,10 @@ CubicProbeCongestionControlOnDataAcknowledged(
 
     } else { // Congestion Avoidance Phase
 
-        // =================================================================
-        // START: ns-3 스타일로 로직 재구성
-        // =================================================================
         const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
         if (DatagramPayloadLength == 0) goto Exit;
 
-        // --- STEP 1: Probe 상태 머신 업데이트 (ns-3의 PktsAcked 역할) ---
+        // --- STEP 1: Probe State Machine ---
         if (AckEvent->MinRttValid) {
             switch (CubicProbe->ProbeState) {
                 case PROBE_INACTIVE:
@@ -1725,7 +1722,6 @@ CubicProbeCongestionControlOnDataAcknowledged(
                             CubicProbe->RttAtProbeStartUs = AckEvent->MinRtt;
                             CubicProbe->RttCount = 0;
 
-                            // [추가] 혼잡 주기 내 첫 Probe일 경우, 앵커 RTT를 설정한다.
                             if (CubicProbe->RttAnchorUs == 0) {
                                 CubicProbe->RttAnchorUs = AckEvent->MinRtt;
                             }
@@ -1738,24 +1734,59 @@ CubicProbeCongestionControlOnDataAcknowledged(
                     CubicProbe->ProbeState = PROBE_JUDGMENT;
                     __fallthrough;
                 case PROBE_JUDGMENT:
-                    // [변경] RttAnchorUs가 설정되지 않았거나, 현재 RTT가 앵커 RTT의 1.1배를 넘지 않으면 Probe 계속
-                    // RttAnchorUs == 0 인 경우는 혼잡 이벤트 없이 시작된 매우 예외적인 상황을 위한 방어 코드
                     if (CubicProbe->RttAnchorUs == 0 ||
                         (AckEvent->MinRtt * PROBE_RTT_INCREASE_DENOMINATOR <= CubicProbe->RttAnchorUs * PROBE_RTT_INCREASE_NUMERATOR)) {
                         CubicProbe->ProbeState = PROBE_TEST;
                         CubicProbe->CumulativeSuccessLevel++;
                     } else {
+                        /******************************************************************
+                         * Treat RTT spike as an 'Actual Loss' (Final Version)
+                         ******************************************************************/
+                        double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
+                        printf("[%.3fms] PROBE FAILED (RTT Spike): CWnd=%u. Treating as congestion event.\n",
+                            ElapsedMilliseconds, Cubic->CongestionWindow);
+
+                        // 1. Reset probe state and anchor RTT
                         CubicProbeResetProbeState(CubicProbe);
-                        Cubic->TimeOfCongAvoidStart = TimeNowUs; // CUBIC epoch 리셋
+                        CubicProbe->RttAnchorUs = 0;
+                        Cubic->HasHadCongestionEvent = TRUE;
+
+                        // 2. Update W_max and W_last_max (same as a real congestion event)
+                        Cubic->WindowLastMax = Cubic->WindowMax;
+                        Cubic->WindowMax = Cubic->CongestionWindow;
+
+                        // 3. Calculate K for the new CUBIC curve (same as a real congestion event)
+                        if (DatagramPayloadLength > 0) {
+                            uint32_t W_max_in_mss = Cubic->WindowMax / DatagramPayloadLength;
+                            uint32_t radicand = (W_max_in_mss * (10 - TEN_TIMES_BETA_CUBIC) << 9) / TEN_TIMES_C_CUBIC;
+                            Cubic->KCubic = CubeRoot(radicand);
+                            Cubic->KCubic = S_TO_MS(Cubic->KCubic);
+                            Cubic->KCubic >>= 3;
+                        } else {
+                            Cubic->KCubic = 0;
+                        }
+
+                        // 4. Reduce CWND to 70% (same as a real congestion event)
+                        uint32_t MinCongestionWindow = 2 * DatagramPayloadLength;
+                        Cubic->SlowStartThreshold =
+                        Cubic->CongestionWindow =
+                            CXPLAT_MAX(
+                                MinCongestionWindow,
+                                (uint32_t)(Cubic->CongestionWindow * ((double)TEN_TIMES_BETA_CUBIC / 10.0)));
+
+                        // 5. Reset CUBIC growth epoch to start a new concave region
+                        Cubic->TimeOfCongAvoidStart = TimeNowUs;
+
+                        printf("[%.3fms] CWND Update (Probe Failure): %u -> %u\n",
+                            ElapsedMilliseconds, Cubic->WindowMax, Cubic->CongestionWindow);
                     }
                     break;
             }
         }
 
-        // --- STEP 2: AckTarget 계산 (ns-3의 Update 역할) ---
+        // --- STEP 2: Calculate AckTarget ---
         CubicProbe->AckCountSinceLastGrowth += (BytesAcked + DatagramPayloadLength - 1) / DatagramPayloadLength;
 
-        // CUBIC의 목표 윈도우(W_cubic) 계산 (기존 C코드의 계산 로직 활용)
         const uint32_t W_max_bytes = Cubic->WindowMax;
         const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
         if (Cubic->TimeOfCongAvoidStart > TimeNowUs) {
@@ -1776,28 +1807,24 @@ CubicProbeCongestionControlOnDataAcknowledged(
 
         uint32_t AckTarget;
         if (W_cubic_bytes > Cubic->CongestionWindow) {
-            // **[변경점]** ns-3과 동일하게 세그먼트 단위로 계산
             uint32_t CwndSegments = Cubic->CongestionWindow / DatagramPayloadLength;
             uint32_t TargetSegments = W_cubic_bytes / DatagramPayloadLength;
             uint32_t DiffSegments = TargetSegments - CwndSegments;
-            if (DiffSegments == 0) DiffSegments = 1; // 0으로 나누기 방지
+            if (DiffSegments == 0) DiffSegments = 1;
             AckTarget = CwndSegments / DiffSegments;
         } else {
             AckTarget = 100 * (Cubic->CongestionWindow / DatagramPayloadLength);
         }
 
-        // Probe 로직: 성장 빈도(Frequency) 가속
         if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 1) {
             AckTarget /= CubicProbe->CumulativeSuccessLevel;
         }
 
-        // 최소 AckTarget 값 보장 (ns-3의 max(cnt, 2U)와 유사)
         if (AckTarget < 2) AckTarget = 2;
 
 
-        // --- STEP 3: CWND 증가 (ns-3의 IncreaseWindow 역할) ---
+        // --- STEP 3: Increase CWND ---
         if (CubicProbe->AckCountSinceLastGrowth >= AckTarget) {
-            // Probe 로직: 성장 폭(Magnitude) 가속
             uint32_t GrowthInSegments = 1;
             if (CubicProbe->ProbeState == PROBE_TEST && CubicProbe->CumulativeSuccessLevel > 0) {
                 GrowthInSegments = ((CubicProbe->CumulativeSuccessLevel / 2) + 1);
@@ -1805,7 +1832,7 @@ CubicProbeCongestionControlOnDataAcknowledged(
 
             uint32_t PrevCwnd = Cubic->CongestionWindow;
             Cubic->CongestionWindow += (GrowthInSegments * DatagramPayloadLength);
-            CubicProbe->AckCountSinceLastGrowth = 0; // 카운터 리셋
+            CubicProbe->AckCountSinceLastGrowth = 0;
 
             double ElapsedMilliseconds = (double)(TimeNowUs - Connection->Stats.Timing.Start) / 1000.0;
             if (CubicProbe->ProbeState == PROBE_TEST) {
@@ -1816,9 +1843,6 @@ CubicProbeCongestionControlOnDataAcknowledged(
                     ElapsedMilliseconds, PrevCwnd, Cubic->CongestionWindow, AckTarget);
             }
         }
-        // =================================================================
-        // END: ns-3 스타일로 로직 재구성
-        // =================================================================
     }
 
     if (Cubic->CongestionWindow > 2 * Cubic->BytesInFlightMax) {
@@ -1852,7 +1876,7 @@ CubicProbeCongestionControlOnCongestionEvent(
     Cubic->HasHadCongestionEvent = TRUE;
     CubicProbeResetProbeState(CubicProbe);
     CubicProbe->AckCountSinceLastGrowth = 0;
-    CubicProbe->RttAnchorUs = 0; // [추가] 혼잡 이벤트 발생 시 앵커 RTT를 리셋하여 다음 Probe때 새로 설정하도록 함
+    CubicProbe->RttAnchorUs = 0;
 
     if (!Ecn) {
         Cubic->PrevCongestionWindow = Cubic->CongestionWindow;
@@ -2088,5 +2112,5 @@ CubicProbeCongestionControlInitialize(
 
     CubicProbeResetProbeState(CubicProbe);
     CubicProbe->AckCountSinceLastGrowth = 0;
-    CubicProbe->RttAnchorUs = 0; // [추가] 앵커 RTT 초기화
+    CubicProbe->RttAnchorUs = 0;
 }
