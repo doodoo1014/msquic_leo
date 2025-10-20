@@ -1469,8 +1469,8 @@
 
 // Constants for CubicProbe logic (from ns-3 implementation)
 #define PROBE_RTT_INTERVAL 2
-#define PROBE_RTT_INCREASE_NUMERATOR 11   // Represents 1.1x RTT increase threshold
-#define PROBE_RTT_INCREASE_DENOMINATOR 10
+#define PROBE_RTT_INCREASE_NUMERATOR 21   // Represents 1.1x RTT increase threshold
+#define PROBE_RTT_INCREASE_DENOMINATOR 20
 
 //
 // Forward declarations for all functions in the v-table and static helpers
