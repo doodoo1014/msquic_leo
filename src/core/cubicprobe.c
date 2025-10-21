@@ -2159,7 +2159,7 @@
 
 // Constants for CubicProbe logic
 #define PROBE_RTT_INTERVAL 2
-#define PROBE_RTT_INCREASE_NUMERATOR 21   // 1.05x RTT threshold
+#define PROBE_RTT_INCREASE_NUMERATOR 22   // 1.1x RTT threshold (수정 제안)
 #define PROBE_RTT_INCREASE_DENOMINATOR 20
 
 // Forward declarations
@@ -2269,20 +2269,17 @@ CubicProbePktsAcked(
                 break;
             }
         }
-        // fall through 
-
-
-
+        // fall through
 
         case PROBE_JUDGMENT:
         {
             if (AckEvent->MinRtt * PROBE_RTT_INCREASE_DENOMINATOR <= CubicProbe->RttAtProbeStartUs * PROBE_RTT_INCREASE_NUMERATOR) {
                 CubicProbe->ProbeState = PROBE_TEST;
                 CubicProbe->CumulativeSuccessLevel++;
-                printf("[CubicProbe] PROBE SUCCEEDED (Lvl %u), RTT=%.3fms <= Anchor*1.05",
+                printf("[CubicProbe] PROBE SUCCEEDED (Lvl %u), RTT=%.3fms <= Anchor*1.xx\n", // Adjusted printf
                     CubicProbe->CumulativeSuccessLevel, (double)AckEvent->MinRtt / 1000.0);
             } else {
-                printf("[CubicProbe] PROBE FAILED (RTT Spike): CWnd=%u. RTT=%.3fms > Anchor*1.05. Treating as congestion event.\n",
+                printf("[CubicProbe] PROBE FAILED (RTT Spike): CWnd=%u. RTT=%.3fms > Anchor*1.xx. Treating as congestion event.\n", // Adjusted printf
                     Cubic->CongestionWindow, (double)AckEvent->MinRtt / 1000.0);
                 CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, FALSE);
             }
@@ -2294,6 +2291,7 @@ CubicProbePktsAcked(
     }
 }
 
+// ======================= [ START OF MODIFICATION ] =======================
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static void
 CubicProbeUpdate(
@@ -2307,50 +2305,64 @@ CubicProbeUpdate(
     const QUIC_PATH* Path = &QuicCongestionControlGetConnection(Cc)->Paths[0];
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(Path);
 
-    if (Cubic->TimeOfCongAvoidStart == 0) {
-        Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow;
-        if (Cubic->CongestionWindow < Cubic->WindowMax) {
-            if (DatagramPayloadLength > 0) {
-                uint32_t W_max_in_mss = (Cubic->WindowMax - Cubic->CongestionWindow) / DatagramPayloadLength;
-                uint32_t radicand = (W_max_in_mss * (10) << 9) / TEN_TIMES_C_CUBIC;
-                Cubic->KCubic = CubeRoot(radicand);
-                Cubic->KCubic = S_TO_MS(Cubic->KCubic);
-                Cubic->KCubic >>= 3;
+    // ✅ [수정] 연속 가속 모드 (프로브 1회 이상 성공) 인 경우
+    if (CubicProbe->CumulativeSuccessLevel > 0) {
+        // W_cubic 계산 및 비교를 생략하고, 즉시 공격적인 성장 로직으로 진입합니다.
+        // RTT마다 CWND를 최소 1세그먼트씩 키우도록 DiffSegments를 1로 설정하여
+        // AckTarget이 CwndSegments가 되도록 합니다.
+        // (이후 accelerationFactor에 의해 더 작아져서 RTT보다 더 빠르게 성장)
+        uint32_t CwndSegments = Cubic->CongestionWindow / DatagramPayloadLength;
+        uint32_t DiffSegments = 1;
+        *AckTarget = CwndSegments / DiffSegments;
+
+    } else {
+        // 🐢 기존 로직 (첫 프로브 진입 전)
+        if (Cubic->TimeOfCongAvoidStart == 0) {
+            Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow;
+            if (Cubic->CongestionWindow < Cubic->WindowMax) {
+                if (DatagramPayloadLength > 0) {
+                    uint32_t W_max_in_mss = (Cubic->WindowMax - Cubic->CongestionWindow) / DatagramPayloadLength;
+                    uint32_t radicand = (W_max_in_mss * (10) << 9) / TEN_TIMES_C_CUBIC;
+                    Cubic->KCubic = CubeRoot(radicand);
+                    Cubic->KCubic = S_TO_MS(Cubic->KCubic);
+                    Cubic->KCubic >>= 3;
+                } else {
+                    Cubic->KCubic = 0;
+                }
             } else {
                 Cubic->KCubic = 0;
+                Cubic->WindowMax = Cubic->CongestionWindow;
             }
+        }
+
+        const uint32_t W_max_bytes = Cubic->WindowMax;
+        const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, AckEvent->TimeNow);
+        const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
+
+        int64_t TimeDeltaUs = (int64_t)t_us - (int64_t)K_us;
+        int64_t OffsetMs = (TimeDeltaUs / 1000);
+        int64_t CubicTerm = ((((OffsetMs * OffsetMs) >> 10) * OffsetMs * (int64_t)(DatagramPayloadLength * TEN_TIMES_C_CUBIC / 10)) >> 20);
+
+        uint32_t W_cubic_bytes;
+        if (TimeDeltaUs < 0) {
+            W_cubic_bytes = W_max_bytes - (uint32_t)(-CubicTerm);
         } else {
-            Cubic->KCubic = 0;
-            Cubic->WindowMax = Cubic->CongestionWindow;
+            W_cubic_bytes = W_max_bytes + (uint32_t)CubicTerm;
+        }
+
+        if (W_cubic_bytes > Cubic->CongestionWindow) {
+            uint32_t CwndSegments = Cubic->CongestionWindow / DatagramPayloadLength;
+            uint32_t TargetSegments = W_cubic_bytes / DatagramPayloadLength;
+            uint32_t DiffSegments = TargetSegments > CwndSegments ? TargetSegments - CwndSegments : 1;
+            *AckTarget = CwndSegments / DiffSegments;
+        } else {
+            *AckTarget = 100 * (Cubic->CongestionWindow / DatagramPayloadLength);
         }
     }
 
-    const uint32_t W_max_bytes = Cubic->WindowMax;
-    const uint64_t t_us = CxPlatTimeDiff64(Cubic->TimeOfCongAvoidStart, AckEvent->TimeNow);
-    const uint64_t K_us = (uint64_t)Cubic->KCubic * 1000;
-
-    int64_t TimeDeltaUs = (int64_t)t_us - (int64_t)K_us;
-    int64_t OffsetMs = (TimeDeltaUs / 1000);
-    int64_t CubicTerm = ((((OffsetMs * OffsetMs) >> 10) * OffsetMs * (int64_t)(DatagramPayloadLength * TEN_TIMES_C_CUBIC / 10)) >> 20);
-
-    uint32_t W_cubic_bytes;
-    if (TimeDeltaUs < 0) {
-        W_cubic_bytes = W_max_bytes - (uint32_t)(-CubicTerm);
-    } else {
-        W_cubic_bytes = W_max_bytes + (uint32_t)CubicTerm;
-    }
-
-    if (W_cubic_bytes > Cubic->CongestionWindow) {
-        uint32_t CwndSegments = Cubic->CongestionWindow / DatagramPayloadLength;
-        uint32_t TargetSegments = W_cubic_bytes / DatagramPayloadLength;
-        uint32_t DiffSegments = TargetSegments > CwndSegments ? TargetSegments - CwndSegments : 1;
-        *AckTarget = CwndSegments / DiffSegments;
-    } else {
-        *AckTarget = 100 * (Cubic->CongestionWindow / DatagramPayloadLength);
-    }
-
+    // 🚀 공통 가속 로직 (기존 코드와 동일)
     if (CubicProbe->CumulativeSuccessLevel > 1) {
-        double accelerationFactor = 1.0 + (5.0 * (CubicProbe->CumulativeSuccessLevel - 1));
+        double accelerationFactor = 1.0 + (2.0 * (CubicProbe->CumulativeSuccessLevel - 1));
         if (accelerationFactor > 1.0) {
             *AckTarget = (uint32_t)(*AckTarget / accelerationFactor);
         }
@@ -2358,6 +2370,7 @@ CubicProbeUpdate(
 
     if (*AckTarget < 2) *AckTarget = 2;
 }
+// ======================== [ END OF MODIFICATION ] ========================
 
 _IRQL_requires_max_(DISPATCH_LEVEL)
 static void
@@ -2379,7 +2392,7 @@ CubicProbeIncreaseWindow(
     if (CubicProbe->AckCountForGrowth >= AckTarget) {
         uint32_t GrowthInSegments = 1;
         if (CubicProbe->CumulativeSuccessLevel > 0) {
-            GrowthInSegments = 5*CubicProbe->CumulativeSuccessLevel + 1;
+            GrowthInSegments = CubicProbe->CumulativeSuccessLevel + 1;
         }
 
         uint32_t PrevCwnd = Cubic->CongestionWindow;
@@ -2389,7 +2402,6 @@ CubicProbeIncreaseWindow(
 
         if (CubicProbe->ProbeState == PROBE_TEST) {
             CubicProbe->ProbeState = PROBE_WAITING;
-            // [수정] 올바른 멤버 변수 이름으로 수정
             CubicProbe->ProbeTargetPacketNumber = Connection->Send.NextPacketNumber - 1;
             printf("[CubicProbe] CWND Grown for Probe. State -> PROBE_WAITING. TargetPkt=%lu\n",
                 CubicProbe->ProbeTargetPacketNumber);
