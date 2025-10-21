@@ -2362,7 +2362,7 @@ CubicProbeUpdate(
 
     // 🚀 공통 가속 로직 (기존 코드와 동일)
     if (CubicProbe->CumulativeSuccessLevel > 1) {
-        double accelerationFactor = 1.0 + (2.0 * (CubicProbe->CumulativeSuccessLevel - 1));
+        double accelerationFactor = 1.0 + CubicProbe->CumulativeSuccessLevel;
         if (accelerationFactor > 1.0) {
             *AckTarget = (uint32_t)(*AckTarget / accelerationFactor);
         }
