@@ -2362,11 +2362,15 @@ CubicProbeUpdate(
 
     // 🚀 공통 가속 로직 (기존 코드와 동일)
     if (CubicProbe->CumulativeSuccessLevel > 1) {
-        double accelerationFactor = 1.0 + CubicProbe->CumulativeSuccessLevel;
-        if (accelerationFactor > 1.0) {
-            *AckTarget = (uint32_t)(*AckTarget / accelerationFactor);
+        double accelerationFactor = 1.0;
+        if (CubicProbe->CumulativeSuccessLevel < 5){
+            accelerationFactor = 1.0 + 0.5 * CubicProbe->CumulativeSuccessLevel;
         }
-    }
+        else{
+            accelerationFactor = 2.0 + CubicProbe->CumulativeSuccessLevel;
+        }
+        *AckTarget = (uint32_t)(*AckTarget / accelerationFactor);
+        }
 
     if (*AckTarget < 2) *AckTarget = 2;
 }
@@ -2392,7 +2396,12 @@ CubicProbeIncreaseWindow(
     if (CubicProbe->AckCountForGrowth >= AckTarget) {
         uint32_t GrowthInSegments = 1;
         if (CubicProbe->CumulativeSuccessLevel > 0) {
-            GrowthInSegments = CubicProbe->CumulativeSuccessLevel + 1;
+            if(CubicProbe->CumulativeSuccessLevel < 5){
+                GrowthInSegments = CubicProbe->CumulativeSuccessLevel / 2 + 1;
+            }
+            else{
+                GrowthInSegments = CubicProbe->CumulativeSuccessLevel + 1;
+            }
         }
 
         uint32_t PrevCwnd = Cubic->CongestionWindow;
