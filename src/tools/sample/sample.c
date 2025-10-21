@@ -1702,9 +1702,8 @@ RunClient(
             uint64_t IntervalMs = CurrentTimeMs - Ctx.LastLogTimeMs;
             double IntervalThroughputMbps = (IntervalMs > 0) ? (((double)IntervalBytes * 8 * 1000) / (IntervalMs * 1000 * 1000)) : 0;
             
-            double ElapsedSecondsTotal = (double)(CurrentTimeMs - Ctx.StartTime) / 1000.0;
-            printf("[CLIENT] Time: %5.2fs | Throughput: %7.2f Mbps | RTT: %4lu us\n",
-                   ElapsedSecondsTotal, IntervalThroughputMbps, (unsigned long)Stats.Rtt);
+            printf("[CLIENT] Time: %.3fms | Throughput: %7.2f Mbps | RTT: %4lu us\n",
+                   (double)CxPlatTimeUs64() / 1000.0, IntervalThroughputMbps, (unsigned long)Stats.Rtt);
             
             Ctx.LastLogTimeMs = CurrentTimeMs;
             Ctx.LastBytesReceived = Ctx.BytesReceived;
