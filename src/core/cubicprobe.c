@@ -2390,11 +2390,11 @@ CubicProbeIncreaseWindow(
     CubicProbe->AckCountForGrowth += AckedSegments;
 
     if (CubicProbe->AckCountForGrowth >= AckTarget) {
-        uint32_t GrowthInSegments = 1;
+        uint32_t GrowthInSegments = 0;
         if (CubicProbe->CumulativeSuccessLevel > 0) {
             GrowthInSegments = CubicProbe->CumulativeSuccessLevel - 1;
-            if (GrowthInSegments < 1) {
-                GrowthInSegments = 1;
+            if (GrowthInSegments < 0) {
+                GrowthInSegments = 0;
             }
         }
 
