@@ -124,6 +124,7 @@
 typedef enum QUIC_PROBE_STATE {
     PROBE_INACTIVE,
     PROBE_TEST,
+    PROBE_WAITING,
     PROBE_JUDGMENT
 } QUIC_PROBE_STATE;
 
@@ -143,6 +144,7 @@ typedef struct QUIC_CONGESTION_CONTROL_CUBICPROBE {
     // uint32_t AckCountSinceLastGrowth; // ns-3의 m_cWndCnt 역할 (세그먼트 단위)
     uint64_t MinRttUs;
     uint32_t AckCountForGrowth;
+    uint64_t ProbeTargetPacketNumber;
 
 } QUIC_CONGESTION_CONTROL_CUBICPROBE;
 
