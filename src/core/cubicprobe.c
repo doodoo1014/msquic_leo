@@ -2199,7 +2199,6 @@ CubicProbeResetProbeState(
 {
     CubicProbe->ProbeState = PROBE_INACTIVE;
     CubicProbe->CumulativeSuccessLevel = 0;
-    CubicProbe->RttCount = 0;
     CubicProbe->RttAtProbeStartUs = 0;
     CubicProbe->ProbeTargetPacketNumber = 0;
 }
@@ -2254,15 +2253,9 @@ CubicProbePktsAcked(
         case PROBE_INACTIVE:
         {
             if (Cubic->WindowMax > 0 && Cubic->CongestionWindow >= Cubic->WindowMax) {
-                CubicProbe->RttCount++;
-                if (CubicProbe->RttCount >= PROBE_RTT_INTERVAL) {
                     CubicProbe->ProbeState = PROBE_TEST;
                     CubicProbe->RttAtProbeStartUs = AckEvent->MinRtt;
-                    CubicProbe->RttCount = 0;
-                     printf("[CubicProbe] State -> PROBE_TEST. Triggering growth. RTT_Anchor=%.3fms\n", (double)AckEvent->MinRtt/1000.0);
-                }
-            } else {
-                CubicProbe->RttCount = 0;
+                    printf("[CubicProbe] State -> PROBE_TEST. Triggering growth. RTT_Anchor=%.3fms\n", (double)AckEvent->MinRtt/1000.0);
             }
             break;
         }
@@ -2276,7 +2269,10 @@ CubicProbePktsAcked(
                 break;
             }
         }
-        // fall through
+        // fall through 
+
+
+
 
         case PROBE_JUDGMENT:
         {

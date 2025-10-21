@@ -137,7 +137,6 @@ typedef struct QUIC_CONGESTION_CONTROL_CUBICPROBE {
     // CubicProbe-specific State
     QUIC_PROBE_STATE ProbeState;
     uint32_t CumulativeSuccessLevel;
-    uint32_t RttCount;
     uint64_t RttAtProbeStartUs;
 
     // **ACK Counter for ns-3 style growth**
