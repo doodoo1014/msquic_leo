@@ -2354,7 +2354,7 @@ CubicProbeUpdate(
     }
 
     if (CubicProbe->CumulativeSuccessLevel > 1) {
-        double accelerationFactor = 1.0 + (1.0 * (CubicProbe->CumulativeSuccessLevel - 1));
+        double accelerationFactor = 1.0 + (2.0 * (CubicProbe->CumulativeSuccessLevel - 1));
         if (accelerationFactor > 1.0) {
             *AckTarget = (uint32_t)(*AckTarget / accelerationFactor);
         }
@@ -2383,7 +2383,7 @@ CubicProbeIncreaseWindow(
     if (CubicProbe->AckCountForGrowth >= AckTarget) {
         uint32_t GrowthInSegments = 1;
         if (CubicProbe->CumulativeSuccessLevel > 0) {
-            GrowthInSegments = (CubicProbe->CumulativeSuccessLevel / 2) + 1;
+            GrowthInSegments = CubicProbe->CumulativeSuccessLevel + 1;
         }
 
         uint32_t PrevCwnd = Cubic->CongestionWindow;
