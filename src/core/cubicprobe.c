@@ -2281,9 +2281,9 @@ CubicProbePktsAcked(
         case PROBE_JUDGMENT:
         {
             if (AckEvent->MinRtt * PROBE_RTT_INCREASE_DENOMINATOR <= CubicProbe->RttAtProbeStartUs * PROBE_RTT_INCREASE_NUMERATOR) {
-                CubicProbe->ProbeState = PROBE_INACTIVE;
+                CubicProbe->ProbeState = PROBE_TEST;
                 CubicProbe->CumulativeSuccessLevel++;
-                printf("[CubicProbe] PROBE SUCCEEDED (Lvl %u), RTT=%.3fms <= Anchor*1.05. State -> INACTIVE\n",
+                printf("[CubicProbe] PROBE SUCCEEDED (Lvl %u), RTT=%.3fms <= Anchor*1.05",
                     CubicProbe->CumulativeSuccessLevel, (double)AckEvent->MinRtt / 1000.0);
             } else {
                 printf("[CubicProbe] PROBE FAILED (RTT Spike): CWnd=%u. RTT=%.3fms > Anchor*1.05. Treating as congestion event.\n",
