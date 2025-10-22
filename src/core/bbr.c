@@ -1860,10 +1860,9 @@ BbrCongestionControlTransitToProbeRtt(
     // [수정] ProbeRTT 진입 및 CWND 변경 로그 추가 (형식 변경)
     const uint16_t DatagramPayloadLength = QuicPathGetDatagramPayloadSize(&Connection->Paths[0]);
     uint32_t MinCongestionWindow = kMinCwndInMss * DatagramPayloadLength;
-    double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
     printf("[Bbr][%p][%.3fms] CWND Update (Probe RTT): %u -> %u\n", // [수정] 형식 변경
         Connection, // [추가] Connection 포인터
-        ElapsedMilliseconds,
+        (double)CxPlatTimeUs64() / 1000.0,
         OldCongestionWindow,
         MinCongestionWindow);
 }
@@ -1949,10 +1948,9 @@ BbrCongestionControlUpdateCongestionWindow(
     // [수정] CWND 증가 로그 추가 (형식 변경)
     if (OldCongestionWindow != Bbr->CongestionWindow) {
         const char* Reason = Bbr->BtlbwFound ? "BBR" : "Startup";
-        double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
         printf("[Bbr][%p][%.3fms] CWND Update (%s): %u -> %u\n", // [수정] 형식 변경
             Connection, // [추가] Connection 포인터
-            ElapsedMilliseconds,
+            (double)CxPlatTimeUs64() / 1000.0,
             Reason,
             OldCongestionWindow,
             Bbr->CongestionWindow);
@@ -2107,10 +2105,9 @@ BbrCongestionControlOnDataLost(
     QUIC_CONNECTION* Connection = QuicCongestionControlGetConnection(Cc);
 
     // [수정] 손실 이벤트 로그 추가 (형식 변경)
-    double ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
     printf("[Bbr][%p][%.3fms] LOSS EVENT: CWnd=%u, InFlight=%u, LostBytes=%u\n", // [수정] 형식 변경
         Connection, // [추가] Connection 포인터
-        ElapsedMilliseconds,
+        (double)CxPlatTimeUs64() / 1000.0,
         BbrCongestionControlGetCongestionWindow(Cc),
         Bbr->BytesInFlight,
         LossEvent->NumRetransmittableBytes);
@@ -2166,10 +2163,9 @@ BbrCongestionControlOnDataLost(
     
     // [수정] 손실로 인한 유효 CWND(RecoveryWindow) 변경 로그 추가 (형식 변경)
     if (OldRecoveryWindow != Bbr->RecoveryWindow) {
-        ElapsedMilliseconds = (double)(CxPlatTimeUs64() - Connection->Stats.Timing.Start) / 1000.0;
         printf("[Bbr][%p][%.3fms] CWND Update (Congestion Event): %u -> %u (RecoveryWindow)\n", // [수정] 형식 변경
             Connection, // [추가] Connection 포인터
-            ElapsedMilliseconds,
+            (double)CxPlatTimeUs64() / 1000.0,
             Bbr->CongestionWindow,
             Bbr->RecoveryWindow);
     }
