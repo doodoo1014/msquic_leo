@@ -2163,12 +2163,7 @@
 #define PROBE_RTT_INCREASE_DENOMINATOR 20
 
 // Forward declarations
-static void CubicProbeCongestionControlOnCongestionEvent(
-    _In_ QUIC_CONGESTION_CONTROL* Cc, 
-    _In_ BOOLEAN IsPersistentCongestion, 
-    _In_ BOOLEAN Ecn,
-    _In_ BOOLEAN IsProbeFailure // [수정] 플래그 추가
-    );
+static void CubicProbeCongestionControlOnCongestionEvent(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ BOOLEAN IsPersistentCongestion, _In_ BOOLEAN Ecn);
 static void CubicProbeUpdate(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ const QUIC_ACK_EVENT* AckEvent, _Out_ uint32_t* AckTarget);
 static void CubicProbeIncreaseWindow(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ const QUIC_ACK_EVENT* AckEvent, _In_ uint32_t AckTarget);
 static void CubicProbePktsAcked(_In_ QUIC_CONGESTION_CONTROL* Cc, _In_ const QUIC_ACK_EVENT* AckEvent);
@@ -2286,9 +2281,7 @@ CubicProbePktsAcked(
             } else {
                 printf("[CubicProbe] PROBE FAILED (RTT Spike): CWnd=%u. RTT=%.3fms > Anchor*1.xx. Treating as congestion event.\n", // Adjusted printf
                     Cubic->CongestionWindow, (double)AckEvent->MinRtt / 1000.0);
-                
-                // [수정] IsProbeFailure 플래그를 TRUE로 전달
-                CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, FALSE, TRUE);
+                CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, FALSE);
             }
             break;
         }
@@ -2479,8 +2472,7 @@ static void
 CubicProbeCongestionControlOnCongestionEvent(
     _In_ QUIC_CONGESTION_CONTROL* Cc,
     _In_ BOOLEAN IsPersistentCongestion,
-    _In_ BOOLEAN Ecn,
-    _In_ BOOLEAN IsProbeFailure // [수정] 플래그 인수 받기
+    _In_ BOOLEAN Ecn
     )
 {
     UNREFERENCED_PARAMETER(IsPersistentCongestion);
@@ -2511,23 +2503,11 @@ CubicProbeCongestionControlOnCongestionEvent(
     }
 
     uint32_t MinCongestionWindow = 2 * DatagramPayloadLength;
-
-    // [수정] 프로브 실패 여부에 따라 감소율(Beta) 결정
-    double ReductionFactor;
-    if (IsProbeFailure) {
-        // 프로브 실패 시: 0.5배 감소 (더 공격적)
-        ReductionFactor = 0.5;
-        printf("[CubicProbe] Applying Probe Failure Reduction (0.5x)\n");
-    } else {
-        // 일반 손실/ECN: 0.7배 감소 (CUBIC 기본값)
-        ReductionFactor = (double)TEN_TIMES_BETA_CUBIC / 10.0; // 0.7
-    }
-
     Cubic->SlowStartThreshold =
     Cubic->CongestionWindow =
         CXPLAT_MAX(
             MinCongestionWindow,
-            (uint32_t)(Cubic->CongestionWindow * ReductionFactor)); // [수정] 결정된 감소율 적용
+            (uint32_t)(Cubic->CongestionWindow * ((double)TEN_TIMES_BETA_CUBIC / 10.0)));
 
     Cubic->TimeOfCongAvoidStart = 0;
 
@@ -2659,9 +2639,7 @@ CubicProbeCongestionControlOnDataLost(
 
     if (!Cubic->HasHadCongestionEvent || LossEvent->LargestPacketNumberLost > Cubic->RecoverySentPacketNumber) {
         Cubic->RecoverySentPacketNumber = LossEvent->LargestSentPacketNumber;
-        
-        // [수정] IsProbeFailure 플래그를 FALSE로 전달
-        CubicProbeCongestionControlOnCongestionEvent(Cc, LossEvent->PersistentCongestion, FALSE, FALSE);
+        CubicProbeCongestionControlOnCongestionEvent(Cc, LossEvent->PersistentCongestion, FALSE);
     }
 
     CXPLAT_DBG_ASSERT(Cubic->BytesInFlight >= LossEvent->NumRetransmittableBytes);
@@ -2686,9 +2664,7 @@ CubicProbeCongestionControlOnEcn(
     if (!Cubic->HasHadCongestionEvent || EcnEvent->LargestPacketNumberAcked > Cubic->RecoverySentPacketNumber) {
         Cubic->RecoverySentPacketNumber = EcnEvent->LargestSentPacketNumber;
         Connection->Stats.Send.EcnCongestionCount++;
-        
-        // [수정] IsProbeFailure 플래그를 FALSE로 전달
-        CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, TRUE, FALSE);
+        CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, TRUE);
     }
 
     CubicProbeCongestionControlUpdateBlockedState(Cc, PreviousCanSendState);
