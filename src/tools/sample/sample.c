@@ -1725,7 +1725,7 @@ RunClient(
             
             printf("[CLIENT] Time: %.3fms | Throughput: %7.2f Mbps | RTT: %4lu ms\n",
                    (double)CxPlatTimeUs64() / 1000.0, IntervalThroughputMbps, (unsigned long)Stats.Rtt / 1000);
-            
+            fflush(stdout);
             Ctx.LastLogTimeMs = CurrentTimeMs;
             Ctx.LastBytesReceived = Ctx.BytesReceived;
         } else {
