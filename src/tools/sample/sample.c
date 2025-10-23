@@ -1637,26 +1637,6 @@ ClientConnectionCallback(
     case QUIC_CONNECTION_EVENT_SHUTDOWN_COMPLETE:
         printf("[CLIENT-conn][%p] All done\n", Connection);
 
-        if (Ctx->StartTime != 0) { // 연결이 성공적으로 시작된 경우에만 계산
-            uint64_t EndTimeMs = GetCurrentTimeMs();
-            uint64_t ElapsedTimeMs = EndTimeMs - Ctx->StartTime;
-            uint64_t TotalBytes = Ctx->BytesReceived;
-            double FinalThroughputMbps = 0;
-
-            if (ElapsedTimeMs > 0) {
-                // 기존 0.5초 간격 계산과 동일한 로직 사용
-                // (TotalBytes * 8 * 1000) / (ElapsedTimeMs * 1000 * 1000)
-                // == (TotalBytes * 8) / (ElapsedTimeMs * 1000)
-                FinalThroughputMbps = ((double)TotalBytes * 8) / (ElapsedTimeMs * 1000.0);
-            }
-
-            printf("[CLIENT] --- FINAL STATS ---\n");
-            printf("[CLIENT] Total time:    %.3f s\n", (double)ElapsedTimeMs / 1000.0);
-            printf("[CLIENT] Total received: %llu bytes\n", (unsigned long long)TotalBytes);
-            printf("[CLIENT] Avg throughput: %.2f Mbps\n", FinalThroughputMbps);
-            printf("[CLIENT] ---------------------\n");
-        }
-
         Ctx->Connected = FALSE;
         if (!Event->SHUTDOWN_COMPLETE.AppCloseInProgress) {
             MsQuic->ConnectionClose(Connection);
@@ -1728,6 +1708,30 @@ RunClient(
             fflush(stdout);
             Ctx.LastLogTimeMs = CurrentTimeMs;
             Ctx.LastBytesReceived = Ctx.BytesReceived;
+
+
+            if(i == 110){
+                if (Ctx.StartTime != 0) { // 연결이 성공적으로 시작된 경우에만 계산
+                uint64_t EndTimeMs = GetCurrentTimeMs();
+                uint64_t ElapsedTimeMs = EndTimeMs - Ctx.StartTime;
+                uint64_t TotalBytes = Ctx.BytesReceived;
+                double FinalThroughputMbps = 0;
+
+                if (ElapsedTimeMs > 0) {
+                    // 기존 0.5초 간격 계산과 동일한 로직 사용
+                    // (TotalBytes * 8 * 1000) / (ElapsedTimeMs * 1000 * 1000)
+                    // == (TotalBytes * 8) / (ElapsedTimeMs * 1000)
+                    FinalThroughputMbps = ((double)TotalBytes * 8) / (ElapsedTimeMs * 1000.0);
+                }
+
+                printf("[CLIENT] --- FINAL STATS ---\n");
+                printf("[CLIENT] Total time:    %.3f s\n", (double)ElapsedTimeMs / 1000.0);
+                printf("[CLIENT] Total received: %llu bytes\n", (unsigned long long)TotalBytes);
+                printf("[CLIENT] Avg throughput: %.2f Mbps\n", FinalThroughputMbps);
+                printf("[CLIENT] ---------------------\n");
+            }
+        }
+
         } else {
             break;
         }
