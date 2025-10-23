@@ -8,10 +8,10 @@ import os
 QUICSAMPLE_PATH = '/home/woochan/widen/msquic_leo/build/bin/Release/quicsample'
 
 # 테스트할 포트 목록
-PORTS_TO_TEST = [20001, 20002, 20003, 20004]
+PORTS_TO_TEST = [20001, 20002, 20003]
 
 # 포트별 실행 횟수
-RUNS_PER_PORT = 1
+RUNS_PER_PORT = 5
 
 # 로그를 저장할 디렉토리 이름 (스크립트를 실행하는 위치에 생성됩니다)
 LOG_DIRECTORY = 'client_log'
@@ -66,7 +66,8 @@ def run_experiment():
                         stdout=log_file,
                         stderr=subprocess.STDOUT,
                         check=True,
-                        text=True
+                        text=True,
+                        timeout=60
                     )
             except subprocess.CalledProcessError as e:
                 print(f"  [오류] {log_filename} 실행 중 오류 발생 (종료 코드: {e.returncode})")

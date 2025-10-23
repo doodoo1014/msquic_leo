@@ -2411,10 +2411,10 @@ CubicProbeIncreaseWindow(
         }
 
         if (CubicProbe->ProbeState != PROBE_INACTIVE) {
-            printf("[Cubic][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Target=%u, Growth=%u segs)\n",
+            printf("[CubicProbe][%p][%.3fms] CWND Update (Probe Lvl %u): %u -> %u (Target=%u, Growth=%u segs)\n",
                 (void*)Connection, (double)AckEvent->TimeNow / 1000.0, CubicProbe->CumulativeSuccessLevel, PrevCwnd, Cubic->CongestionWindow, AckTarget, GrowthInSegments);
         } else {
-             printf("[Cubic][%p][%.3fms] CWND Update (CUBIC): %u -> %u (Target=%u)\n",
+             printf("[CubicProbe][%p][%.3fms] CWND Update (CUBIC): %u -> %u (Target=%u)\n",
                 (void*)Connection, (double)AckEvent->TimeNow / 1000.0, PrevCwnd, Cubic->CongestionWindow, AckTarget);
         }
     }
@@ -2445,9 +2445,23 @@ CubicProbeCongestionControlOnDataAcknowledged(
     }
 
     if (Cubic->CongestionWindow < Cubic->SlowStartThreshold) {
+        uint32_t PrevCwnd = Cubic->CongestionWindow;
+
         Cubic->CongestionWindow += AckEvent->NumRetransmittableBytes;
+
+        printf("[CubicProbe][%p][%.3fms] CWND Update (SlowStart): %u -> %u\n",
+            (void*)Connection,
+            (double)AckEvent->TimeNow / 1000.0,
+            PrevCwnd,
+            Cubic->CongestionWindow);
+
         if (Cubic->CongestionWindow >= Cubic->SlowStartThreshold) {
             Cubic->TimeOfCongAvoidStart = AckEvent->TimeNow;
+
+            printf("[CubicProbe-SS][%p][%.3fms] SlowStart -> CongestionAvoidance (Ssthresh: %u)\n",
+                (void*)Connection,
+                (double)AckEvent->TimeNow / 1000.0,
+                Cubic->SlowStartThreshold);
         }
 
     } else {
