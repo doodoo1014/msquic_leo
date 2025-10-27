@@ -1460,8 +1460,8 @@
 // Constants for CubicProbe logic
 #define TEN_TIMES_BETA_PROBE 7 // [신규] 프로브 실패(RTT 스파이크) 시 0.5배 감소
 #define PROBE_RTT_INTERVAL 2
-#define PROBE_RTT_INCREASE_NUMERATOR 21   // 1.1x RTT threshold (수정 제안)
-#define PROBE_RTT_INCREASE_DENOMINATOR 20
+#define PROBE_RTT_INCREASE_NUMERATOR 11   // 1.1x RTT threshold (수정 제안)
+#define PROBE_RTT_INCREASE_DENOMINATOR 10
 
 // Forward declarations
 // [수정] 혼잡 이벤트 함수가 감소 계수(beta)를 인자로 받도록 변경
