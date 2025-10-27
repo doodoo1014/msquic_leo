@@ -1458,7 +1458,7 @@
 #define TEN_TIMES_C_CUBIC 4
 
 // Constants for CubicProbe logic
-#define TEN_TIMES_BETA_PROBE 5 // [신규] 프로브 실패(RTT 스파이크) 시 0.5배 감소
+#define TEN_TIMES_BETA_PROBE 7 // [신규] 프로브 실패(RTT 스파이크) 시 0.5배 감소
 #define PROBE_RTT_INTERVAL 2
 #define PROBE_RTT_INCREASE_NUMERATOR 21   // 1.1x RTT threshold (수정 제안)
 #define PROBE_RTT_INCREASE_DENOMINATOR 20
@@ -1581,7 +1581,7 @@ CubicProbePktsAcked(
                 printf("[CubicProbe] PROBE SUCCEEDED (Lvl %u), RTT=%.3fms <= Anchor*1.xx\n", // Adjusted printf
                     CubicProbe->CumulativeSuccessLevel, (double)AckEvent->MinRtt / 1000.0);
             } else {
-                printf("[CubicProbe] PROBE FAILED (RTT Spike): CWnd=%u. RTT=%.3fms > Anchor*1.xx. Treating as congestion event (0.5x).\n", // Adjusted printf
+                printf("[CubicProbe] PROBE FAILED (RTT Spike): CWnd=%u. RTT=%.3fms > Anchor*1.xx. Treating as congestion event (0.7x).\n", // Adjusted printf
                     Cubic->CongestionWindow, (double)AckEvent->MinRtt / 1000.0);
                 // [수정] 프로브 실패 시 0.5배 감소(TEN_TIMES_BETA_PROBE)를 사용하도록 호출
                 CubicProbeCongestionControlOnCongestionEvent(Cc, FALSE, FALSE, TEN_TIMES_BETA_PROBE);
