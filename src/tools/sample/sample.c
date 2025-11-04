@@ -1688,7 +1688,7 @@ RunClient(
     printf("Starting 60-second measurement...\n");
     Ctx.LastLogTimeMs = 0;
     Ctx.LastBytesReceived = 0;
-    for (int i = 0; i < 120; ++i) {
+    for (int i = 0; i < 80; ++i) {
         usleep(500000);
         if (Ctx.Connected) {
             if (Ctx.LastLogTimeMs == 0) { // 첫 로그 출력 시점 초기화
@@ -1710,7 +1710,7 @@ RunClient(
             Ctx.LastBytesReceived = Ctx.BytesReceived;
 
 
-            if(i == 110){
+            if(i == 70){
                 if (Ctx.StartTime != 0) { // 연결이 성공적으로 시작된 경우에만 계산
                 uint64_t EndTimeMs = GetCurrentTimeMs();
                 uint64_t ElapsedTimeMs = EndTimeMs - Ctx.StartTime;
@@ -1736,7 +1736,7 @@ RunClient(
             break;
         }
     }
-    printf("60-second measurement complete.\n");
+    printf("40-second measurement complete.\n");
 
 Error:
     if (Ctx.Connected && Connection != NULL) { // Ctx.Connected 조건을 추가!
