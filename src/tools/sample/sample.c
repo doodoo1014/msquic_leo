@@ -1497,14 +1497,14 @@ RunServer(
     if (QUIC_FAILED(Status = MsQuic->ListenerStart(Listener, &Alpn, 1, &Address))) { printf("ListenerStart failed, 0x%x!\n", Status); goto Error; }
     
     struct timespec ts;
-    timespec_get(&ts, TIME_UTC);
+    clock_gettime(CLOCK_REALTIME, &ts);
     uint64_t monotonic_us = CxPlatTimeUs64(); 
     char time_buf[100];
     strftime(time_buf, sizeof(time_buf), "%Y-%m-%dT%H:%M:%S", gmtime(&ts.tv_sec));
     long ms = ts.tv_nsec / 1000000;
     printf("[SERVER] ListenerStart WallClock=%s.%03ldZ, MonotonicStartTime=%lluus\n",
-           time_buf,           
-           ms,               
+           time_buf,          
+           ms,      
            (unsigned long long)monotonic_us);
     fflush(stdout);
     
@@ -1701,15 +1701,16 @@ RunClient(
     printf("Starting 40-second measurement...\n");
 
     struct timespec ts;
-    timespec_get(&ts, TIME_UTC);
-    uint64_t monotonic_us = CxPlatTimeUs64(); // 현재 모노토닉 시간
+    clock_gettime(CLOCK_REALTIME, &ts); // POSIX - macOS/Linux 모두에서 작동
+    uint64_t monotonic_us = CxPlatTimeUs64(); 
+
     char time_buf[100];
     strftime(time_buf, sizeof(time_buf), "%Y-%m-%dT%H:%M:%S", gmtime(&ts.tv_sec));
     long ms = ts.tv_nsec / 1000000;
-
-    // [Main] 대신 [CLIENT]로, Monotonic'Start'Time을 이 시점으로 기록
-    printf("[CLIENT] MeasurementStart WallClock=%s.%03ldZ, MonotonicStartTime=%lluus\n",
-           time_buf, ms, (unsigned long long)monotonic_us);
+    printf("[SERVER] ListenerStart WallClock=%s.%03ldZ, MonotonicStartTime=%lluus\n",
+           time_buf,  
+           ms,         
+           (unsigned long long)monotonic_us); 
     fflush(stdout);
 
     Ctx.LastLogTimeMs = 0;
