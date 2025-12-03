@@ -74,8 +74,7 @@ def run_experiment(ports_to_run, num_runs):
                         stdout=log_file,
                         stderr=subprocess.STDOUT,
                         check=True,
-                        text=True,
-                        timeout=60  # 60초 타임아웃
+                        text=True
                     )
             except subprocess.CalledProcessError as e:
                 print(f"  [오류] {log_filename} 실행 중 오류 발생 (종료 코드: {e.returncode})")
